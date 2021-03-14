@@ -20,4 +20,5 @@ makedocs(;
 
 deploydocs(;
     repo="github.com/James11222/CosmoMMF.jl",
+    devbranch = "main"
 )
