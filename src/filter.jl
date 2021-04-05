@@ -107,9 +107,9 @@ function signatures_from_hessian(hes::AbstractArray{T,4}) where T
 
                 # StaticArray (SA) here for speed, we know the dimensions are 3x3
                 hes_slice = SA[
-                    hes[i,j,k,1], hes[i,j,k,2], hes[i,j,k,3];
-                    hes[i,j,k,2], hes[i,j,k,4], hes[i,j,k,5];
-                    hes[i,j,k,3], hes[i,j,k,5], hes[i,j,k,6]
+                    hes[i,j,k,1]  hes[i,j,k,2]  hes[i,j,k,3];
+                    hes[i,j,k,2]  hes[i,j,k,4]  hes[i,j,k,5];
+                    hes[i,j,k,3]  hes[i,j,k,5]  hes[i,j,k,6]
                 ]
 
                 eigs[:] .= sort(real(eigvals(hes_slice)), rev=false)
