@@ -10,6 +10,7 @@ function wall(n::Int64)
     are = 1. Other points = 0.
     """
     array = zeros((n,n,n))
+    array[:,:,:] .= 0.1
     index = n ÷ 2
     array[index,:,:] .= 1
     return array
@@ -22,16 +23,17 @@ function cylinder(n::Int64,r::Float64)
     are 0.
     """
     array  = zeros(Float64,(n,n,n))
+    array[:,:,:] .= 0.1
     for x::Int64 in 1:n
         for y::Int64 in 1:n
             for z::Int64 in 1:n
                 if ((x - (n)/2)^2 + (y - (n)/2)^2) < r^2
-                    array[x,y,z] = 1      
+                    array[x,y,z] = 1
                 end
             end
         end
     end
-    return array   
+    return array
 end
 
 
@@ -42,16 +44,17 @@ function sphere(n::Int64,r::Float64)
     are 0.
     """
     array = zeros(Float64,(n,n,n))
+    array[:,:,:] .= 0.1
     for x::Int64 in 1:n
         for y::Int64 in 1:n
             for z::Int64 in 1:n
                 if ((x - (n)/2)^2 + (y - (n)/2)^2 + (z - (n)/2)^2) < r^2
-                    array[x,y,z] = 1      
+                    array[x,y,z] = 1
                 end
             end
         end
     end
-    return array   
+    return array
 end
 
 

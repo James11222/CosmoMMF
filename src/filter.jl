@@ -125,16 +125,16 @@ function signatures_from_hessian(hes::AbstractArray{T,4}) where T
                     (abs(eigs[1]) * θ(-eigs[1]))
             end
         end
-        GC.gc()
+        # GC.gc()
     end
     #return cats  # category shape strength ℐ (arxiv:1209.2043 eq 6)
     sigs = zeros(T, (hsize[1], hsize[2], hsize[3], 3) )
-    
+
     sigs[i,j,k,1] = cats[i,j,k, 1] * abs(eigs[3])*θ(-eigs[1])*θ(-eigs[2])*θ(-eigs[3])
     sigs[i,j,k,2] = cats[i,j,k, 2] * abs(eigs[2])*θ(-eigs[1])*θ(-eigs[2])
     sigs[i,j,k,3] = cats[i,j,k, 3] * abs(eigs[1])*θ(-eigs[1])
-    
-    return sigs    
+
+    return sigs
 end
 
 
@@ -144,45 +144,49 @@ function maximum_signature(R_0::Float64, field::AbstractArray{T,3}) where T
     then iterate to the maximum scale of the problem, calculating the signatures
     for each smoothing scale. We then chose the maximum signature over all scales
     at each point to categorize whether that point is a wall, filament, or cluster.
-    
+
     R_0 is typically the grid spacing of the field
     """
-    
+
     nx,ny,nz = size(field)
-    
+
     #create an array of scales
     Rs = []
-    n::Int64 = 4 #this will need to be changed 
+    n::Int64 = 5 #this will need to be changed
     for i in 1:n
         Ri = R_0 * sqrt(2)^i
         Rs = append!(Rs,Ri)
     end
-    
+
     #calculate wave vectors for our field
     wave_vecs = wavevectors3D((nx,ny,nz))
-    
+
     #calculate signatures at each scale Rn then determine the max signature
     sigs_ = zeros(T,nx,ny,nz,3,length(Rs))
     sigs_final = zeros(T,nx,ny,nz,3)
+
+    for a in 1:length(Rs)
+        log_smooth_field = smooth_loggauss(field, Rs[a], wave_vecs)
+        H_Rn = hessian_NEXUSPLUS(log_smooth_field, Rs[a], wave_vecs)
+        sigs_Rn = signatures_from_hessian(H_Rn)
+        sig_c,sig_f,sig_w = sigs_Rn[:,:,:,1],sigs_Rn[:,:,:,2],sigs_Rn[:,:,:,3]
+        sigs_[:,:,:,1,a] .= sig_c
+        sigs_[:,:,:,2,a] .= sig_f
+        sigs_[:,:,:,3,a] .= sig_w
+    end
+
     for i in 1:nx
         for j in 1:ny
             for k in 1:nz
-                for a in 1:length(Rs)
-                    kspace_G_filter = kspace_gaussian_filter(Rs[a], wave_vecs)
-                    log_smooth_field = smooth_loggauss(field, Rs[a], wave_vecs)
-                    H_Rn = hessian_NEXUSPLUS(log_smooth_field, Rs[a], wave_vecs)
-                    sigs_Rn = signatures_from_hessian(H_Rn)
-                    sig_c,sig_f,sig_w = sigs_Rn[i,j,k,1],sigs_Rn[i,j,k,2],sigs_Rn[i,j,k,3] 
-                    sigs_[i,j,k,1,a],sigs_[i,j,k,2,a],sigs_[i,j,k,3,a] = sig_c,sig_f,sig_w
-                end
-                sig_max_per_Rn_cluster = max(sigs_[i,j,k,1,:])
-                sig_max_per_Rn_filament = max(sigs_[i,j,k,2,:])
-                sig_max_per_Rn_wall = max(sigs_[i,j,k,3,:])
+                sig_max_per_Rn_cluster = maximum(sigs_[i,j,k,1,:])
+                sig_max_per_Rn_filament = maximum(sigs_[i,j,k,2,:])
+                sig_max_per_Rn_wall = maximum(sigs_[i,j,k,3,:])
                 sigs_final[i,j,k,1] = sig_max_per_Rn_cluster
                 sigs_final[i,j,k,2] = sig_max_per_Rn_filament
                 sigs_final[i,j,k,3] = sig_max_per_Rn_wall
             end
         end
     end
-    return sigs_final    
+
+    return sigs_final
 end
