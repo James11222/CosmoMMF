@@ -9,6 +9,7 @@ using JLD2
 
 include("util.jl")
 include("filter.jl")
+include("../test/runtests.jl")
 
 
 end

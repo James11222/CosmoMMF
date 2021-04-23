@@ -39,6 +39,14 @@ You would multiply this with the FFT'd field and then IFFT to apply the filter.
 # Returns:
 - `Array{T,3}`: fourier representation of gaussian filter
 """
+
+function smooth_gauss(f::AbstractArray{T,3}, R_S::T, kv) where T
+    GF = kspace_gaussian_filter(R_S, kv)  # get filter in Fourier space
+    f_Rn = (real(ifft(GF .* fft(f))))
+    f_Rn = f_Rn .* (sum(f)/sum(f_Rn))  # normalize
+    return f_Rn
+end
+
 function smooth_loggauss(f::AbstractArray{T,3}, R_S::T, kv) where T
     GF = kspace_gaussian_filter(R_S, kv)  # get filter in Fourier space
     f_Rn = 10 .^(
@@ -98,6 +106,7 @@ end
 function signatures_from_hessian(hes::AbstractArray{T,4}) where T
     hsize = size(hes)[1:3]
     cats = zeros(T, (hsize[1], hsize[2], hsize[3], 3) )
+    sigs = zeros(T, (hsize[1], hsize[2], hsize[3], 3) )
     Threads.@threads for i in 1:hsize[1]
         B0 = zeros(T, 3,3)
         eigs = zeros(T, 3)
@@ -123,17 +132,15 @@ function signatures_from_hessian(hes::AbstractArray{T,4}) where T
                 cats[i,j,k, 3] = (xθ(1-abs(eigs[2] / eigs[1])) *
                     xθ(1-abs(eigs[3] / eigs[1]))) *
                     (abs(eigs[1]) * θ(-eigs[1]))
+                
+                sigs[i,j,k,1] = cats[i,j,k, 1] * abs(eigs[3])*θ(-eigs[1])*θ(-eigs[2])*θ(-eigs[3])
+                sigs[i,j,k,2] = cats[i,j,k, 2] * abs(eigs[2])*θ(-eigs[1])*θ(-eigs[2])
+                sigs[i,j,k,3] = cats[i,j,k, 3] * abs(eigs[1])*θ(-eigs[1])
             end
         end
         # GC.gc()
     end
     #return cats  # category shape strength ℐ (arxiv:1209.2043 eq 6)
-    sigs = zeros(T, (hsize[1], hsize[2], hsize[3], 3) )
-
-    sigs[i,j,k,1] = cats[i,j,k, 1] * abs(eigs[3])*θ(-eigs[1])*θ(-eigs[2])*θ(-eigs[3])
-    sigs[i,j,k,2] = cats[i,j,k, 2] * abs(eigs[2])*θ(-eigs[1])*θ(-eigs[2])
-    sigs[i,j,k,3] = cats[i,j,k, 3] * abs(eigs[1])*θ(-eigs[1])
-
     return sigs
 end
 
