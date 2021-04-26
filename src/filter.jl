@@ -64,20 +64,60 @@ function hessian_NEXUSPLUS(f::AbstractArray{T,3}, R_S, kv) where T
     hessian = zeros(Complex{T}, (dims[1], dims[2], dims[3], 6))
     f_Rn = smooth_loggauss(f, R_S, kv)
     f_Rn_hat = fft(f_Rn)
-
-    hescol = 1
-
-    for i in 1:3
-        for j in 1:3
-            if i <= j # i.e. (1,1), (1,2), (1,3), (2,2), (2,3), (3,3)
-                hessian[:,:,:,hescol] = ifft(
-                    - kv[i] .* kv[j] .* R_S^2 .* f_Rn_hat )
-                hescol += 1
+    
+    kx = kv[1]
+    ky = kv[2]
+    kz = kv[3]
+    
+    for x in length(kv[1])
+        for y in length(kv[2])
+            for z in length(kv[3])
+                # (1,1)
+                hessian[x,y,z,1] = 
+                    - kx[x] * kx[x] * R_S^2 * f_Rn_hat[x,y,z] 
+                # (1,2)
+                hessian[x,y,z,2] = 
+                    - kx[x] * ky[y] * R_S^2 * f_Rn_hat[x,y,z] 
+                # (1,3)
+                hessian[x,y,z,3] = 
+                    - kx[x] * kz[z] * R_S^2 * f_Rn_hat[x,y,z]
+                # (2,2)
+                hessian[x,y,z,4] = 
+                    - ky[y] * ky[y] * R_S^2 * f_Rn_hat[x,y,z]
+                # (2,3)
+                hessian[x,y,z,5] = 
+                    - ky[y] * kz[z] * R_S^2 * f_Rn_hat[x,y,z] 
+                # (3,3)
+                hessian[x,y,z,6] = 
+                    - kz[z] * kz[z] * R_S^2 * f_Rn_hat[x,y,z] 
             end
         end
     end
+    hessian[:,:,:,1] = ifft(hessian[:,:,:,1])
+    hessian[:,:,:,2] = ifft(hessian[:,:,:,2])
+    hessian[:,:,:,3] = ifft(hessian[:,:,:,3])
+    hessian[:,:,:,4] = ifft(hessian[:,:,:,4])
+    hessian[:,:,:,5] = ifft(hessian[:,:,:,5])
+    hessian[:,:,:,6] = ifft(hessian[:,:,:,6])
     real(R_S^2 .* hessian)
 end
+    
+    
+    
+
+#     hescol = 1
+
+#     for i in 1:3
+#         for j in 1:3
+#             if i <= j # i.e. (1,1), (1,2), (1,3), (2,2), (2,3), (3,3)
+#                 hessian[:,:,:,hescol] = ifft(
+#                     - kv[i] .* kv[j] .* R_S^2 .* f_Rn_hat )
+#                 hescol += 1
+#             end
+#         end
+#     end
+#     real(R_S^2 .* hessian)
+# end
 
 
 # Computes Hessian of gaussian smoothed density field
@@ -115,6 +155,7 @@ function signatures_from_hessian(hes::AbstractArray{T,4}) where T
             for k in 1:hsize[3]
 
                 # StaticArray (SA) here for speed, we know the dimensions are 3x3
+                #the hessian matrix is symmetric
                 hes_slice = SA[
                     hes[i,j,k,1]  hes[i,j,k,2]  hes[i,j,k,3];
                     hes[i,j,k,2]  hes[i,j,k,4]  hes[i,j,k,5];
