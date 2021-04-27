@@ -69,9 +69,9 @@ function hessian_NEXUSPLUS(f::AbstractArray{T,3}, R_S, kv) where T
     ky = kv[2]
     kz = kv[3]
     
-    for x in length(kv[1])
-        for y in length(kv[2])
-            for z in length(kv[3])
+    for x in 1:length(kv[1])
+        for y in 1:length(kv[2])
+            for z in 1:length(kv[3])
                 # (1,1)
                 hessian[x,y,z,1] = 
                     - kx[x] * kx[x] * R_S^2 * f_Rn_hat[x,y,z] 
