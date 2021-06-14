@@ -1,19 +1,15 @@
-
-
-"""
-    kspace_gaussian_filter(R_S, kv)
-
-Computes the Fourier representation of a Gaussian filter with width ``R_S``.
-You would multiply this with the FFT'd field and then IFFT to apply the filter.
-
-# Arguments:
-- `R_S::T`: filter radius
-- `kv`: wavevector, tuple of (kx, ky, kz)
-
-# Returns:
-- `Array{T,3}`: fourier representation of gaussian filter
-"""
 function kspace_gaussian_filter(R_S::T, kv) where T
+    """
+    Computes the Fourier representation of a Gaussian filter with width ``R_S``.
+    You would multiply this with the FFT'd field and then IFFT to apply the filter.
+
+    # Arguments:
+    - `R_S::T`: filter radius
+    - `kv`: wavevector, tuple of (kx, ky, kz)
+
+    # Returns:
+    - `Array{T,3}`: fourier representation of gaussian filter
+    """
     kx, ky, kz = kv
     nx, ny, nz = length(kx), length(ky), length(kz)
     filter_k = zeros(T, (nx, ny, nz))
@@ -24,23 +20,19 @@ function kspace_gaussian_filter(R_S::T, kv) where T
     return filter_k
 end
 
-
-"""
-    kspace_gaussian_filter(f, R_S, kv)
-
-Computes the Fourier representation of a Gaussian filter with width ``R_S``.
-You would multiply this with the FFT'd field and then IFFT to apply the filter.
-
-# Arguments:
-- `f`: the 3D array to smooth
-- `R_S::T`: filter radius
-- `kv`: wavevector, tuple of (kx, ky, kz)
-
-# Returns:
-- `Array{T,3}`: fourier representation of gaussian filter
-"""
-
 function smooth_gauss(f::AbstractArray{T,3}, R_S::T, kv) where T
+    """
+    Apply a gaussian filter to a density field with smoothing radius `R_S` 
+    making use of wavevectors `kv`
+    
+    # Arguments:
+    - `f::AbstractArray{T,3}`: density field
+    - `R_S::T`: filter radius
+    - `kv`: wavevector, tuple of (kx, ky, kz)
+    
+    # Returns:
+    - Array{T,3}: smoothed density field
+    """
     GF = kspace_gaussian_filter(R_S, kv)  # get filter in Fourier space
     f_Rn = (real(ifft(GF .* fft(f))))
     f_Rn = f_Rn .* (sum(f)/sum(f_Rn))  # normalize
@@ -48,6 +40,18 @@ function smooth_gauss(f::AbstractArray{T,3}, R_S::T, kv) where T
 end
 
 function smooth_loggauss(f::AbstractArray{T,3}, R_S::T, kv) where T
+    """
+    Apply a gaussian filter to a density field with smoothing radius `R_S` 
+    making use of wavevectors `kv` using log smoothing
+    
+    # Arguments:
+    - `f::AbstractArray{T,3}`: density field
+    - `R_S::T`: filter radius
+    - `kv`: wavevector, tuple of (kx, ky, kz)
+    
+    # Returns:
+    - Array{T,3}: log-smoothed density field
+    """
     GF = kspace_gaussian_filter(R_S, kv)  # get filter in Fourier space
     f_Rn = 10 .^(
         real(ifft(GF .* fft(log10.(f)))))
@@ -102,22 +106,6 @@ function hessian_NEXUSPLUS(f::AbstractArray{T,3}, R_S, kv) where T
     real(R_S^2 .* hessian)
 end
     
-    
-    
-
-#     hescol = 1
-
-#     for i in 1:3
-#         for j in 1:3
-#             if i <= j # i.e. (1,1), (1,2), (1,3), (2,2), (2,3), (3,3)
-#                 hessian[:,:,:,hescol] = ifft(
-#                     - kv[i] .* kv[j] .* R_S^2 .* f_Rn_hat )
-#                 hescol += 1
-#             end
-#         end
-#     end
-#     real(R_S^2 .* hessian)
-# end
 
 
 # Computes Hessian of gaussian smoothed density field
