@@ -44,9 +44,9 @@ julia> CosmoMMF.wavevectors3D((6,2,2))
 """
 function wavevectors3D(T::Type{<:Real}, dims, box_size=(2π, 2π, 2π))
     sample_rate = T.(2π .* dims ./ box_size)
-    kx = fftfreq(dims[1], sample_rate[1])
-    ky = fftfreq(dims[2], sample_rate[2])
-    kz = fftfreq(dims[3], sample_rate[3])
+    kx = fftfreq(dims[1], sample_rate[1]) .* (2π / dims[1])
+    ky = fftfreq(dims[2], sample_rate[2]) .* (2π / dims[2])
+    kz = fftfreq(dims[3], sample_rate[3]) .* (2π / dims[3])
     return kx, ky, kz
 end
 
