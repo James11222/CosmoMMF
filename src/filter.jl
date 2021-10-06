@@ -163,13 +163,16 @@ then iterate to the maximum scale of the problem, calculating the signatures
 for each smoothing scale. We then chose the maximum signature over all scales
 at each point to categorize whether that point is a wall, filament, or cluster.
 """
-function maximum_signature(Rs, field::AbstractArray{T,3}; alg=:NEXUSPLUS) where T
+function (Rs, field::AbstractArray{T,3}; alg=:NEXUSPLUS) where T
 
     if alg ∉ (:NEXUS, :NEXUSPLUS)
         throw(ArgumentError("alg must be either :NEXUS or :NEXUSPLUS"))
     end
 
     nx,ny,nz = size(field)
+    
+    #we need to make sure the field has no 0 values
+    field = field .+ 0.0001
 
     #calculate wave vectors for our field
     wave_vecs = wavevectors3D(T, (nx,ny,nz))
@@ -184,9 +187,16 @@ function maximum_signature(Rs, field::AbstractArray{T,3}; alg=:NEXUSPLUS) where 
         elseif alg == :NEXUSPLUS
             f_Rn = smooth_loggauss(field, R, wave_vecs)
         end
+#         print("succesfully calculated f_Rn \n")
 
         H_Rn = hessian_from_smoothed(f_Rn, R, wave_vecs)
+        
+#         print("Succesfully calculated H_Rn \n")
+
         sigs_Rn = signatures_from_hessian(H_Rn)
+        
+#         print("Succesfully calculated S_Rn \n")
+        
         for ix = 1:nx, iy = 1:ny, iz = 1:nz, sigtype = 1:3
             sigmax[ix, iy, iz, sigtype] = max(
                 sigmax[ix, iy, iz, sigtype], sigs_Rn[ix, iy, iz, sigtype])

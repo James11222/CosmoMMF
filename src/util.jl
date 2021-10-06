@@ -111,3 +111,11 @@ function sphere(n::Int64,r::Float64)
     return array
 end
 
+
+function save_max_sigs(output_directory, id_string, sig_array::AbstractArray{T,4}) where T
+    """
+    A simple function to save the signatures to an output directory in the form of a jld2 file.
+    """
+    @save output_directory * id_string * ".jld2" sig_array
+end
+    
