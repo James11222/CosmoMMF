@@ -15,6 +15,7 @@ config = YAML.load_file("../config.yaml")
 ########################################
 
 @load config["input_directory"]*config["run_name"]*".jld2" den
+print("\n Loading in Density Cube \n")
 
 ########################################
 #  Run n' Save NEXUS/NEXUS+ Algorithm(s)
@@ -43,6 +44,7 @@ elseif ARGS[1] == "BOTH"
     combined_NEXUSPLUS = nothing
 else
     printstyled("Please give a valid algorithm input argument: \n NEXUS, NEXUSPLUS, or BOTH"; color = :red)
+end
     
 
 

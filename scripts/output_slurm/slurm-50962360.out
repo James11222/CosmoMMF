@@ -1,0 +1,9 @@
+
+ loading different scales 
+ERROR: LoadError: syntax: incomplete: "if" at /global/u2/j/james12/.julia/dev/CosmoMMF/scripts/run_NEXUS.jl:36 requires end
+Stacktrace:
+ [1] top-level scope
+   @ /global/u2/j/james12/.julia/dev/CosmoMMF/scripts/run_NEXUS.jl:28
+in expression starting at /global/u2/j/james12/.julia/dev/CosmoMMF/scripts/run_NEXUS.jl:28
+srun: error: nid01341: task 0: Exited with exit code 1
+srun: launch/slurm: _step_signal: Terminating StepId=50962360.0
