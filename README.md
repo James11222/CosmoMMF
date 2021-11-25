@@ -7,3 +7,7 @@
 
 
 Nexus Pipeline for analyzing the effects of baryonic matter on cosmological structures in IllustrisTNG simulations 
+
+Workflow:
+
+![image info](test/flow_chart.jpeg)
