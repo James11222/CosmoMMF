@@ -11,14 +11,14 @@ using JLD2
 using YAML
 using CosmoMMF
 
-config = YAML.load_file("../config.yaml")
+config = YAML.load_file("config.yaml")
 
 ############################################################
 #                  Load Relevant Data
 ############################################################
 
 #Density Field
-@load config["output_directory"]*"testing/"*config["run_name"]*"_"*string(config["snapfile_root"])*".jld2" den
+@load config["output_directory"]*config["run_name"]*"_"*string(config["snapfile_root"])*".jld2" den
 
 den = den[1:256,1:256,1:256]
 

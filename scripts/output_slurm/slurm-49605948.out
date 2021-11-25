@@ -1,0 +1,129 @@
+Currently Loaded Modulefiles:
+  1) modules/3.2.11.4
+  2) altd/2.0
+  3) darshan/3.2.1
+  4) craype-network-aries
+  5) udreg/2.3.2-7.0.1.1_3.59__g8175d3d.ari
+  6) ugni/6.0.14.0-7.0.1.1_7.61__ge78e5b0.ari
+  7) dmapp/7.1.1-7.0.1.1_4.70__g38cf134.ari
+  8) gni-headers/5.0.12.0-7.0.1.1_6.44__g3b1768f.ari
+  9) xpmem/2.2.20-7.0.1.1_4.27__g0475745.ari
+ 10) job/2.2.4-7.0.1.1_3.54__g36b56f4.ari
+ 11) dvs/2.12_2.2.167-7.0.1.1_17.10__ge473d3a2
+ 12) alps/6.6.58-7.0.1.1_6.28__g437d88db.ari
+ 13) rca/2.2.20-7.0.1.1_4.72__g8e3fb5b.ari
+ 14) craype-haswell
+ 15) cray-mpich/7.7.10
+ 16) Base-opts/2.4.139-7.0.1.1_4.84__gbb799dd.ari
+ 17) gcc/8.3.0
+ 18) craype/2.6.2
+ 19) cray-libsci/19.06.1
+ 20) pmi/5.0.14
+ 21) atp/2.1.3
+ 22) PrgEnv-gnu/6.0.5
+Matplotlib is building the font cache; this may take a moment.
+Warming up caches and configs on computing nodes ....
+
+Computing your density cubes for snap 99
+
+Traceback (most recent call last):
+  File "create_density_cubes.py", line 64, in <module>
+    compute_snap(snap_num, sys.argv[1])
+  File "create_density_cubes.py", line 38, in compute_snap
+    f = HDFCatalog(input_files_string)
+  File "/dev/shm/local/lib/python3.7/site-packages/nbodykit/source/catalog/file.py", line 191, in __init__
+    FileCatalogBase.__init__(self, filetype=filetype, path=path, args=args, kwargs=kwargs, comm=comm)
+  File "/dev/shm/local/lib/python3.7/site-packages/nbodykit/__init__.py", line 125, in wrapped
+    return func(*args, **kwargs)
+  File "/dev/shm/local/lib/python3.7/site-packages/nbodykit/source/catalog/file.py", line 46, in __init__
+    self._source = FileStack(filetype, path, *args, **kwargs)
+  File "/dev/shm/local/lib/python3.7/site-packages/nbodykit/io/stack.py", line 49, in __init__
+    self.files = [filetype(fn, *args, **kwargs) for fn in filenames]
+  File "/dev/shm/local/lib/python3.7/site-packages/nbodykit/io/stack.py", line 49, in <listcomp>
+    self.files = [filetype(fn, *args, **kwargs) for fn in filenames]
+  File "/dev/shm/local/lib/python3.7/site-packages/nbodykit/io/hdf.py", line 120, in __init__
+    raise ValueError(msg)
+ValueError: size mismatch in datasets of file; please use ``exclude`` to remove datasets of the wrong size
+size of 'PartType0/CenterOfMass': 23851047
+size of 'PartType0/Coordinates': 23851047
+size of 'PartType0/Density': 23851047
+size of 'PartType0/ElectronAbundance': 23851047
+size of 'PartType0/EnergyDissipation': 23851047
+size of 'PartType0/GFM_AGNRadiation': 23851047
+size of 'PartType0/GFM_CoolingRate': 23851047
+size of 'PartType0/GFM_Metallicity': 23851047
+size of 'PartType0/GFM_Metals': 23851047
+size of 'PartType0/GFM_MetalsTagged': 23851047
+size of 'PartType0/GFM_WindDMVelDisp': 23851047
+size of 'PartType0/GFM_WindHostHaloMass': 23851047
+size of 'PartType0/InternalEnergy': 23851047
+size of 'PartType0/InternalEnergyOld': 23851047
+size of 'PartType0/Machnumber': 23851047
+size of 'PartType0/MagneticField': 23851047
+size of 'PartType0/MagneticFieldDivergence': 23851047
+size of 'PartType0/Masses': 23851047
+size of 'PartType0/NeutralHydrogenAbundance': 23851047
+size of 'PartType0/ParticleIDs': 23851047
+size of 'PartType0/Potential': 23851047
+size of 'PartType0/StarFormationRate': 23851047
+size of 'PartType0/SubfindDMDensity': 23851047
+size of 'PartType0/SubfindDensity': 23851047
+size of 'PartType0/SubfindHsml': 23851047
+size of 'PartType0/SubfindVelDisp': 23851047
+size of 'PartType0/Velocities': 23851047
+size of 'PartType1/Coordinates': 25680412
+size of 'PartType1/ParticleIDs': 25680412
+size of 'PartType1/Potential': 25680412
+size of 'PartType1/SubfindDMDensity': 25680412
+size of 'PartType1/SubfindDensity': 25680412
+size of 'PartType1/SubfindHsml': 25680412
+size of 'PartType1/SubfindVelDisp': 25680412
+size of 'PartType1/Velocities': 25680412
+size of 'PartType3/ParentID': 27199194
+size of 'PartType3/TracerID': 27199194
+size of 'PartType4/BirthPos': 1787650
+size of 'PartType4/BirthVel': 1787650
+size of 'PartType4/Coordinates': 1787650
+size of 'PartType4/GFM_InitialMass': 1787650
+size of 'PartType4/GFM_Metallicity': 1787650
+size of 'PartType4/GFM_Metals': 1787650
+size of 'PartType4/GFM_MetalsTagged': 1787650
+size of 'PartType4/GFM_StellarFormationTime': 1787650
+size of 'PartType4/GFM_StellarPhotometrics': 1787650
+size of 'PartType4/Masses': 1787650
+size of 'PartType4/ParticleIDs': 1787650
+size of 'PartType4/Potential': 1787650
+size of 'PartType4/StellarHsml': 1787650
+size of 'PartType4/SubfindDMDensity': 1787650
+size of 'PartType4/SubfindDensity': 1787650
+size of 'PartType4/SubfindHsml': 1787650
+size of 'PartType4/SubfindVelDisp': 1787650
+size of 'PartType4/Velocities': 1787650
+size of 'PartType5/BH_BPressure': 1103
+size of 'PartType5/BH_CumEgyInjection_QM': 1103
+size of 'PartType5/BH_CumEgyInjection_RM': 1103
+size of 'PartType5/BH_CumMassGrowth_QM': 1103
+size of 'PartType5/BH_CumMassGrowth_RM': 1103
+size of 'PartType5/BH_Density': 1103
+size of 'PartType5/BH_HostHaloMass': 1103
+size of 'PartType5/BH_Hsml': 1103
+size of 'PartType5/BH_Mass': 1103
+size of 'PartType5/BH_Mdot': 1103
+size of 'PartType5/BH_MdotBondi': 1103
+size of 'PartType5/BH_MdotEddington': 1103
+size of 'PartType5/BH_Pressure': 1103
+size of 'PartType5/BH_Progs': 1103
+size of 'PartType5/BH_U': 1103
+size of 'PartType5/Coordinates': 1103
+size of 'PartType5/Masses': 1103
+size of 'PartType5/ParticleIDs': 1103
+size of 'PartType5/Potential': 1103
+size of 'PartType5/SubfindDMDensity': 1103
+size of 'PartType5/SubfindDensity': 1103
+size of 'PartType5/SubfindHsml': 1103
+size of 'PartType5/SubfindVelDisp': 1103
+size of 'PartType5/Velocities': 1103
+srun: error: nid12797: task 0: Exited with exit code 1
+srun: launch/slurm: _step_signal: Terminating StepId=49605948.2
+srun: Job 49605948 step creation temporarily disabled, retrying (Requested nodes are busy)
+srun: Step created for job 49605948

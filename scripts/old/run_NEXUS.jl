@@ -8,13 +8,13 @@ using JLD2
 using YAML
 using CosmoMMF
 
-config = YAML.load_file("../config.yaml")
+config = YAML.load_file("config.yaml")
 
 ########################################
 #            Load in Data
 ########################################
 
-@load config["input_directory"]*config["run_name"]*".jld2" den
+@load config["output_directory"]*config["run_name"]*"_"*config["snapfile_root"]*".jld2" den
 
 ########################################
 #  Run n' Save NEXUS/NEXUS+ Algorithm(s)
@@ -23,7 +23,7 @@ config = YAML.load_file("../config.yaml")
 Rs = (√2) .^ (0:config["num_scales"])
 print("\n loading different scales \n")
 
-save_name = config["run_name"]
+save_name = config["run_name"]*"_"*config["snapfile_root"]
 
 if ARGS[1] == "NEXUS"
     @time combined_NEXUS = CosmoMMF.maximum_signature(Rs, den; alg=:NEXUS);

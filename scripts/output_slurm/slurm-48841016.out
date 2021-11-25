@@ -1,0 +1,667 @@
+/var/spool/slurmd/job48841016/slurm_script: line 16: cd: /global/homes/j/james12/CosmoMMF/scipts/: No such file or directory
+WARNING: Method definition middle(C<:(ColorTypes.Color{T, 1} where T), C<:(ColorTypes.Color{T, 1} where T)) where {C<:(ColorTypes.Color{T, 1} where T)} in module ColorVectorSpace at /global/homes/j/james12/.julia/packages/ColorVectorSpace/s7hKD/src/ColorVectorSpace.jl:308 overwritten in module ColorVectorSpace on the same line (check for duplicate calls to `include`).
+  ** incremental compilation may be fatally broken for this module **
+
+WARNING: Method definition middle(ColorTypes.Color{T, 1} where T) in module ColorVectorSpace at /global/homes/j/james12/.julia/packages/ColorVectorSpace/s7hKD/src/ColorVectorSpace.jl:307 overwritten in module ColorVectorSpace on the same line (check for duplicate calls to `include`).
+  ** incremental compilation may be fatally broken for this module **
+
+WARNING: Method definition _mean_promote(Union{ColorTypes.AbstractRGB{T}, ColorTypes.Color{T, 1}, ColorTypes.TransparentColor{C, T, 4}, ColorTypes.TransparentColor{C, T, 2}} where C where T, Union{ColorTypes.AbstractRGB{T}, ColorTypes.Color{T, 1}, ColorTypes.TransparentColor{C, T, 4}, ColorTypes.TransparentColor{C, T, 2}} where C where T) in module ColorVectorSpace at /global/homes/j/james12/.julia/packages/ColorVectorSpace/s7hKD/src/ColorVectorSpace.jl:84 overwritten in module ColorVectorSpace on the same line (check for duplicate calls to `include`).
+  ** incremental compilation may be fatally broken for this module **
+
+WARNING: Method definition min(Number, ColorTypes.Color{T, 1} where T) in module ColorVectorSpace at /global/homes/j/james12/.julia/packages/ColorVectorSpace/s7hKD/src/ColorVectorSpace.jl:341 overwritten in module ColorVectorSpace on the same line (check for duplicate calls to `include`).
+  ** incremental compilation may be fatally broken for this module **
+
+WARNING: Method definition min(ColorTypes.Color{T, 1} where T, Number) in module ColorVectorSpace at /global/homes/j/james12/.julia/packages/ColorVectorSpace/s7hKD/src/ColorVectorSpace.jl:342 overwritten in module ColorVectorSpace on the same line (check for duplicate calls to `include`).
+  ** incremental compilation may be fatally broken for this module **
+
+WARNING: Method definition min(ColorTypes.Color{T, 1} where T, ColorTypes.Color{T, 1} where T) in module ColorVectorSpace at /global/homes/j/james12/.julia/packages/ColorVectorSpace/s7hKD/src/ColorVectorSpace.jl:340 overwritten in module ColorVectorSpace on the same line (check for duplicate calls to `include`).
+  ** incremental compilation may be fatally broken for this module **
+
+WARNING: Method definition min(T<:(ColorTypes.Color{T, 1} where T), T<:(ColorTypes.Color{T, 1} where T)) where {T<:(ColorTypes.Color{T, 1} where T)} in module ColorVectorSpace at /global/homes/j/james12/.julia/packages/ColorVectorSpace/s7hKD/src/ColorVectorSpace.jl:339 overwritten in module ColorVectorSpace on the same line (check for duplicate calls to `include`).
+  ** incremental compilation may be fatally broken for this module **
+
+WARNING: Method definition max(Number, ColorTypes.Color{T, 1} where T) in module ColorVectorSpace at /global/homes/j/james12/.julia/packages/ColorVectorSpace/s7hKD/src/ColorVectorSpace.jl:337 overwritten in module ColorVectorSpace on the same line (check for duplicate calls to `include`).
+  ** incremental compilation may be fatally broken for this module **
+
+WARNING: Method definition max(ColorTypes.Color{T, 1} where T, Number) in module ColorVectorSpace at /global/homes/j/james12/.julia/packages/ColorVectorSpace/s7hKD/src/ColorVectorSpace.jl:338 overwritten in module ColorVectorSpace on the same line (check for duplicate calls to `include`).
+  ** incremental compilation may be fatally broken for this module **
+
+WARNING: Method definition max(ColorTypes.Color{T, 1} where T, ColorTypes.Color{T, 1} where T) in module ColorVectorSpace at /global/homes/j/james12/.julia/packages/ColorVectorSpace/s7hKD/src/ColorVectorSpace.jl:336 overwritten in module ColorVectorSpace on the same line (check for duplicate calls to `include`).
+  ** incremental compilation may be fatally broken for this module **
+
+WARNING: Method definition max(T<:(ColorTypes.Color{T, 1} where T), T<:(ColorTypes.Color{T, 1} where T)) where {T<:(ColorTypes.Color{T, 1} where T)} in module ColorVectorSpace at /global/homes/j/james12/.julia/packages/ColorVectorSpace/s7hKD/src/ColorVectorSpace.jl:335 overwritten in module ColorVectorSpace on the same line (check for duplicate calls to `include`).
+  ** incremental compilation may be fatally broken for this module **
+
+WARNING: Method definition isnan(ColorTypes.Colorant{T, N} where N where T) in module ColorVectorSpace at /global/homes/j/james12/.julia/packages/ColorVectorSpace/s7hKD/src/ColorVectorSpace.jl:54 overwritten in module ColorVectorSpace on the same line (check for duplicate calls to `include`).
+  ** incremental compilation may be fatally broken for this module **
+
+WARNING: Method definition log(ColorTypes.Color{T, 1} where T) in module ColorVectorSpace at /global/homes/j/james12/.julia/packages/ColorVectorSpace/s7hKD/src/ColorVectorSpace.jl:300 overwritten in module ColorVectorSpace on the same line (check for duplicate calls to `include`).
+  ** incremental compilation may be fatally broken for this module **
+
+WARNING: Method definition sin(ColorTypes.Color{T, 1} where T) in module ColorVectorSpace at /global/homes/j/james12/.julia/packages/ColorVectorSpace/s7hKD/src/ColorVectorSpace.jl:300 overwritten in module ColorVectorSpace on the same line (check for duplicate calls to `include`).
+  ** incremental compilation may be fatally broken for this module **
+
+WARNING: Method definition bswap(ColorTypes.Gray{T}) where {T} in module ColorVectorSpace at /global/homes/j/james12/.julia/packages/ColorVectorSpace/s7hKD/src/ColorVectorSpace.jl:205 overwritten in module ColorVectorSpace on the same line (check for duplicate calls to `include`).
+  ** incremental compilation may be fatally broken for this module **
+
+WARNING: Method definition trunc(Type{T<:Integer}, ColorTypes.Gray{T} where T<:Union{Bool, AbstractFloat, FixedPointNumbers.FixedPoint{T, f} where f where T<:Integer}) where {T<:Integer} in module ColorVectorSpace at /global/homes/j/james12/.julia/packages/ColorVectorSpace/s7hKD/src/ColorVectorSpace.jl:210 overwritten in module ColorVectorSpace on the same line (check for duplicate calls to `include`).
+  ** incremental compilation may be fatally broken for this module **
+
+WARNING: Method definition trunc(ColorTypes.Gray{T}) where {T} in module ColorVectorSpace at /global/homes/j/james12/.julia/packages/ColorVectorSpace/s7hKD/src/ColorVectorSpace.jl:205 overwritten in module ColorVectorSpace on the same line (check for duplicate calls to `include`).
+  ** incremental compilation may be fatally broken for this module **
+
+WARNING: Method definition cos(ColorTypes.Color{T, 1} where T) in module ColorVectorSpace at /global/homes/j/james12/.julia/packages/ColorVectorSpace/s7hKD/src/ColorVectorSpace.jl:300 overwritten in module ColorVectorSpace on the same line (check for duplicate calls to `include`).
+  ** incremental compilation may be fatally broken for this module **
+
+WARNING: Method definition conj(ColorTypes.Color{T, 1} where T) in module ColorVectorSpace at /global/homes/j/james12/.julia/packages/ColorVectorSpace/s7hKD/src/ColorVectorSpace.jl:300 overwritten in module ColorVectorSpace on the same line (check for duplicate calls to `include`).
+  ** incremental compilation may be fatally broken for this module **
+
+WARNING: Method definition abs(ColorTypes.Color{T, 1} where T) in module ColorVectorSpace at /global/homes/j/james12/.julia/packages/ColorVectorSpace/s7hKD/src/ColorVectorSpace.jl:300 overwritten in module ColorVectorSpace on the same line (check for duplicate calls to `include`).
+  ** incremental compilation may be fatally broken for this module **
+
+WARNING: Method definition abs(Union{ColorTypes.AbstractRGB{T}, ColorTypes.Color{T, 1}, ColorTypes.TransparentColor{C, T, 4}, ColorTypes.TransparentColor{C, T, 2}} where C where T) in module ColorVectorSpace at /global/homes/j/james12/.julia/packages/ColorVectorSpace/s7hKD/src/ColorVectorSpace.jl:243 overwritten in module ColorVectorSpace on the same line (check for duplicate calls to `include`).
+  ** incremental compilation may be fatally broken for this module **
+
+WARNING: Method definition add_sum(Union{ColorTypes.AbstractRGB{T}, ColorTypes.Color{T, 1}, ColorTypes.TransparentColor{C, T, 4}, ColorTypes.TransparentColor{C, T, 2}} where C where T, Union{ColorTypes.AbstractRGB{T}, ColorTypes.Color{T, 1}, ColorTypes.TransparentColor{C, T, 4}, ColorTypes.TransparentColor{C, T, 2}} where C where T) in module ColorVectorSpace at /global/homes/j/james12/.julia/packages/ColorVectorSpace/s7hKD/src/ColorVectorSpace.jl:195 overwritten in module ColorVectorSpace on the same line (check for duplicate calls to `include`).
+  ** incremental compilation may be fatally broken for this module **
+
+WARNING: Method definition secd(ColorTypes.Color{T, 1} where T) in module ColorVectorSpace at /global/homes/j/james12/.julia/packages/ColorVectorSpace/s7hKD/src/ColorVectorSpace.jl:300 overwritten in module ColorVectorSpace on the same line (check for duplicate calls to `include`).
+  ** incremental compilation may be fatally broken for this module **
+
+WARNING: Method definition acot(ColorTypes.Color{T, 1} where T) in module ColorVectorSpace at /global/homes/j/james12/.julia/packages/ColorVectorSpace/s7hKD/src/ColorVectorSpace.jl:300 overwritten in module ColorVectorSpace on the same line (check for duplicate calls to `include`).
+  ** incremental compilation may be fatally broken for this module **
+
+WARNING: Method definition csch(ColorTypes.Color{T, 1} where T) in module ColorVectorSpace at /global/homes/j/james12/.julia/packages/ColorVectorSpace/s7hKD/src/ColorVectorSpace.jl:300 overwritten in module ColorVectorSpace on the same line (check for duplicate calls to `include`).
+  ** incremental compilation may be fatally broken for this module **
+
+WARNING: Method definition sec(ColorTypes.Color{T, 1} where T) in module ColorVectorSpace at /global/homes/j/james12/.julia/packages/ColorVectorSpace/s7hKD/src/ColorVectorSpace.jl:300 overwritten in module ColorVectorSpace on the same line (check for duplicate calls to `include`).
+  ** incremental compilation may be fatally broken for this module **
+
+WARNING: Method definition acoth(ColorTypes.Color{T, 1} where T) in module ColorVectorSpace at /global/homes/j/james12/.julia/packages/ColorVectorSpace/s7hKD/src/ColorVectorSpace.jl:300 overwritten in module ColorVectorSpace on the same line (check for duplicate calls to `include`).
+  ** incremental compilation may be fatally broken for this module **
+
+WARNING: Method definition deg2rad(ColorTypes.Color{T, 1} where T) in module ColorVectorSpace at /global/homes/j/james12/.julia/packages/ColorVectorSpace/s7hKD/src/ColorVectorSpace.jl:300 overwritten in module ColorVectorSpace on the same line (check for duplicate calls to `include`).
+  ** incremental compilation may be fatally broken for this module **
+
+WARNING: Method definition sinc(ColorTypes.Color{T, 1} where T) in module ColorVectorSpace at /global/homes/j/james12/.julia/packages/ColorVectorSpace/s7hKD/src/ColorVectorSpace.jl:300 overwritten in module ColorVectorSpace on the same line (check for duplicate calls to `include`).
+  ** incremental compilation may be fatally broken for this module **
+
+WARNING: Method definition sech(ColorTypes.Color{T, 1} where T) in module ColorVectorSpace at /global/homes/j/james12/.julia/packages/ColorVectorSpace/s7hKD/src/ColorVectorSpace.jl:300 overwritten in module ColorVectorSpace on the same line (check for duplicate calls to `include`).
+  ** incremental compilation may be fatally broken for this module **
+
+WARNING: Method definition cosd(ColorTypes.Color{T, 1} where T) in module ColorVectorSpace at /global/homes/j/james12/.julia/packages/ColorVectorSpace/s7hKD/src/ColorVectorSpace.jl:300 overwritten in module ColorVectorSpace on the same line (check for duplicate calls to `include`).
+  ** incremental compilation may be fatally broken for this module **
+
+WARNING: Method definition acotd(ColorTypes.Color{T, 1} where T) in module ColorVectorSpace at /global/homes/j/james12/.julia/packages/ColorVectorSpace/s7hKD/src/ColorVectorSpace.jl:300 overwritten in module ColorVectorSpace on the same line (check for duplicate calls to `include`).
+  ** incremental compilation may be fatally broken for this module **
+
+WARNING: Method definition cbrt(ColorTypes.Color{T, 1} where T) in module ColorVectorSpace at /global/homes/j/james12/.julia/packages/ColorVectorSpace/s7hKD/src/ColorVectorSpace.jl:300 overwritten in module ColorVectorSpace on the same line (check for duplicate calls to `include`).
+  ** incremental compilation may be fatally broken for this module **
+
+WARNING: Method definition rad2deg(ColorTypes.Color{T, 1} where T) in module ColorVectorSpace at /global/homes/j/james12/.julia/packages/ColorVectorSpace/s7hKD/src/ColorVectorSpace.jl:300 overwritten in module ColorVectorSpace on the same line (check for duplicate calls to `include`).
+  ** incremental compilation may be fatally broken for this module **
+
+WARNING: Method definition coth(ColorTypes.Color{T, 1} where T) in module ColorVectorSpace at /global/homes/j/james12/.julia/packages/ColorVectorSpace/s7hKD/src/ColorVectorSpace.jl:300 overwritten in module ColorVectorSpace on the same line (check for duplicate calls to `include`).
+  ** incremental compilation may be fatally broken for this module **
+
+WARNING: Method definition modf(ColorTypes.Color{T, 1} where T) in module ColorVectorSpace at /global/homes/j/james12/.julia/packages/ColorVectorSpace/s7hKD/src/ColorVectorSpace.jl:300 overwritten in module ColorVectorSpace on the same line (check for duplicate calls to `include`).
+  ** incremental compilation may be fatally broken for this module **
+
+WARNING: Method definition acsch(ColorTypes.Color{T, 1} where T) in module ColorVectorSpace at /global/homes/j/james12/.julia/packages/ColorVectorSpace/s7hKD/src/ColorVectorSpace.jl:300 overwritten in module ColorVectorSpace on the same line (check for duplicate calls to `include`).
+  ** incremental compilation may be fatally broken for this module **
+
+WARNING: Method definition atand(ColorTypes.Color{T, 1} where T) in module ColorVectorSpace at /global/homes/j/james12/.julia/packages/ColorVectorSpace/s7hKD/src/ColorVectorSpace.jl:300 overwritten in module ColorVectorSpace on the same line (check for duplicate calls to `include`).
+  ** incremental compilation may be fatally broken for this module **
+
+WARNING: Method definition cosc(ColorTypes.Color{T, 1} where T) in module ColorVectorSpace at /global/homes/j/james12/.julia/packages/ColorVectorSpace/s7hKD/src/ColorVectorSpace.jl:300 overwritten in module ColorVectorSpace on the same line (check for duplicate calls to `include`).
+  ** incremental compilation may be fatally broken for this module **
+
+WARNING: Method definition asech(ColorTypes.Color{T, 1} where T) in module ColorVectorSpace at /global/homes/j/james12/.julia/packages/ColorVectorSpace/s7hKD/src/ColorVectorSpace.jl:300 overwritten in module ColorVectorSpace on the same line (check for duplicate calls to `include`).
+  ** incremental compilation may be fatally broken for this module **
+
+WARNING: Method definition exponent(ColorTypes.Color{T, 1} where T) in module ColorVectorSpace at /global/homes/j/james12/.julia/packages/ColorVectorSpace/s7hKD/src/ColorVectorSpace.jl:300 overwritten in module ColorVectorSpace on the same line (check for duplicate calls to `include`).
+  ** incremental compilation may be fatally broken for this module **
+
+WARNING: Method definition asind(ColorTypes.Color{T, 1} where T) in module ColorVectorSpace at /global/homes/j/james12/.julia/packages/ColorVectorSpace/s7hKD/src/ColorVectorSpace.jl:300 overwritten in module ColorVectorSpace on the same line (check for duplicate calls to `include`).
+  ** incremental compilation may be fatally broken for this module **
+
+WARNING: Method definition asecd(ColorTypes.Color{T, 1} where T) in module ColorVectorSpace at /global/homes/j/james12/.julia/packages/ColorVectorSpace/s7hKD/src/ColorVectorSpace.jl:300 overwritten in module ColorVectorSpace on the same line (check for duplicate calls to `include`).
+  ** incremental compilation may be fatally broken for this module **
+
+WARNING: Method definition sind(ColorTypes.Color{T, 1} where T) in module ColorVectorSpace at /global/homes/j/james12/.julia/packages/ColorVectorSpace/s7hKD/src/ColorVectorSpace.jl:300 overwritten in module ColorVectorSpace on the same line (check for duplicate calls to `include`).
+  ** incremental compilation may be fatally broken for this module **
+
+WARNING: Method definition significand(ColorTypes.Color{T, 1} where T) in module ColorVectorSpace at /global/homes/j/james12/.julia/packages/ColorVectorSpace/s7hKD/src/ColorVectorSpace.jl:300 overwritten in module ColorVectorSpace on the same line (check for duplicate calls to `include`).
+  ** incremental compilation may be fatally broken for this module **
+
+WARNING: Method definition frexp(ColorTypes.Color{T, 1} where T) in module ColorVectorSpace at /global/homes/j/james12/.julia/packages/ColorVectorSpace/s7hKD/src/ColorVectorSpace.jl:300 overwritten in module ColorVectorSpace on the same line (check for duplicate calls to `include`).
+  ** incremental compilation may be fatally broken for this module **
+
+WARNING: Method definition acscd(ColorTypes.Color{T, 1} where T) in module ColorVectorSpace at /global/homes/j/james12/.julia/packages/ColorVectorSpace/s7hKD/src/ColorVectorSpace.jl:300 overwritten in module ColorVectorSpace on the same line (check for duplicate calls to `include`).
+  ** incremental compilation may be fatally broken for this module **
+
+WARNING: Method definition acosd(ColorTypes.Color{T, 1} where T) in module ColorVectorSpace at /global/homes/j/james12/.julia/packages/ColorVectorSpace/s7hKD/src/ColorVectorSpace.jl:300 overwritten in module ColorVectorSpace on the same line (check for duplicate calls to `include`).
+  ** incremental compilation may be fatally broken for this module **
+
+WARNING: Method definition acsc(ColorTypes.Color{T, 1} where T) in module ColorVectorSpace at /global/homes/j/james12/.julia/packages/ColorVectorSpace/s7hKD/src/ColorVectorSpace.jl:300 overwritten in module ColorVectorSpace on the same line (check for duplicate calls to `include`).
+  ** incremental compilation may be fatally broken for this module **
+
+WARNING: Method definition cotd(ColorTypes.Color{T, 1} where T) in module ColorVectorSpace at /global/homes/j/james12/.julia/packages/ColorVectorSpace/s7hKD/src/ColorVectorSpace.jl:300 overwritten in module ColorVectorSpace on the same line (check for duplicate calls to `include`).
+  ** incremental compilation may be fatally broken for this module **
+
+WARNING: Method definition asec(ColorTypes.Color{T, 1} where T) in module ColorVectorSpace at /global/homes/j/james12/.julia/packages/ColorVectorSpace/s7hKD/src/ColorVectorSpace.jl:300 overwritten in module ColorVectorSpace on the same line (check for duplicate calls to `include`).
+  ** incremental compilation may be fatally broken for this module **
+
+WARNING: Method definition cscd(ColorTypes.Color{T, 1} where T) in module ColorVectorSpace at /global/homes/j/james12/.julia/packages/ColorVectorSpace/s7hKD/src/ColorVectorSpace.jl:300 overwritten in module ColorVectorSpace on the same line (check for duplicate calls to `include`).
+  ** incremental compilation may be fatally broken for this module **
+
+WARNING: Method definition tand(ColorTypes.Color{T, 1} where T) in module ColorVectorSpace at /global/homes/j/james12/.julia/packages/ColorVectorSpace/s7hKD/src/ColorVectorSpace.jl:300 overwritten in module ColorVectorSpace on the same line (check for duplicate calls to `include`).
+  ** incremental compilation may be fatally broken for this module **
+
+WARNING: Method definition cot(ColorTypes.Color{T, 1} where T) in module ColorVectorSpace at /global/homes/j/james12/.julia/packages/ColorVectorSpace/s7hKD/src/ColorVectorSpace.jl:300 overwritten in module ColorVectorSpace on the same line (check for duplicate calls to `include`).
+  ** incremental compilation may be fatally broken for this module **
+
+WARNING: Method definition csc(ColorTypes.Color{T, 1} where T) in module ColorVectorSpace at /global/homes/j/james12/.julia/packages/ColorVectorSpace/s7hKD/src/ColorVectorSpace.jl:300 overwritten in module ColorVectorSpace on the same line (check for duplicate calls to `include`).
+  ** incremental compilation may be fatally broken for this module **
+
+WARNING: Method definition hypot(ColorTypes.Color{T, 1} where T, ColorTypes.Color{T, 1} where T) in module ColorVectorSpace at /global/homes/j/james12/.julia/packages/ColorVectorSpace/s7hKD/src/ColorVectorSpace.jl:345 overwritten in module ColorVectorSpace on the same line (check for duplicate calls to `include`).
+  ** incremental compilation may be fatally broken for this module **
+
+WARNING: Method definition copy(Union{ColorTypes.AbstractRGB{T}, ColorTypes.Color{T, 1}, ColorTypes.TransparentColor{C, T, 4}, ColorTypes.TransparentColor{C, T, 2}} where C where T) in module ColorVectorSpace at /global/homes/j/james12/.julia/packages/ColorVectorSpace/s7hKD/src/ColorVectorSpace.jl:235 overwritten in module ColorVectorSpace on the same line (check for duplicate calls to `include`).
+  ** incremental compilation may be fatally broken for this module **
+
+WARNING: Method definition exp2(ColorTypes.Color{T, 1} where T) in module ColorVectorSpace at /global/homes/j/james12/.julia/packages/ColorVectorSpace/s7hKD/src/ColorVectorSpace.jl:300 overwritten in module ColorVectorSpace on the same line (check for duplicate calls to `include`).
+  ** incremental compilation may be fatally broken for this module **
+
+WARNING: Method definition sinh(ColorTypes.Color{T, 1} where T) in module ColorVectorSpace at /global/homes/j/james12/.julia/packages/ColorVectorSpace/s7hKD/src/ColorVectorSpace.jl:300 overwritten in module ColorVectorSpace on the same line (check for duplicate calls to `include`).
+  ** incremental compilation may be fatally broken for this module **
+
+WARNING: Method definition exp(ColorTypes.Color{T, 1} where T) in module ColorVectorSpace at /global/homes/j/james12/.julia/packages/ColorVectorSpace/s7hKD/src/ColorVectorSpace.jl:300 overwritten in module ColorVectorSpace on the same line (check for duplicate calls to `include`).
+  ** incremental compilation may be fatally broken for this module **
+
+WARNING: Method definition asinh(ColorTypes.Color{T, 1} where T) in module ColorVectorSpace at /global/homes/j/james12/.julia/packages/ColorVectorSpace/s7hKD/src/ColorVectorSpace.jl:300 overwritten in module ColorVectorSpace on the same line (check for duplicate calls to `include`).
+  ** incremental compilation may be fatally broken for this module **
+
+WARNING: Method definition acosh(ColorTypes.Color{T, 1} where T) in module ColorVectorSpace at /global/homes/j/james12/.julia/packages/ColorVectorSpace/s7hKD/src/ColorVectorSpace.jl:300 overwritten in module ColorVectorSpace on the same line (check for duplicate calls to `include`).
+  ** incremental compilation may be fatally broken for this module **
+
+WARNING: Method definition atan(ColorTypes.Color{T, 1} where T, ColorTypes.Color{T, 1} where T) in module ColorVectorSpace at /global/homes/j/james12/.julia/packages/ColorVectorSpace/s7hKD/src/ColorVectorSpace.jl:344 overwritten in module ColorVectorSpace on the same line (check for duplicate calls to `include`).
+  ** incremental compilation may be fatally broken for this module **
+
+WARNING: Method definition atan(ColorTypes.Color{T, 1} where T) in module ColorVectorSpace at /global/homes/j/james12/.julia/packages/ColorVectorSpace/s7hKD/src/ColorVectorSpace.jl:300 overwritten in module ColorVectorSpace on the same line (check for duplicate calls to `include`).
+  ** incremental compilation may be fatally broken for this module **
+
+WARNING: Method definition <(ColorTypes.Color{T, 1} where T, Real) in module ColorVectorSpace at /global/homes/j/james12/.julia/packages/ColorVectorSpace/s7hKD/src/ColorVectorSpace.jl:59 overwritten in module ColorVectorSpace on the same line (check for duplicate calls to `include`).
+  ** incremental compilation may be fatally broken for this module **
+
+WARNING: Method definition <(ColorTypes.Color{T, 1} where T, ColorTypes.Color{T, 1} where T) in module ColorVectorSpace at /global/homes/j/james12/.julia/packages/ColorVectorSpace/s7hKD/src/ColorVectorSpace.jl:58 overwritten in module ColorVectorSpace on the same line (check for duplicate calls to `include`).
+  ** incremental compilation may be fatally broken for this module **
+
+WARNING: Method definition <(Real, ColorTypes.Color{T, 1} where T) in module ColorVectorSpace at /global/homes/j/james12/.julia/packages/ColorVectorSpace/s7hKD/src/ColorVectorSpace.jl:60 overwritten in module ColorVectorSpace on the same line (check for duplicate calls to `include`).
+  ** incremental compilation may be fatally broken for this module **
+
+WARNING: Method definition reduce_empty(typeof(Base.add_sum), Type{T<:(Union{ColorTypes.AbstractRGB{T}, ColorTypes.Color{T, 1}, ColorTypes.TransparentColor{C, T, 4}, ColorTypes.TransparentColor{C, T, 2}} where C where T)}) where {T<:(Union{ColorTypes.AbstractRGB{T}, ColorTypes.Color{T, 1}, ColorTypes.TransparentColor{C, T, 4}, ColorTypes.TransparentColor{C, T, 2}} where C where T)} in module ColorVectorSpace at /global/homes/j/james12/.julia/packages/ColorVectorSpace/s7hKD/src/ColorVectorSpace.jl:197 overwritten in module ColorVectorSpace on the same line (check for duplicate calls to `include`).
+  ** incremental compilation may be fatally broken for this module **
+
+WARNING: Method definition log2(ColorTypes.Color{T, 1} where T) in module ColorVectorSpace at /global/homes/j/james12/.julia/packages/ColorVectorSpace/s7hKD/src/ColorVectorSpace.jl:300 overwritten in module ColorVectorSpace on the same line (check for duplicate calls to `include`).
+  ** incremental compilation may be fatally broken for this module **
+
+WARNING: Method definition acos(ColorTypes.Color{T, 1} where T) in module ColorVectorSpace at /global/homes/j/james12/.julia/packages/ColorVectorSpace/s7hKD/src/ColorVectorSpace.jl:300 overwritten in module ColorVectorSpace on the same line (check for duplicate calls to `include`).
+  ** incremental compilation may be fatally broken for this module **
+
+WARNING: Method definition mod1(ColorTypes.Gray{T} where T<:Union{Bool, AbstractFloat, FixedPointNumbers.FixedPoint{T, f} where f where T<:Integer}, ColorTypes.Gray{T} where T<:Union{Bool, AbstractFloat, FixedPointNumbers.FixedPoint{T, f} where f where T<:Integer}) in module ColorVectorSpace at /global/homes/j/james12/.julia/packages/ColorVectorSpace/s7hKD/src/ColorVectorSpace.jl:214 overwritten in module ColorVectorSpace on the same line (check for duplicate calls to `include`).
+  ** incremental compilation may be fatally broken for this module **
+
+WARNING: Method definition cosh(ColorTypes.Color{T, 1} where T) in module ColorVectorSpace at /global/homes/j/james12/.julia/packages/ColorVectorSpace/s7hKD/src/ColorVectorSpace.jl:300 overwritten in module ColorVectorSpace on the same line (check for duplicate calls to `include`).
+  ** incremental compilation may be fatally broken for this module **
+
+WARNING: Method definition tan(ColorTypes.Color{T, 1} where T) in module ColorVectorSpace at /global/homes/j/james12/.julia/packages/ColorVectorSpace/s7hKD/src/ColorVectorSpace.jl:300 overwritten in module ColorVectorSpace on the same line (check for duplicate calls to `include`).
+  ** incremental compilation may be fatally broken for this module **
+
+WARNING: Method definition floor(Type{T<:Integer}, ColorTypes.Gray{T} where T<:Union{Bool, AbstractFloat, FixedPointNumbers.FixedPoint{T, f} where f where T<:Integer}) where {T<:Integer} in module ColorVectorSpace at /global/homes/j/james12/.julia/packages/ColorVectorSpace/s7hKD/src/ColorVectorSpace.jl:210 overwritten in module ColorVectorSpace on the same line (check for duplicate calls to `include`).
+  ** incremental compilation may be fatally broken for this module **
+
+WARNING: Method definition floor(ColorTypes.Gray{T}) where {T} in module ColorVectorSpace at /global/homes/j/james12/.julia/packages/ColorVectorSpace/s7hKD/src/ColorVectorSpace.jl:205 overwritten in module ColorVectorSpace on the same line (check for duplicate calls to `include`).
+  ** incremental compilation may be fatally broken for this module **
+
+WARNING: Method definition ceil(Type{T<:Integer}, ColorTypes.Gray{T} where T<:Union{Bool, AbstractFloat, FixedPointNumbers.FixedPoint{T, f} where f where T<:Integer}) where {T<:Integer} in module ColorVectorSpace at /global/homes/j/james12/.julia/packages/ColorVectorSpace/s7hKD/src/ColorVectorSpace.jl:210 overwritten in module ColorVectorSpace on the same line (check for duplicate calls to `include`).
+  ** incremental compilation may be fatally broken for this module **
+
+WARNING: Method definition ceil(ColorTypes.Gray{T}) where {T} in module ColorVectorSpace at /global/homes/j/james12/.julia/packages/ColorVectorSpace/s7hKD/src/ColorVectorSpace.jl:205 overwritten in module ColorVectorSpace on the same line (check for duplicate calls to `include`).
+  ** incremental compilation may be fatally broken for this module **
+
+WARNING: Method definition -(Bool, ColorTypes.Color{Bool, 1}) in module ColorVectorSpace at /global/homes/j/james12/.julia/packages/ColorVectorSpace/s7hKD/src/ColorVectorSpace.jl:330 overwritten in module ColorVectorSpace on the same line (check for duplicate calls to `include`).
+  ** incremental compilation may be fatally broken for this module **
+
+WARNING: Method definition -(ColorTypes.TransparentColor{C, T, 2} where T where C<:(ColorTypes.Color{T, 1} where T), ColorTypes.TransparentColor{C, T, 2} where T where C<:(ColorTypes.Color{T, 1} where T)) in module ColorVectorSpace at /global/homes/j/james12/.julia/packages/ColorVectorSpace/s7hKD/src/ColorVectorSpace.jl:316 overwritten in module ColorVectorSpace on the same line (check for duplicate calls to `include`).
+  ** incremental compilation may be fatally broken for this module **
+
+WARNING: Method definition -(ColorTypes.TransparentColor{C, T, 4} where T where C<:(ColorTypes.AbstractRGB{T} where T), ColorTypes.TransparentColor{C, T, 4} where T where C<:(ColorTypes.AbstractRGB{T} where T)) in module ColorVectorSpace at /global/homes/j/james12/.julia/packages/ColorVectorSpace/s7hKD/src/ColorVectorSpace.jl:265 overwritten in module ColorVectorSpace on the same line (check for duplicate calls to `include`).
+  ** incremental compilation may be fatally broken for this module **
+
+WARNING: Method definition -(Number, ColorTypes.Color{Bool, 1}) in module ColorVectorSpace at /global/homes/j/james12/.julia/packages/ColorVectorSpace/s7hKD/src/ColorVectorSpace.jl:328 overwritten in module ColorVectorSpace on the same line (check for duplicate calls to `include`).
+  ** incremental compilation may be fatally broken for this module **
+
+WARNING: Method definition -(Number, ColorTypes.Color{T, 1} where T) in module ColorVectorSpace at /global/homes/j/james12/.julia/packages/ColorVectorSpace/s7hKD/src/ColorVectorSpace.jl:326 overwritten in module ColorVectorSpace on the same line (check for duplicate calls to `include`).
+  ** incremental compilation may be fatally broken for this module **
+
+WARNING: Method definition -(ColorTypes.Color{Bool, 1}, Bool) in module ColorVectorSpace at /global/homes/j/james12/.julia/packages/ColorVectorSpace/s7hKD/src/ColorVectorSpace.jl:329 overwritten in module ColorVectorSpace on the same line (check for duplicate calls to `include`).
+  ** incremental compilation may be fatally broken for this module **
+
+WARNING: Method definition -(ColorTypes.Color{Bool, 1}, Number) in module ColorVectorSpace at /global/homes/j/james12/.julia/packages/ColorVectorSpace/s7hKD/src/ColorVectorSpace.jl:327 overwritten in module ColorVectorSpace on the same line (check for duplicate calls to `include`).
+  ** incremental compilation may be fatally broken for this module **
+
+WARNING: Method definition -(ColorTypes.Color{T, 1} where T, Number) in module ColorVectorSpace at /global/homes/j/james12/.julia/packages/ColorVectorSpace/s7hKD/src/ColorVectorSpace.jl:325 overwritten in module ColorVectorSpace on the same line (check for duplicate calls to `include`).
+  ** incremental compilation may be fatally broken for this module **
+
+WARNING: Method definition -(ColorTypes.Color{Bool, 1}, ColorTypes.Color{Bool, 1}) in module ColorVectorSpace at /global/homes/j/james12/.julia/packages/ColorVectorSpace/s7hKD/src/ColorVectorSpace.jl:315 overwritten in module ColorVectorSpace on the same line (check for duplicate calls to `include`).
+  ** incremental compilation may be fatally broken for this module **
+
+WARNING: Method definition -(ColorTypes.Color{T, 1} where T, ColorTypes.Color{T, 1} where T) in module ColorVectorSpace at /global/homes/j/james12/.julia/packages/ColorVectorSpace/s7hKD/src/ColorVectorSpace.jl:314 overwritten in module ColorVectorSpace on the same line (check for duplicate calls to `include`).
+  ** incremental compilation may be fatally broken for this module **
+
+WARNING: Method definition -(ColorTypes.AbstractRGB{T} where T, ColorTypes.AbstractRGB{T} where T) in module ColorVectorSpace at /global/homes/j/james12/.julia/packages/ColorVectorSpace/s7hKD/src/ColorVectorSpace.jl:263 overwritten in module ColorVectorSpace on the same line (check for duplicate calls to `include`).
+  ** incremental compilation may be fatally broken for this module **
+
+WARNING: Method definition -(Union{ColorTypes.AbstractRGB{T}, ColorTypes.Color{T, 1}, ColorTypes.TransparentColor{C, T, 4}, ColorTypes.TransparentColor{C, T, 2}} where C where T, Union{ColorTypes.AbstractRGB{T}, ColorTypes.Color{T, 1}, ColorTypes.TransparentColor{C, T, 4}, ColorTypes.TransparentColor{C, T, 2}} where C where T) in module ColorVectorSpace at /global/homes/j/james12/.julia/packages/ColorVectorSpace/s7hKD/src/ColorVectorSpace.jl:251 overwritten in module ColorVectorSpace on the same line (check for duplicate calls to `include`).
+  ** incremental compilation may be fatally broken for this module **
+
+WARNING: Method definition -(Union{ColorTypes.AbstractRGB{Bool}, ColorTypes.Color{Bool, 1}, ColorTypes.TransparentColor{C, Bool, 4}, ColorTypes.TransparentColor{C, Bool, 2}} where C) in module ColorVectorSpace at /global/homes/j/james12/.julia/packages/ColorVectorSpace/s7hKD/src/ColorVectorSpace.jl:242 overwritten in module ColorVectorSpace on the same line (check for duplicate calls to `include`).
+  ** incremental compilation may be fatally broken for this module **
+
+WARNING: Method definition -(Union{ColorTypes.AbstractRGB{T}, ColorTypes.Color{T, 1}, ColorTypes.TransparentColor{C, T, 4}, ColorTypes.TransparentColor{C, T, 2}} where C where T) in module ColorVectorSpace at /global/homes/j/james12/.julia/packages/ColorVectorSpace/s7hKD/src/ColorVectorSpace.jl:241 overwritten in module ColorVectorSpace on the same line (check for duplicate calls to `include`).
+  ** incremental compilation may be fatally broken for this module **
+
+WARNING: Method definition ~(ColorTypes.Color{T, 1} where T) in module ColorVectorSpace at /global/homes/j/james12/.julia/packages/ColorVectorSpace/s7hKD/src/ColorVectorSpace.jl:300 overwritten in module ColorVectorSpace on the same line (check for duplicate calls to `include`).
+  ** incremental compilation may be fatally broken for this module **
+
+WARNING: Method definition log1p(ColorTypes.Color{T, 1} where T) in module ColorVectorSpace at /global/homes/j/james12/.julia/packages/ColorVectorSpace/s7hKD/src/ColorVectorSpace.jl:300 overwritten in module ColorVectorSpace on the same line (check for duplicate calls to `include`).
+  ** incremental compilation may be fatally broken for this module **
+
+WARNING: Method definition round(Type{T<:Integer}, ColorTypes.Gray{T} where T<:Union{Bool, AbstractFloat, FixedPointNumbers.FixedPoint{T, f} where f where T<:Integer}) where {T<:Integer} in module ColorVectorSpace at /global/homes/j/james12/.julia/packages/ColorVectorSpace/s7hKD/src/ColorVectorSpace.jl:210 overwritten in module ColorVectorSpace on the same line (check for duplicate calls to `include`).
+  ** incremental compilation may be fatally broken for this module **
+
+WARNING: Method definition round(ColorTypes.Gray{T}) where {T} in module ColorVectorSpace at /global/homes/j/james12/.julia/packages/ColorVectorSpace/s7hKD/src/ColorVectorSpace.jl:205 overwritten in module ColorVectorSpace on the same line (check for duplicate calls to `include`).
+  ** incremental compilation may be fatally broken for this module **
+
+WARNING: Method definition log10(ColorTypes.Color{T, 1} where T) in module ColorVectorSpace at /global/homes/j/james12/.julia/packages/ColorVectorSpace/s7hKD/src/ColorVectorSpace.jl:300 overwritten in module ColorVectorSpace on the same line (check for duplicate calls to `include`).
+  ** incremental compilation may be fatally broken for this module **
+
+WARNING: Method definition tanh(ColorTypes.Color{T, 1} where T) in module ColorVectorSpace at /global/homes/j/james12/.julia/packages/ColorVectorSpace/s7hKD/src/ColorVectorSpace.jl:300 overwritten in module ColorVectorSpace on the same line (check for duplicate calls to `include`).
+  ** incremental compilation may be fatally broken for this module **
+
+WARNING: Method definition expm1(ColorTypes.Color{T, 1} where T) in module ColorVectorSpace at /global/homes/j/james12/.julia/packages/ColorVectorSpace/s7hKD/src/ColorVectorSpace.jl:300 overwritten in module ColorVectorSpace on the same line (check for duplicate calls to `include`).
+  ** incremental compilation may be fatally broken for this module **
+
+WARNING: Method definition +(Number, ColorTypes.Color{T, 1} where T) in module ColorVectorSpace at /global/homes/j/james12/.julia/packages/ColorVectorSpace/s7hKD/src/ColorVectorSpace.jl:324 overwritten in module ColorVectorSpace on the same line (check for duplicate calls to `include`).
+  ** incremental compilation may be fatally broken for this module **
+
+WARNING: Method definition +(ColorTypes.TransparentColor{C, T, 2} where T where C<:(ColorTypes.Color{T, 1} where T), ColorTypes.TransparentColor{C, T, 2} where T where C<:(ColorTypes.Color{T, 1} where T)) in module ColorVectorSpace at /global/homes/j/james12/.julia/packages/ColorVectorSpace/s7hKD/src/ColorVectorSpace.jl:313 overwritten in module ColorVectorSpace on the same line (check for duplicate calls to `include`).
+  ** incremental compilation may be fatally broken for this module **
+
+WARNING: Method definition +(ColorTypes.TransparentColor{C, T, 4} where T where C<:(ColorTypes.AbstractRGB{T} where T), ColorTypes.TransparentColor{C, T, 4} where T where C<:(ColorTypes.AbstractRGB{T} where T)) in module ColorVectorSpace at /global/homes/j/james12/.julia/packages/ColorVectorSpace/s7hKD/src/ColorVectorSpace.jl:264 overwritten in module ColorVectorSpace on the same line (check for duplicate calls to `include`).
+  ** incremental compilation may be fatally broken for this module **
+
+WARNING: Method definition +(ColorTypes.Color{Bool, 1}, Bool) in module ColorVectorSpace at /global/homes/j/james12/.julia/packages/ColorVectorSpace/s7hKD/src/ColorVectorSpace.jl:323 overwritten in module ColorVectorSpace on the same line (check for duplicate calls to `include`).
+  ** incremental compilation may be fatally broken for this module **
+
+WARNING: Method definition +(ColorTypes.Color{Bool, 1}, Number) in module ColorVectorSpace at /global/homes/j/james12/.julia/packages/ColorVectorSpace/s7hKD/src/ColorVectorSpace.jl:322 overwritten in module ColorVectorSpace on the same line (check for duplicate calls to `include`).
+  ** incremental compilation may be fatally broken for this module **
+
+WARNING: Method definition +(ColorTypes.Color{T, 1} where T, Number) in module ColorVectorSpace at /global/homes/j/james12/.julia/packages/ColorVectorSpace/s7hKD/src/ColorVectorSpace.jl:321 overwritten in module ColorVectorSpace on the same line (check for duplicate calls to `include`).
+  ** incremental compilation may be fatally broken for this module **
+
+WARNING: Method definition +(ColorTypes.Color{Bool, 1}, ColorTypes.Color{Bool, 1}) in module ColorVectorSpace at /global/homes/j/james12/.julia/packages/ColorVectorSpace/s7hKD/src/ColorVectorSpace.jl:312 overwritten in module ColorVectorSpace on the same line (check for duplicate calls to `include`).
+  ** incremental compilation may be fatally broken for this module **
+
+WARNING: Method definition +(ColorTypes.Color{T, 1} where T, ColorTypes.Color{T, 1} where T) in module ColorVectorSpace at /global/homes/j/james12/.julia/packages/ColorVectorSpace/s7hKD/src/ColorVectorSpace.jl:311 overwritten in module ColorVectorSpace on the same line (check for duplicate calls to `include`).
+  ** incremental compilation may be fatally broken for this module **
+
+WARNING: Method definition +(ColorTypes.AbstractRGB{T} where T, ColorTypes.AbstractRGB{T} where T) in module ColorVectorSpace at /global/homes/j/james12/.julia/packages/ColorVectorSpace/s7hKD/src/ColorVectorSpace.jl:262 overwritten in module ColorVectorSpace on the same line (check for duplicate calls to `include`).
+  ** incremental compilation may be fatally broken for this module **
+
+WARNING: Method definition +(Union{ColorTypes.AbstractRGB{T}, ColorTypes.Color{T, 1}, ColorTypes.TransparentColor{C, T, 4}, ColorTypes.TransparentColor{C, T, 2}} where C where T, Union{ColorTypes.AbstractRGB{T}, ColorTypes.Color{T, 1}, ColorTypes.TransparentColor{C, T, 4}, ColorTypes.TransparentColor{C, T, 2}} where C where T) in module ColorVectorSpace at /global/homes/j/james12/.julia/packages/ColorVectorSpace/s7hKD/src/ColorVectorSpace.jl:250 overwritten in module ColorVectorSpace on the same line (check for duplicate calls to `include`).
+  ** incremental compilation may be fatally broken for this module **
+
+WARNING: Method definition +(Union{ColorTypes.AbstractRGB{Bool}, ColorTypes.Color{Bool, 1}, ColorTypes.TransparentColor{C, Bool, 4}, ColorTypes.TransparentColor{C, Bool, 2}} where C) in module ColorVectorSpace at /global/homes/j/james12/.julia/packages/ColorVectorSpace/s7hKD/src/ColorVectorSpace.jl:240 overwritten in module ColorVectorSpace on the same line (check for duplicate calls to `include`).
+  ** incremental compilation may be fatally broken for this module **
+
+WARNING: Method definition +(Union{ColorTypes.AbstractRGB{T}, ColorTypes.Color{T, 1}, ColorTypes.TransparentColor{C, T, 4}, ColorTypes.TransparentColor{C, T, 2}} where C where T) in module ColorVectorSpace at /global/homes/j/james12/.julia/packages/ColorVectorSpace/s7hKD/src/ColorVectorSpace.jl:239 overwritten in module ColorVectorSpace on the same line (check for duplicate calls to `include`).
+  ** incremental compilation may be fatally broken for this module **
+
+WARNING: Method definition real(Type{C<:(ColorTypes.Color{T, 1} where T)}) where {C<:(ColorTypes.Color{T, 1} where T)} in module ColorVectorSpace at /global/homes/j/james12/.julia/packages/ColorVectorSpace/s7hKD/src/ColorVectorSpace.jl:75 overwritten in module ColorVectorSpace on the same line (check for duplicate calls to `include`).
+  ** incremental compilation may be fatally broken for this module **
+
+WARNING: Method definition *(ColorTypes.Color{T, 1} where T, ColorTypes.Color{T, 1} where T) in module ColorVectorSpace at /global/homes/j/james12/.julia/packages/ColorVectorSpace/s7hKD/src/ColorVectorSpace.jl:317 overwritten in module ColorVectorSpace on the same line (check for duplicate calls to `include`).
+  ** incremental compilation may be fatally broken for this module **
+
+WARNING: Method definition *(Real, Union{ColorTypes.AbstractRGB{T}, ColorTypes.Color{T, 1}, ColorTypes.TransparentColor{C, T, 4}, ColorTypes.TransparentColor{C, T, 2}} where C where T) in module ColorVectorSpace at /global/homes/j/james12/.julia/packages/ColorVectorSpace/s7hKD/src/ColorVectorSpace.jl:236 overwritten in module ColorVectorSpace on the same line (check for duplicate calls to `include`).
+  ** incremental compilation may be fatally broken for this module **
+
+WARNING: Method definition *(Union{ColorTypes.AbstractRGB{T}, ColorTypes.Color{T, 1}, ColorTypes.TransparentColor{C, T, 4}, ColorTypes.TransparentColor{C, T, 2}} where C where T, Real) in module ColorVectorSpace at /global/homes/j/james12/.julia/packages/ColorVectorSpace/s7hKD/src/ColorVectorSpace.jl:237 overwritten in module ColorVectorSpace on the same line (check for duplicate calls to `include`).
+  ** incremental compilation may be fatally broken for this module **
+
+WARNING: Method definition exp10(ColorTypes.Color{T, 1} where T) in module ColorVectorSpace at /global/homes/j/james12/.julia/packages/ColorVectorSpace/s7hKD/src/ColorVectorSpace.jl:300 overwritten in module ColorVectorSpace on the same line (check for duplicate calls to `include`).
+  ** incremental compilation may be fatally broken for this module **
+
+WARNING: Method definition atanh(ColorTypes.Color{T, 1} where T) in module ColorVectorSpace at /global/homes/j/james12/.julia/packages/ColorVectorSpace/s7hKD/src/ColorVectorSpace.jl:300 overwritten in module ColorVectorSpace on the same line (check for duplicate calls to `include`).
+  ** incremental compilation may be fatally broken for this module **
+
+WARNING: Method definition isinf(ColorTypes.Colorant{T, N} where N where T) in module ColorVectorSpace at /global/homes/j/james12/.julia/packages/ColorVectorSpace/s7hKD/src/ColorVectorSpace.jl:53 overwritten in module ColorVectorSpace on the same line (check for duplicate calls to `include`).
+  ** incremental compilation may be fatally broken for this module **
+
+WARNING: Method definition promote_rule(Type{T<:Real}, Type{C<:(ColorTypes.Color{T, 1} where T)}) where {T<:Real, C<:(ColorTypes.Color{T, 1} where T)} in module ColorVectorSpace at /global/homes/j/james12/.julia/packages/ColorVectorSpace/s7hKD/src/ColorVectorSpace.jl:79 overwritten in module ColorVectorSpace on the same line (check for duplicate calls to `include`).
+  ** incremental compilation may be fatally broken for this module **
+
+WARNING: Method definition sqrt(ColorTypes.Color{T, 1} where T) in module ColorVectorSpace at /global/homes/j/james12/.julia/packages/ColorVectorSpace/s7hKD/src/ColorVectorSpace.jl:300 overwritten in module ColorVectorSpace on the same line (check for duplicate calls to `include`).
+  ** incremental compilation may be fatally broken for this module **
+
+WARNING: Method definition isless(ColorTypes.Color{T, 1} where T, Real) in module ColorVectorSpace at /global/homes/j/james12/.julia/packages/ColorVectorSpace/s7hKD/src/ColorVectorSpace.jl:63 overwritten in module ColorVectorSpace on the same line (check for duplicate calls to `include`).
+  ** incremental compilation may be fatally broken for this module **
+
+WARNING: Method definition isless(Real, ColorTypes.Color{T, 1} where T) in module ColorVectorSpace at /global/homes/j/james12/.julia/packages/ColorVectorSpace/s7hKD/src/ColorVectorSpace.jl:64 overwritten in module ColorVectorSpace on the same line (check for duplicate calls to `include`).
+  ** incremental compilation may be fatally broken for this module **
+
+WARNING: Method definition typemax(Type{C<:(ColorTypes.Color{T, 1} where T)}) where {C<:(ColorTypes.Color{T, 1} where T)} in module ColorVectorSpace at /global/homes/j/james12/.julia/packages/ColorVectorSpace/s7hKD/src/ColorVectorSpace.jl:350 overwritten in module ColorVectorSpace on the same line (check for duplicate calls to `include`).
+  ** incremental compilation may be fatally broken for this module **
+
+WARNING: Method definition typemax(ColorTypes.Color{T, 1} where T) in module ColorVectorSpace at /global/homes/j/james12/.julia/packages/ColorVectorSpace/s7hKD/src/ColorVectorSpace.jl:352 overwritten in module ColorVectorSpace on the same line (check for duplicate calls to `include`).
+  ** incremental compilation may be fatally broken for this module **
+
+WARNING: Method definition /(ColorTypes.Color{T, 1} where T, ColorTypes.Color{T, 1} where T) in module ColorVectorSpace at /global/homes/j/james12/.julia/packages/ColorVectorSpace/s7hKD/src/ColorVectorSpace.jl:320 overwritten in module ColorVectorSpace on the same line (check for duplicate calls to `include`).
+  ** incremental compilation may be fatally broken for this module **
+
+WARNING: Method definition /(Number, ColorTypes.Color{T, 1} where T) in module ColorVectorSpace at /global/homes/j/james12/.julia/packages/ColorVectorSpace/s7hKD/src/ColorVectorSpace.jl:310 overwritten in module ColorVectorSpace on the same line (check for duplicate calls to `include`).
+  ** incremental compilation may be fatally broken for this module **
+
+WARNING: Method definition /(C<:Union{ColorTypes.AbstractRGB{T} where T, ColorTypes.TransparentColor{C, T, 4} where T where C<:(ColorTypes.AbstractRGB{T} where T)}, AbstractFloat) where {C<:Union{ColorTypes.AbstractRGB{T} where T, ColorTypes.TransparentColor{C, T, 4} where T where C<:(ColorTypes.AbstractRGB{T} where T)}} in module ColorVectorSpace at /global/homes/j/james12/.julia/packages/ColorVectorSpace/s7hKD/src/ColorVectorSpace.jl:258 overwritten in module ColorVectorSpace on the same line (check for duplicate calls to `include`).
+  ** incremental compilation may be fatally broken for this module **
+
+WARNING: Method definition /(Union{ColorTypes.AbstractRGB{T}, ColorTypes.Color{T, 1}, ColorTypes.TransparentColor{C, T, 4}, ColorTypes.TransparentColor{C, T, 2}} where C where T, Real) in module ColorVectorSpace at /global/homes/j/james12/.julia/packages/ColorVectorSpace/s7hKD/src/ColorVectorSpace.jl:238 overwritten in module ColorVectorSpace on the same line (check for duplicate calls to `include`).
+  ** incremental compilation may be fatally broken for this module **
+
+WARNING: Method definition reduce_first(typeof(Base.add_sum), Union{ColorTypes.AbstractRGB{T}, ColorTypes.Color{T, 1}, ColorTypes.TransparentColor{C, T, 4}, ColorTypes.TransparentColor{C, T, 2}} where C where T) in module ColorVectorSpace at /global/homes/j/james12/.julia/packages/ColorVectorSpace/s7hKD/src/ColorVectorSpace.jl:196 overwritten in module ColorVectorSpace on the same line (check for duplicate calls to `include`).
+  ** incremental compilation may be fatally broken for this module **
+
+WARNING: Method definition typemin(Type{C<:(ColorTypes.Color{T, 1} where T)}) where {C<:(ColorTypes.Color{T, 1} where T)} in module ColorVectorSpace at /global/homes/j/james12/.julia/packages/ColorVectorSpace/s7hKD/src/ColorVectorSpace.jl:349 overwritten in module ColorVectorSpace on the same line (check for duplicate calls to `include`).
+  ** incremental compilation may be fatally broken for this module **
+
+WARNING: Method definition typemin(ColorTypes.Color{T, 1} where T) in module ColorVectorSpace at /global/homes/j/james12/.julia/packages/ColorVectorSpace/s7hKD/src/ColorVectorSpace.jl:351 overwritten in module ColorVectorSpace on the same line (check for duplicate calls to `include`).
+  ** incremental compilation may be fatally broken for this module **
+
+WARNING: Method definition one(Type{C<:(ColorTypes.TransparentColor{C, T, 4} where T where C<:(ColorTypes.AbstractRGB{T} where T))}) where {C<:(ColorTypes.TransparentColor{C, T, 4} where T where C<:(ColorTypes.AbstractRGB{T} where T))} in module ColorVectorSpace at /global/homes/j/james12/.julia/packages/ColorVectorSpace/s7hKD/src/ColorVectorSpace.jl:47 overwritten in module ColorVectorSpace on the same line (check for duplicate calls to `include`).
+  ** incremental compilation may be fatally broken for this module **
+
+WARNING: Method definition one(Type{C<:(ColorTypes.TransparentColor{C, T, 2} where T where C<:(ColorTypes.Color{T, 1} where T))}) where {C<:(ColorTypes.TransparentColor{C, T, 2} where T where C<:(ColorTypes.Color{T, 1} where T))} in module ColorVectorSpace at /global/homes/j/james12/.julia/packages/ColorVectorSpace/s7hKD/src/ColorVectorSpace.jl:45 overwritten in module ColorVectorSpace on the same line (check for duplicate calls to `include`).
+  ** incremental compilation may be fatally broken for this module **
+
+WARNING: Method definition one(Type{C<:(ColorTypes.AbstractRGB{T} where T)}) where {C<:(ColorTypes.AbstractRGB{T} where T)} in module ColorVectorSpace at /global/homes/j/james12/.julia/packages/ColorVectorSpace/s7hKD/src/ColorVectorSpace.jl:46 overwritten in module ColorVectorSpace on the same line (check for duplicate calls to `include`).
+  ** incremental compilation may be fatally broken for this module **
+
+WARNING: Method definition one(ColorTypes.Colorant{T, N} where N where T) in module ColorVectorSpace at /global/homes/j/james12/.julia/packages/ColorVectorSpace/s7hKD/src/ColorVectorSpace.jl:48 overwritten in module ColorVectorSpace on the same line (check for duplicate calls to `include`).
+  ** incremental compilation may be fatally broken for this module **
+
+WARNING: Method definition mod(ColorTypes.Gray{T} where T<:Union{Bool, AbstractFloat, FixedPointNumbers.FixedPoint{T, f} where f where T<:Integer}, ColorTypes.Gray{T} where T<:Union{Bool, AbstractFloat, FixedPointNumbers.FixedPoint{T, f} where f where T<:Integer}) in module ColorVectorSpace at /global/homes/j/james12/.julia/packages/ColorVectorSpace/s7hKD/src/ColorVectorSpace.jl:214 overwritten in module ColorVectorSpace on the same line (check for duplicate calls to `include`).
+  ** incremental compilation may be fatally broken for this module **
+
+WARNING: Method definition asin(ColorTypes.Color{T, 1} where T) in module ColorVectorSpace at /global/homes/j/james12/.julia/packages/ColorVectorSpace/s7hKD/src/ColorVectorSpace.jl:300 overwritten in module ColorVectorSpace on the same line (check for duplicate calls to `include`).
+  ** incremental compilation may be fatally broken for this module **
+
+WARNING: Method definition eps(Type{ColorTypes.Gray{T}}) where {T} in module ColorVectorSpace at /global/homes/j/james12/.julia/packages/ColorVectorSpace/s7hKD/src/ColorVectorSpace.jl:207 overwritten in module ColorVectorSpace on the same line (check for duplicate calls to `include`).
+  ** incremental compilation may be fatally broken for this module **
+
+WARNING: Method definition eps(ColorTypes.Gray{T}) where {T} in module ColorVectorSpace at /global/homes/j/james12/.julia/packages/ColorVectorSpace/s7hKD/src/ColorVectorSpace.jl:205 overwritten in module ColorVectorSpace on the same line (check for duplicate calls to `include`).
+  ** incremental compilation may be fatally broken for this module **
+
+WARNING: Method definition zero(Type{C<:(ColorTypes.AbstractRGB{T} where T)}) where {C<:(ColorTypes.AbstractRGB{T} where T)} in module ColorVectorSpace at /global/homes/j/james12/.julia/packages/ColorVectorSpace/s7hKD/src/ColorVectorSpace.jl:39 overwritten in module ColorVectorSpace on the same line (check for duplicate calls to `include`).
+  ** incremental compilation may be fatally broken for this module **
+
+WARNING: Method definition zero(Type{C<:(ColorTypes.TransparentColor{C, T, 4} where T where C<:(ColorTypes.AbstractRGB{T} where T))}) where {C<:(ColorTypes.TransparentColor{C, T, 4} where T where C<:(ColorTypes.AbstractRGB{T} where T))} in module ColorVectorSpace at /global/homes/j/james12/.julia/packages/ColorVectorSpace/s7hKD/src/ColorVectorSpace.jl:40 overwritten in module ColorVectorSpace on the same line (check for duplicate calls to `include`).
+  ** incremental compilation may be fatally broken for this module **
+
+WARNING: Method definition zero(Type{C<:(ColorTypes.TransparentColor{C, T, 2} where T where C<:(ColorTypes.Color{T, 1} where T))}) where {C<:(ColorTypes.TransparentColor{C, T, 2} where T where C<:(ColorTypes.Color{T, 1} where T))} in module ColorVectorSpace at /global/homes/j/james12/.julia/packages/ColorVectorSpace/s7hKD/src/ColorVectorSpace.jl:38 overwritten in module ColorVectorSpace on the same line (check for duplicate calls to `include`).
+  ** incremental compilation may be fatally broken for this module **
+
+WARNING: Method definition zero(ColorTypes.Colorant{T, N} where N where T) in module ColorVectorSpace at /global/homes/j/james12/.julia/packages/ColorVectorSpace/s7hKD/src/ColorVectorSpace.jl:41 overwritten in module ColorVectorSpace on the same line (check for duplicate calls to `include`).
+  ** incremental compilation may be fatally broken for this module **
+
+WARNING: Method definition ^(ColorTypes.Color{T, 1} where T, Real) in module ColorVectorSpace at /global/homes/j/james12/.julia/packages/ColorVectorSpace/s7hKD/src/ColorVectorSpace.jl:319 overwritten in module ColorVectorSpace on the same line (check for duplicate calls to `include`).
+  ** incremental compilation may be fatally broken for this module **
+
+WARNING: Method definition ^(ColorTypes.Color{T, 1} where T, Integer) in module ColorVectorSpace at /global/homes/j/james12/.julia/packages/ColorVectorSpace/s7hKD/src/ColorVectorSpace.jl:318 overwritten in module ColorVectorSpace on the same line (check for duplicate calls to `include`).
+  ** incremental compilation may be fatally broken for this module **
+
+WARNING: Method definition rem(ColorTypes.Gray{T} where T<:Union{Bool, AbstractFloat, FixedPointNumbers.FixedPoint{T, f} where f where T<:Integer}, ColorTypes.Gray{T} where T<:Union{Bool, AbstractFloat, FixedPointNumbers.FixedPoint{T, f} where f where T<:Integer}) in module ColorVectorSpace at /global/homes/j/james12/.julia/packages/ColorVectorSpace/s7hKD/src/ColorVectorSpace.jl:214 overwritten in module ColorVectorSpace on the same line (check for duplicate calls to `include`).
+  ** incremental compilation may be fatally broken for this module **
+
+WARNING: Method definition isfinite(ColorTypes.Colorant{T, N} where N where T) in module ColorVectorSpace at /global/homes/j/james12/.julia/packages/ColorVectorSpace/s7hKD/src/ColorVectorSpace.jl:52 overwritten in module ColorVectorSpace on the same line (check for duplicate calls to `include`).
+  ** incremental compilation may be fatally broken for this module **
+
+WARNING: Method definition tensor(ColorTypes.AbstractRGB{T} where T, ColorTypes.AbstractRGB{T} where T) in module ColorVectorSpace at /global/homes/j/james12/.julia/packages/ColorVectorSpace/s7hKD/src/ColorVectorSpace.jl:422 overwritten in module ColorVectorSpace on the same line (check for duplicate calls to `include`).
+  ** incremental compilation may be fatally broken for this module **
+
+WARNING: Method definition tensor(C<:(ColorTypes.Color{T, 1} where T), C<:(ColorTypes.Color{T, 1} where T)) where {C<:(ColorTypes.Color{T, 1} where T)} in module ColorVectorSpace at /global/homes/j/james12/.julia/packages/ColorVectorSpace/s7hKD/src/ColorVectorSpace.jl:333 overwritten in module ColorVectorSpace on the same line (check for duplicate calls to `include`).
+  ** incremental compilation may be fatally broken for this module **
+
+WARNING: Method definition tensor(Union{ColorTypes.AbstractRGB{T}, ColorTypes.Color{T, 1}, ColorTypes.TransparentColor{C, T, 4}, ColorTypes.TransparentColor{C, T, 2}} where C where T, Union{ColorTypes.AbstractRGB{T}, ColorTypes.Color{T, 1}, ColorTypes.TransparentColor{C, T, 4}, ColorTypes.TransparentColor{C, T, 2}} where C where T) in module ColorVectorSpace at /global/homes/j/james12/.julia/packages/ColorVectorSpace/s7hKD/src/ColorVectorSpace.jl:254 overwritten in module ColorVectorSpace on the same line (check for duplicate calls to `include`).
+  ** incremental compilation may be fatally broken for this module **
+
+WARNING: Method definition tensor(C<:(Union{ColorTypes.AbstractRGB{T}, ColorTypes.Color{T, 1}, ColorTypes.TransparentColor{C, T, 4}, ColorTypes.TransparentColor{C, T, 2}} where C where T), C<:(Union{ColorTypes.AbstractRGB{T}, ColorTypes.Color{T, 1}, ColorTypes.TransparentColor{C, T, 4}, ColorTypes.TransparentColor{C, T, 2}} where C where T)) where {C<:(Union{ColorTypes.AbstractRGB{T}, ColorTypes.Color{T, 1}, ColorTypes.TransparentColor{C, T, 4}, ColorTypes.TransparentColor{C, T, 2}} where C where T)} in module ColorVectorSpace at /global/homes/j/james12/.julia/packages/ColorVectorSpace/s7hKD/src/ColorVectorSpace.jl:247 overwritten in module ColorVectorSpace on the same line (check for duplicate calls to `include`).
+  ** incremental compilation may be fatally broken for this module **
+
+WARNING: Method definition hadamard(Union{ColorTypes.AbstractRGB{T}, ColorTypes.Color{T, 1}, ColorTypes.TransparentColor{C, T, 4}, ColorTypes.TransparentColor{C, T, 2}} where C where T, Union{ColorTypes.AbstractRGB{T}, ColorTypes.Color{T, 1}, ColorTypes.TransparentColor{C, T, 4}, ColorTypes.TransparentColor{C, T, 2}} where C where T) in module ColorVectorSpace at /global/homes/j/james12/.julia/packages/ColorVectorSpace/s7hKD/src/ColorVectorSpace.jl:252 overwritten in module ColorVectorSpace on the same line (check for duplicate calls to `include`).
+  ** incremental compilation may be fatally broken for this module **
+
+WARNING: Method definition hadamard(C<:(Union{ColorTypes.AbstractRGB{T}, ColorTypes.Color{T, 1}, ColorTypes.TransparentColor{C, T, 4}, ColorTypes.TransparentColor{C, T, 2}} where C where T), C<:(Union{ColorTypes.AbstractRGB{T}, ColorTypes.Color{T, 1}, ColorTypes.TransparentColor{C, T, 4}, ColorTypes.TransparentColor{C, T, 2}} where C where T)) where {C<:(Union{ColorTypes.AbstractRGB{T}, ColorTypes.Color{T, 1}, ColorTypes.TransparentColor{C, T, 4}, ColorTypes.TransparentColor{C, T, 2}} where C where T)} in module ColorVectorSpace at /global/homes/j/james12/.julia/packages/ColorVectorSpace/s7hKD/src/ColorVectorSpace.jl:245 overwritten in module ColorVectorSpace on the same line (check for duplicate calls to `include`).
+  ** incremental compilation may be fatally broken for this module **
+
+WARNING: Method definition bessely1(ColorTypes.Color{T, 1} where T) in module ColorVectorSpace at /global/homes/j/james12/.julia/packages/ColorVectorSpace/s7hKD/src/ColorVectorSpace.jl:300 overwritten in module ColorVectorSpace on the same line (check for duplicate calls to `include`).
+  ** incremental compilation may be fatally broken for this module **
+
+WARNING: Method definition besselj1(ColorTypes.Color{T, 1} where T) in module ColorVectorSpace at /global/homes/j/james12/.julia/packages/ColorVectorSpace/s7hKD/src/ColorVectorSpace.jl:300 overwritten in module ColorVectorSpace on the same line (check for duplicate calls to `include`).
+  ** incremental compilation may be fatally broken for this module **
+
+WARNING: Method definition erf(ColorTypes.Color{T, 1} where T) in module ColorVectorSpace at /global/homes/j/james12/.julia/packages/ColorVectorSpace/s7hKD/src/ColorVectorSpace.jl:300 overwritten in module ColorVectorSpace on the same line (check for duplicate calls to `include`).
+  ** incremental compilation may be fatally broken for this module **
+
+WARNING: Method definition zeta(ColorTypes.Color{T, 1} where T) in module ColorVectorSpace at /global/homes/j/james12/.julia/packages/ColorVectorSpace/s7hKD/src/ColorVectorSpace.jl:300 overwritten in module ColorVectorSpace on the same line (check for duplicate calls to `include`).
+  ** incremental compilation may be fatally broken for this module **
+
+WARNING: Method definition lfact(ColorTypes.Color{T, 1} where T) in module ColorVectorSpace at /global/homes/j/james12/.julia/packages/ColorVectorSpace/s7hKD/src/ColorVectorSpace.jl:300 overwritten in module ColorVectorSpace on the same line (check for duplicate calls to `include`).
+  ** incremental compilation may be fatally broken for this module **
+
+WARNING: Method definition logabsgamma(ColorTypes.Color{T, 1} where T) in module ColorVectorSpace at /global/homes/j/james12/.julia/packages/ColorVectorSpace/s7hKD/src/ColorVectorSpace.jl:302 overwritten in module ColorVectorSpace on the same line (check for duplicate calls to `include`).
+  ** incremental compilation may be fatally broken for this module **
+
+WARNING: Method definition eta(ColorTypes.Color{T, 1} where T) in module ColorVectorSpace at /global/homes/j/james12/.julia/packages/ColorVectorSpace/s7hKD/src/ColorVectorSpace.jl:300 overwritten in module ColorVectorSpace on the same line (check for duplicate calls to `include`).
+  ** incremental compilation may be fatally broken for this module **
+
+WARNING: Method definition dawson(ColorTypes.Color{T, 1} where T) in module ColorVectorSpace at /global/homes/j/james12/.julia/packages/ColorVectorSpace/s7hKD/src/ColorVectorSpace.jl:300 overwritten in module ColorVectorSpace on the same line (check for duplicate calls to `include`).
+  ** incremental compilation may be fatally broken for this module **
+
+WARNING: Method definition airybi(ColorTypes.Color{T, 1} where T) in module ColorVectorSpace at /global/homes/j/james12/.julia/packages/ColorVectorSpace/s7hKD/src/ColorVectorSpace.jl:300 overwritten in module ColorVectorSpace on the same line (check for duplicate calls to `include`).
+  ** incremental compilation may be fatally broken for this module **
+
+WARNING: Method definition gamma(ColorTypes.Color{T, 1} where T) in module ColorVectorSpace at /global/homes/j/james12/.julia/packages/ColorVectorSpace/s7hKD/src/ColorVectorSpace.jl:300 overwritten in module ColorVectorSpace on the same line (check for duplicate calls to `include`).
+  ** incremental compilation may be fatally broken for this module **
+
+WARNING: Method definition digamma(ColorTypes.Color{T, 1} where T) in module ColorVectorSpace at /global/homes/j/james12/.julia/packages/ColorVectorSpace/s7hKD/src/ColorVectorSpace.jl:300 overwritten in module ColorVectorSpace on the same line (check for duplicate calls to `include`).
+  ** incremental compilation may be fatally broken for this module **
+
+WARNING: Method definition erfc(ColorTypes.Color{T, 1} where T) in module ColorVectorSpace at /global/homes/j/james12/.julia/packages/ColorVectorSpace/s7hKD/src/ColorVectorSpace.jl:300 overwritten in module ColorVectorSpace on the same line (check for duplicate calls to `include`).
+  ** incremental compilation may be fatally broken for this module **
+
+WARNING: Method definition airyaiprime(ColorTypes.Color{T, 1} where T) in module ColorVectorSpace at /global/homes/j/james12/.julia/packages/ColorVectorSpace/s7hKD/src/ColorVectorSpace.jl:300 overwritten in module ColorVectorSpace on the same line (check for duplicate calls to `include`).
+  ** incremental compilation may be fatally broken for this module **
+
+WARNING: Method definition bessely0(ColorTypes.Color{T, 1} where T) in module ColorVectorSpace at /global/homes/j/james12/.julia/packages/ColorVectorSpace/s7hKD/src/ColorVectorSpace.jl:300 overwritten in module ColorVectorSpace on the same line (check for duplicate calls to `include`).
+  ** incremental compilation may be fatally broken for this module **
+
+WARNING: Method definition erfi(ColorTypes.Color{T, 1} where T) in module ColorVectorSpace at /global/homes/j/james12/.julia/packages/ColorVectorSpace/s7hKD/src/ColorVectorSpace.jl:300 overwritten in module ColorVectorSpace on the same line (check for duplicate calls to `include`).
+  ** incremental compilation may be fatally broken for this module **
+
+WARNING: Method definition airyai(ColorTypes.Color{T, 1} where T) in module ColorVectorSpace at /global/homes/j/james12/.julia/packages/ColorVectorSpace/s7hKD/src/ColorVectorSpace.jl:300 overwritten in module ColorVectorSpace on the same line (check for duplicate calls to `include`).
+  ** incremental compilation may be fatally broken for this module **
+
+WARNING: Method definition erfcx(ColorTypes.Color{T, 1} where T) in module ColorVectorSpace at /global/homes/j/james12/.julia/packages/ColorVectorSpace/s7hKD/src/ColorVectorSpace.jl:300 overwritten in module ColorVectorSpace on the same line (check for duplicate calls to `include`).
+  ** incremental compilation may be fatally broken for this module **
+
+WARNING: Method definition airybiprime(ColorTypes.Color{T, 1} where T) in module ColorVectorSpace at /global/homes/j/james12/.julia/packages/ColorVectorSpace/s7hKD/src/ColorVectorSpace.jl:300 overwritten in module ColorVectorSpace on the same line (check for duplicate calls to `include`).
+  ** incremental compilation may be fatally broken for this module **
+
+WARNING: Method definition besselj0(ColorTypes.Color{T, 1} where T) in module ColorVectorSpace at /global/homes/j/james12/.julia/packages/ColorVectorSpace/s7hKD/src/ColorVectorSpace.jl:300 overwritten in module ColorVectorSpace on the same line (check for duplicate calls to `include`).
+  ** incremental compilation may be fatally broken for this module **
+
+WARNING: Method definition promote_leaf_eltypes(Union{Tuple{T<:(Union{ColorTypes.AbstractRGB{T}, ColorTypes.Color{T, 1}, ColorTypes.TransparentColor{C, T, 4}, ColorTypes.TransparentColor{C, T, 2}} where C where T), Vararg{T<:(Union{ColorTypes.AbstractRGB{T}, ColorTypes.Color{T, 1}, ColorTypes.TransparentColor{C, T, 4}, ColorTypes.TransparentColor{C, T, 2}} where C where T), N} where N}, AbstractArray{T<:(Union{ColorTypes.AbstractRGB{T}, ColorTypes.Color{T, 1}, ColorTypes.TransparentColor{C, T, 4}, ColorTypes.TransparentColor{C, T, 2}} where C where T), N} where N}) where {T<:(Union{ColorTypes.AbstractRGB{T}, ColorTypes.Color{T, 1}, ColorTypes.TransparentColor{C, T, 4}, ColorTypes.TransparentColor{C, T, 2}} where C where T)} in module ColorVectorSpace at /global/homes/j/james12/.julia/packages/ColorVectorSpace/s7hKD/src/ColorVectorSpace.jl:81 overwritten in module ColorVectorSpace on the same line (check for duplicate calls to `include`).
+  ** incremental compilation may be fatally broken for this module **
+
+WARNING: Method definition dot(C<:(ColorTypes.Color{T, 1} where T), C<:(ColorTypes.Color{T, 1} where T)) where {C<:(ColorTypes.Color{T, 1} where T)} in module ColorVectorSpace at /global/homes/j/james12/.julia/packages/ColorVectorSpace/s7hKD/src/ColorVectorSpace.jl:332 overwritten in module ColorVectorSpace on the same line (check for duplicate calls to `include`).
+  ** incremental compilation may be fatally broken for this module **
+
+WARNING: Method definition dot(ColorTypes.AbstractRGB{T} where T, ColorTypes.AbstractRGB{T} where T) in module ColorVectorSpace at /global/homes/j/james12/.julia/packages/ColorVectorSpace/s7hKD/src/ColorVectorSpace.jl:268 overwritten in module ColorVectorSpace on the same line (check for duplicate calls to `include`).
+  ** incremental compilation may be fatally broken for this module **
+
+WARNING: Method definition dot(Union{ColorTypes.AbstractRGB{T}, ColorTypes.Color{T, 1}, ColorTypes.TransparentColor{C, T, 4}, ColorTypes.TransparentColor{C, T, 2}} where C where T, Union{ColorTypes.AbstractRGB{T}, ColorTypes.Color{T, 1}, ColorTypes.TransparentColor{C, T, 4}, ColorTypes.TransparentColor{C, T, 2}} where C where T) in module ColorVectorSpace at /global/homes/j/james12/.julia/packages/ColorVectorSpace/s7hKD/src/ColorVectorSpace.jl:253 overwritten in module ColorVectorSpace on the same line (check for duplicate calls to `include`).
+  ** incremental compilation may be fatally broken for this module **
+
+WARNING: Method definition dot(C<:(Union{ColorTypes.AbstractRGB{T}, ColorTypes.Color{T, 1}, ColorTypes.TransparentColor{C, T, 4}, ColorTypes.TransparentColor{C, T, 2}} where C where T), C<:(Union{ColorTypes.AbstractRGB{T}, ColorTypes.Color{T, 1}, ColorTypes.TransparentColor{C, T, 4}, ColorTypes.TransparentColor{C, T, 2}} where C where T)) where {C<:(Union{ColorTypes.AbstractRGB{T}, ColorTypes.Color{T, 1}, ColorTypes.TransparentColor{C, T, 4}, ColorTypes.TransparentColor{C, T, 2}} where C where T)} in module ColorVectorSpace at /global/homes/j/james12/.julia/packages/ColorVectorSpace/s7hKD/src/ColorVectorSpace.jl:246 overwritten in module ColorVectorSpace on the same line (check for duplicate calls to `include`).
+  ** incremental compilation may be fatally broken for this module **
+
+WARNING: Method definition norm(Union{ColorTypes.AbstractRGB{T}, ColorTypes.Color{T, 1}, ColorTypes.TransparentColor{C, T, 4}, ColorTypes.TransparentColor{C, T, 2}} where C where T, Real) in module ColorVectorSpace at /global/homes/j/james12/.julia/packages/ColorVectorSpace/s7hKD/src/ColorVectorSpace.jl:244 overwritten in module ColorVectorSpace on the same line (check for duplicate calls to `include`).
+  ** incremental compilation may be fatally broken for this module **
+
+WARNING: Method definition norm(Union{ColorTypes.AbstractRGB{T}, ColorTypes.Color{T, 1}, ColorTypes.TransparentColor{C, T, 4}, ColorTypes.TransparentColor{C, T, 2}} where C where T) in module ColorVectorSpace at /global/homes/j/james12/.julia/packages/ColorVectorSpace/s7hKD/src/ColorVectorSpace.jl:244 overwritten in module ColorVectorSpace on the same line (check for duplicate calls to `include`).
+  ** incremental compilation may be fatally broken for this module **
+
+┌ Warning: Replacing module `ColorVectorSpace`
+└ @ Base loading.jl:937
+┌ Warning: Module ColorVectorSpace with build ID 3677338610987951 is missing from the cache.
+│ This may mean ColorVectorSpace [c3611d14-8923-5661-9e6a-0046d554d3a4] does not support precompilation but is imported by a module that does.
+└ @ Base loading.jl:1008
+┌ Warning: Module ColorVectorSpace with build ID 3677338610987951 is missing from the cache.
+│ This may mean ColorVectorSpace [c3611d14-8923-5661-9e6a-0046d554d3a4] does not support precompilation but is imported by a module that does.
+└ @ Base loading.jl:1008
+┌ Warning: Module ColorVectorSpace with build ID 3677338610987951 is missing from the cache.
+│ This may mean ColorVectorSpace [c3611d14-8923-5661-9e6a-0046d554d3a4] does not support precompilation but is imported by a module that does.
+└ @ Base loading.jl:1008
+┌ Warning: Module ColorVectorSpace with build ID 3677338610987951 is missing from the cache.
+│ This may mean ColorVectorSpace [c3611d14-8923-5661-9e6a-0046d554d3a4] does not support precompilation but is imported by a module that does.
+└ @ Base loading.jl:1008
+
+signal (11): Segmentation fault
+in expression starting at /global/homes/j/james12/.julia/packages/Images/g4e1T/src/Images.jl:59
+jl_array_ptr_ref at /buildworker/worker/package_linux64/build/src/julia.h:924 [inlined]
+jl_deserialize_value_module at /buildworker/worker/package_linux64/build/src/dump.c:1545 [inlined]
+jl_deserialize_value at /buildworker/worker/package_linux64/build/src/dump.c:1788
+jl_deserialize_value_module at /buildworker/worker/package_linux64/build/src/dump.c:1577 [inlined]
+jl_deserialize_value at /buildworker/worker/package_linux64/build/src/dump.c:1788
+jl_deserialize_value_module at /buildworker/worker/package_linux64/build/src/dump.c:1551 [inlined]
+jl_deserialize_value at /buildworker/worker/package_linux64/build/src/dump.c:1788
+jl_deserialize_value_array at /buildworker/worker/package_linux64/build/src/dump.c:1368
+jl_deserialize_value at /buildworker/worker/package_linux64/build/src/dump.c:1751
+_jl_restore_incremental at /buildworker/worker/package_linux64/build/src/dump.c:2535
+jl_restore_incremental at /buildworker/worker/package_linux64/build/src/dump.c:2605
+_include_from_serialized at ./loading.jl:658
+_require_search_from_serialized at ./loading.jl:760
+_require at ./loading.jl:998
+require at ./loading.jl:914
+require at ./loading.jl:901
+_jl_invoke at /buildworker/worker/package_linux64/build/src/gf.c:2237 [inlined]
+jl_apply_generic at /buildworker/worker/package_linux64/build/src/gf.c:2419
+jl_apply at /buildworker/worker/package_linux64/build/src/julia.h:1703 [inlined]
+call_require at /buildworker/worker/package_linux64/build/src/toplevel.c:421 [inlined]
+eval_import_path at /buildworker/worker/package_linux64/build/src/toplevel.c:458
+jl_toplevel_eval_flex at /buildworker/worker/package_linux64/build/src/toplevel.c:684
+jl_toplevel_eval_flex at /buildworker/worker/package_linux64/build/src/toplevel.c:825
+jl_eval_module_expr at /buildworker/worker/package_linux64/build/src/toplevel.c:195 [inlined]
+jl_toplevel_eval_flex at /buildworker/worker/package_linux64/build/src/toplevel.c:668
+jl_toplevel_eval_flex at /buildworker/worker/package_linux64/build/src/toplevel.c:825
+jl_toplevel_eval_in at /buildworker/worker/package_linux64/build/src/toplevel.c:929
+eval at ./boot.jl:360 [inlined]
+include_string at ./loading.jl:1094
+_jl_invoke at /buildworker/worker/package_linux64/build/src/gf.c:2237 [inlined]
+jl_apply_generic at /buildworker/worker/package_linux64/build/src/gf.c:2419
+_include at ./loading.jl:1148
+include at ./Base.jl:386 [inlined]
+include_package_for_output at ./loading.jl:1213
+jfptr_include_package_for_output_47362.clone_1 at /global/u2/j/james12/julia-1.6.0/lib/julia/sys.so (unknown line)
+_jl_invoke at /buildworker/worker/package_linux64/build/src/gf.c:2237 [inlined]
+jl_apply_generic at /buildworker/worker/package_linux64/build/src/gf.c:2419
+jl_apply at /buildworker/worker/package_linux64/build/src/julia.h:1703 [inlined]
+do_call at /buildworker/worker/package_linux64/build/src/interpreter.c:115
+eval_value at /buildworker/worker/package_linux64/build/src/interpreter.c:204
+eval_stmt_value at /buildworker/worker/package_linux64/build/src/interpreter.c:155 [inlined]
+eval_body at /buildworker/worker/package_linux64/build/src/interpreter.c:561
+jl_interpret_toplevel_thunk at /buildworker/worker/package_linux64/build/src/interpreter.c:669
+jl_toplevel_eval_flex at /buildworker/worker/package_linux64/build/src/toplevel.c:877
+jl_toplevel_eval_in at /buildworker/worker/package_linux64/build/src/toplevel.c:929
+eval at ./boot.jl:360 [inlined]
+eval at ./client.jl:446
+_jl_invoke at /buildworker/worker/package_linux64/build/src/gf.c:2237 [inlined]
+jl_apply_generic at /buildworker/worker/package_linux64/build/src/gf.c:2419
+jl_apply at /buildworker/worker/package_linux64/build/src/julia.h:1703 [inlined]
+do_call at /buildworker/worker/package_linux64/build/src/interpreter.c:115
+eval_value at /buildworker/worker/package_linux64/build/src/interpreter.c:204
+eval_stmt_value at /buildworker/worker/package_linux64/build/src/interpreter.c:155 [inlined]
+eval_body at /buildworker/worker/package_linux64/build/src/interpreter.c:561
+jl_interpret_toplevel_thunk at /buildworker/worker/package_linux64/build/src/interpreter.c:669
+jl_toplevel_eval_flex at /buildworker/worker/package_linux64/build/src/toplevel.c:877
+jl_toplevel_eval_flex at /buildworker/worker/package_linux64/build/src/toplevel.c:825
+jl_toplevel_eval_in at /buildworker/worker/package_linux64/build/src/toplevel.c:929
+eval at ./boot.jl:360 [inlined]
+exec_options at ./client.jl:261
+_start at ./client.jl:485
+jfptr__start_41020.clone_1 at /global/u2/j/james12/julia-1.6.0/lib/julia/sys.so (unknown line)
+_jl_invoke at /buildworker/worker/package_linux64/build/src/gf.c:2237 [inlined]
+jl_apply_generic at /buildworker/worker/package_linux64/build/src/gf.c:2419
+jl_apply at /buildworker/worker/package_linux64/build/src/julia.h:1703 [inlined]
+true_main at /buildworker/worker/package_linux64/build/src/jlapi.c:560
+repl_entrypoint at /buildworker/worker/package_linux64/build/src/jlapi.c:702
+main at /buildworker/worker/package_linux64/build/cli/loader_exe.c:51
+__libc_start_main at /lib64/libc.so.6 (unknown line)
+_start at /global/u2/j/james12/julia-1.6.0/bin/julia (unknown line)
+Allocations: 74222289 (Pool: 74189195; Big: 33094); GC: 79
+ERROR: LoadError: Failed to precompile Images [916415d5-f1e6-5110-898d-aaa5f9f070e0] to /global/homes/j/james12/.julia/compiled/v1.6/Images/jl_KTsgyr.
+Stacktrace:
+  [1] error(s::String)
+    @ Base ./error.jl:33
+  [2] compilecache(pkg::Base.PkgId, path::String, internal_stderr::Base.PipeEndpoint, internal_stdout::Base.PipeEndpoint)
+    @ Base ./loading.jl:1360
+  [3] compilecache(pkg::Base.PkgId, path::String)
+    @ Base ./loading.jl:1306
+  [4] _require(pkg::Base.PkgId)
+    @ Base ./loading.jl:1021
+  [5] require(uuidkey::Base.PkgId)
+    @ Base ./loading.jl:914
+  [6] require(into::Module, mod::Symbol)
+    @ Base ./loading.jl:901
+  [7] include
+    @ ./Base.jl:386 [inlined]
+  [8] include_package_for_output(pkg::Base.PkgId, input::String, depot_path::Vector{String}, dl_load_path::Vector{String}, load_path::Vector{String}, concrete_deps::Vector{Pair{Base.PkgId, UInt64}}, source::String)
+    @ Base ./loading.jl:1213
+  [9] top-level scope
+    @ none:1
+ [10] eval
+    @ ./boot.jl:360 [inlined]
+ [11] eval(x::Expr)
+    @ Base.MainInclude ./client.jl:446
+ [12] top-level scope
+    @ none:1
+in expression starting at /global/homes/j/james12/.julia/dev/CosmoMMF/src/CosmoMMF.jl:1
+ERROR: LoadError: Failed to precompile CosmoMMF [70302bc8-d3c5-42b6-97d0-438349a59312] to /global/homes/j/james12/.julia/compiled/v1.6/CosmoMMF/jl_BiYeaL.
+Stacktrace:
+ [1] error(s::String)
+   @ Base ./error.jl:33
+ [2] compilecache(pkg::Base.PkgId, path::String, internal_stderr::Base.PipeEndpoint, internal_stdout::Base.PipeEndpoint)
+   @ Base ./loading.jl:1360
+ [3] compilecache(pkg::Base.PkgId, path::String)
+   @ Base ./loading.jl:1306
+ [4] _require(pkg::Base.PkgId)
+   @ Base ./loading.jl:1021
+ [5] require(uuidkey::Base.PkgId)
+   @ Base ./loading.jl:914
+ [6] require(into::Module, mod::Symbol)
+   @ Base ./loading.jl:901
+in expression starting at /global/u2/j/james12/.julia/dev/CosmoMMF/scripts/run_NEXUS.jl:9
+srun: error: nid01246: task 0: Exited with exit code 1
+srun: launch/slurm: _step_signal: Terminating StepId=48841016.0

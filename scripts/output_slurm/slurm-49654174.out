@@ -1,0 +1,57 @@
+Currently Loaded Modulefiles:
+  1) modules/3.2.11.4
+  2) altd/2.0
+  3) darshan/3.2.1
+  4) craype-network-aries
+  5) udreg/2.3.2-7.0.1.1_3.59__g8175d3d.ari
+  6) ugni/6.0.14.0-7.0.1.1_7.61__ge78e5b0.ari
+  7) dmapp/7.1.1-7.0.1.1_4.70__g38cf134.ari
+  8) gni-headers/5.0.12.0-7.0.1.1_6.44__g3b1768f.ari
+  9) xpmem/2.2.20-7.0.1.1_4.27__g0475745.ari
+ 10) job/2.2.4-7.0.1.1_3.54__g36b56f4.ari
+ 11) dvs/2.12_2.2.167-7.0.1.1_17.10__ge473d3a2
+ 12) alps/6.6.58-7.0.1.1_6.28__g437d88db.ari
+ 13) rca/2.2.20-7.0.1.1_4.72__g8e3fb5b.ari
+ 14) craype-haswell
+ 15) cray-mpich/7.7.10
+ 16) Base-opts/2.4.139-7.0.1.1_4.84__gbb799dd.ari
+ 17) gcc/8.3.0
+ 18) craype/2.6.2
+ 19) cray-libsci/19.06.1
+ 20) pmi/5.0.14
+ 21) atp/2.1.3
+ 22) PrgEnv-gnu/6.0.5
+Matplotlib is building the font cache; this may take a moment.
+Warming up caches and configs on computing nodes ....
+
+Computing your density cubes for snap 99
+
+Traceback (most recent call last):
+  File "create_density_cubes.py", line 64, in <module>
+    compute_snap(snap_num, sys.argv[1])
+  File "create_density_cubes.py", line 33, in compute_snap
+    f_gas = HDFCatalog(input_files_string, root='PartType0')
+  File "/dev/shm/local/lib/python3.7/site-packages/nbodykit/source/catalog/file.py", line 191, in __init__
+    FileCatalogBase.__init__(self, filetype=filetype, path=path, args=args, kwargs=kwargs, comm=comm)
+  File "/dev/shm/local/lib/python3.7/site-packages/nbodykit/__init__.py", line 125, in wrapped
+    return func(*args, **kwargs)
+  File "/dev/shm/local/lib/python3.7/site-packages/nbodykit/source/catalog/file.py", line 46, in __init__
+    self._source = FileStack(filetype, path, *args, **kwargs)
+  File "/dev/shm/local/lib/python3.7/site-packages/nbodykit/io/stack.py", line 49, in __init__
+    self.files = [filetype(fn, *args, **kwargs) for fn in filenames]
+  File "/dev/shm/local/lib/python3.7/site-packages/nbodykit/io/stack.py", line 49, in <listcomp>
+    self.files = [filetype(fn, *args, **kwargs) for fn in filenames]
+  File "/dev/shm/local/lib/python3.7/site-packages/nbodykit/io/hdf.py", line 77, in __init__
+    with h5py.File(self.path, 'r') as ff:
+  File "/usr/common/software/h5py-parallel/2.9.0/lib/python3.7/site-packages/h5py-2.9.0-py3.7-linux-x86_64.egg/h5py/_hl/files.py", line 394, in __init__
+    swmr=swmr)
+  File "/usr/common/software/h5py-parallel/2.9.0/lib/python3.7/site-packages/h5py-2.9.0-py3.7-linux-x86_64.egg/h5py/_hl/files.py", line 170, in make_fid
+    fid = h5f.open(name, flags, fapl=fapl)
+  File "h5py/_objects.pyx", line 54, in h5py._objects.with_phil.wrapper
+  File "h5py/_objects.pyx", line 55, in h5py._objects.with_phil.wrapper
+  File "h5py/h5f.pyx", line 85, in h5py.h5f.open
+OSError: Unable to open file (truncated file: eof = 3076209851, sblock->base_addr = 0, stored_eof = 7410438464)
+srun: error: nid12944: task 0: Exited with exit code 1
+srun: launch/slurm: _step_signal: Terminating StepId=49654174.2
+srun: Job 49654174 step creation temporarily disabled, retrying (Requested nodes are busy)
+srun: Step created for job 49654174

@@ -1,0 +1,11 @@
+run_name: density_cube_snap_099_full_dm
+input_directory: /global/cscratch1/sd/james12/Illustris_TNG_Data/TNG_Density_Cubes/
+snapfile_root: 99
+num_snaps: 1
+output_directory: /global/cscratch1/sd/james12/NEXUS_analysis/
+xmin: 0.0
+xmax: 205000.0
+num_scales: 10
+nx: 1024
+algorithm: NEXUS+
+

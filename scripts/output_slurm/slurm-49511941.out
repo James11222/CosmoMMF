@@ -1,0 +1,30 @@
+Currently Loaded Modulefiles:
+  1) modules/3.2.11.4
+  2) altd/2.0
+  3) darshan/3.2.1
+  4) craype-network-aries
+  5) craype-haswell
+  6) cray-mpich/7.7.10
+  7) gcc/8.3.0
+  8) craype/2.6.2
+  9) cray-libsci/19.06.1
+ 10) udreg/2.3.2-7.0.1.1_3.59__g8175d3d.ari
+ 11) ugni/6.0.14.0-7.0.1.1_7.61__ge78e5b0.ari
+ 12) pmi/5.0.14
+ 13) dmapp/7.1.1-7.0.1.1_4.70__g38cf134.ari
+ 14) gni-headers/5.0.12.0-7.0.1.1_6.44__g3b1768f.ari
+ 15) xpmem/2.2.20-7.0.1.1_4.27__g0475745.ari
+ 16) job/2.2.4-7.0.1.1_3.54__g36b56f4.ari
+ 17) dvs/2.12_2.2.167-7.0.1.1_17.10__ge473d3a2
+ 18) alps/6.6.58-7.0.1.1_6.28__g437d88db.ari
+ 19) rca/2.2.20-7.0.1.1_4.72__g8e3fb5b.ari
+ 20) atp/2.1.3
+ 21) PrgEnv-gnu/6.0.5
+ 22) Base-opts/2.4.139-7.0.1.1_4.84__gbb799dd.ari
+Matplotlib is building the font cache; this may take a moment.
+Warming up caches and configs on computing nodes ....
+
+Computing your density cubes for snap 99
+
+srun: Job 49511941 step creation temporarily disabled, retrying (Requested nodes are busy)
+srun: Step created for job 49511941

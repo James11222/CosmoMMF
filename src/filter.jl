@@ -163,7 +163,7 @@ then iterate to the maximum scale of the problem, calculating the signatures
 for each smoothing scale. We then chose the maximum signature over all scales
 at each point to categorize whether that point is a wall, filament, or cluster.
 """
-function (Rs, field::AbstractArray{T,3}; alg=:NEXUSPLUS) where T
+function maximum_signature(Rs, field::AbstractArray{T,3}; alg=:NEXUSPLUS) where T
 
     if alg ∉ (:NEXUS, :NEXUSPLUS)
         throw(ArgumentError("alg must be either :NEXUS or :NEXUSPLUS"))
