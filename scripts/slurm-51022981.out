@@ -1,0 +1,6 @@
+
+ Loading in Density Cube 
+
+ loading different scales 
+327.280038 seconds (11.89 M allocations: 99.974 GiB, 2.54% gc time)
+336.598877 seconds (2.07 M allocations: 89.805 GiB, 1.30% gc time, 0.37% compilation time)

@@ -7,5 +7,11 @@ xmin: 0.0
 xmax: 205000.0
 num_scales: 10
 nx: 1024
+DM_particle_mass_TNG: 0.00398342749867548
+GAS_particle_mass_TNG: 0.000743736
+DM_particle_mass_Dark: 0.0047271638660809
+N_DM: 15625000000
+N_GAS: 15625000000
 algorithm: NEXUS+
+simulation_type: Dark
 

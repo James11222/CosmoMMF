@@ -5,7 +5,7 @@
 #SBATCH -J NEXUSPLUS_RUN
 #SBATCH --mail-user=jamessunseri@berkeley.edu
 #SBATCH --mail-type=ALL
-#SBATCH -t 20:00:00
+#SBATCH -t 8:00:00
 
 #OpenMP settings:
 export OMP_NUM_THREADS=64

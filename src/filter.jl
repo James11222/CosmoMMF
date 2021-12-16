@@ -82,7 +82,7 @@ end
 
 # Computes Hessian of log-gaussian-smoothed density field
 # f_Rn is the smoothed field
-function hessian_from_smoothed(f_Rn::AbstractArray{T,3}, R_S, kv) where T
+function slow_hessian_from_smoothed(f_Rn::AbstractArray{T,3}, R_S, kv) where T
     dims = size(f_Rn)
     hessian = zeros(Complex{T}, (dims[1], dims[2], dims[3], 6))
     f_Rn_hat = fft(f_Rn)
@@ -121,6 +121,46 @@ function hessian_from_smoothed(f_Rn::AbstractArray{T,3}, R_S, kv) where T
     hessian[:,:,:,4] .= ifft(hessian[:,:,:,4])
     hessian[:,:,:,5] .= ifft(hessian[:,:,:,5])
     hessian[:,:,:,6] .= ifft(hessian[:,:,:,6])
+    real(R_S^2 .* hessian)
+end
+
+function fast_hessian_from_smoothed(f_Rn::AbstractArray{T,3}, R_S, kv) where T
+    dims = size(f_Rn)
+    hessian = zeros(Complex{T}, (dims[1], dims[2], dims[3], 6))
+    f_Rn_hat = fft(f_Rn)
+
+    kx = kv[1]
+    ky = kv[2]
+    kz = kv[3]
+
+    Threads.@threads for x in 1:length(kv[1])
+        for y in 1:length(kv[2])
+            for z in 1:length(kv[3])
+                # (1,1)
+                hessian[x,y,z,1] =
+                    - kx[x] * kx[x] * R_S^2 * f_Rn_hat[x,y,z]
+                # (1,2)
+                hessian[x,y,z,2] =
+                    - kx[x] * ky[y] * R_S^2 * f_Rn_hat[x,y,z]
+                # (1,3)
+                hessian[x,y,z,3] =
+                    - kx[x] * kz[z] * R_S^2 * f_Rn_hat[x,y,z]
+                # (2,2)
+                hessian[x,y,z,4] =
+                    - ky[y] * ky[y] * R_S^2 * f_Rn_hat[x,y,z]
+                # (2,3)
+                hessian[x,y,z,5] =
+                    - ky[y] * kz[z] * R_S^2 * f_Rn_hat[x,y,z]
+                # (3,3)
+                hessian[x,y,z,6] =
+                    - kz[z] * kz[z] * R_S^2 * f_Rn_hat[x,y,z]
+            end
+        end
+    end
+
+    for j in 1:6
+        ifft!(hessian[:,:,:,j])
+    end
     real(R_S^2 .* hessian)
 end
 

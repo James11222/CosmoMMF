@@ -1,0 +1,21 @@
+
+ Loading in Density Cube 
+
+ loading different scales 
+ERROR: LoadError: OutOfMemoryError()
+Stacktrace:
+ [1] Array
+   @ ./boot.jl:460 [inlined]
+ [2] zeros
+   @ ./array.jl:503 [inlined]
+ [3] hessian_from_smoothed(f_Rn::Array{Float64, 3}, R_S::Float64, kv::Tuple{Frequencies{Float64}, Frequencies{Float64}, Frequencies{Float64}})
+   @ CosmoMMF ~/.julia/dev/CosmoMMF/src/filter.jl:87
+ [4] maximum_signature(Rs::Vector{Float64}, field::Array{Float32, 3}; alg::Symbol)
+   @ CosmoMMF ~/.julia/dev/CosmoMMF/src/filter.jl:192
+ [5] macro expansion
+   @ ./timing.jl:210 [inlined]
+ [6] top-level scope
+   @ /global/u2/j/james12/.julia/dev/CosmoMMF/scripts/run_NEXUS.jl:38
+in expression starting at /global/u2/j/james12/.julia/dev/CosmoMMF/scripts/run_NEXUS.jl:29
+srun: error: nid01891: task 0: Exited with exit code 1
+srun: launch/slurm: _step_signal: Terminating StepId=50994999.0

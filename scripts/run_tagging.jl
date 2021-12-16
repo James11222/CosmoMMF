@@ -1,4 +1,4 @@
-########################################
+ ########################################
 #              Preamble
 ########################################
 
@@ -18,11 +18,9 @@ config = YAML.load_file("../config.yaml")
 ############################################################
 
 #Density Field
-@load config["output_directory"]*"testing/"*config["run_name"]*"_"*string(config["snapfile_root"])*".jld2" den
+@load config["input_directory"]*config["run_name"]*".jld2" den
 
-den = den[1:256,1:256,1:256]
-
-saved_name = config["run_name"]*"_"*string(config["snapfile_root"])
+saved_name = config["run_name"]
 #Signature Arrays
 @load config["output_directory"]*"Sigs_Nexus_"*saved_name*".jld2" sig_array
 combined_NEXUS = sig_array
@@ -33,34 +31,37 @@ combined_NEXUSPLUS = sig_array
 # Simulation specifications (From Illustris website)
 ############################################################
 
-# TNG300-3-Dark specifications
-DM_particle_mass = 0.302538487429177 # in units of 1e10 Msun/h
-N_DM = 244140625 
-N_cells = size(den,1) * size(den,2) * size(den,3)
-# an average grid cell has 
-mass_of_average_cell = DM_particle_mass * N_DM / N_cells
-
-# # TNG300-3 specifications
-# DM_particle_mass = 0.302538487429177 # in units of 1e10 Msun/h
-# N_DM = 244140625
-# N_cells = size(den,1) * size(den,2) * size(den,3)
-# # an average grid cell has 
-# mass_of_average_cell = DM_particle_mass * N_DM / N_cells
+# TNG-300 simulation specifications -> find average cell mass
+if config["simulation_type"] == "Dark"
+    DM_particle_mass = config["DM_particle_mass_Dark"] # in units of 1e10 Msun/h
+    N_DM = config["N_DM"] 
+    N_cells = size(den,1) * size(den,2) * size(den,3)
+    # an average grid cell has 
+    mass_of_average_cell = DM_particle_mass * N_DM / N_cells
+elseif config["simulation_type"] == "All"
+    DM_particle_mass = config["DM_particle_mass_TNG"] # in units of 1e10 Msun/h
+    GAS_particle_mass = config["GAS_particle_mass_TNG"] # in units of 1e10 Msun/h
+    N_DM = config["N_DM"] 
+    N_GAS = config["N_GAS"] 
+    N_cells = size(den,1) * size(den,2) * size(den,3)
+    # an average grid cell has 
+    mass_of_average_cell = (DM_particle_mass + GAS_particle_mass) * (N_DM + N_GAS) / N_cells
+end
 
 
 ####################################
 #        CREATE BOOL FILTERS
 ####################################
 
-clusbool, filbool, wallbool, S_fil, dM2_fil, S_wall, dM2_wall = CosmoMMF.calc_structure_bools(240.0, combined_NEXUS, combined_NEXUSPLUS,den)
+clusbool, filbool, wallbool, S_fil, dM2_fil, S_wall, dM2_wall = CosmoMMF.calc_structure_bools(mass_of_average_cell, 240.0, combined_NEXUS, combined_NEXUSPLUS, den)
 
 ####################################
 #        SAVE BOOL FILTERS
 ####################################
 
-@save config["output_directory"]*config["run_name"]*"_"*string(config["snapfile_root"])*"cluster_bool_filter.jld2" clusbool
-@save config["output_directory"]*config["run_name"]*"_"*string(config["snapfile_root"])*"filament_bool_filter.jld2" filbool
-@save config["output_directory"]*config["run_name"]*"_"*string(config["snapfile_root"])*"wall_bool_filter.jld2" wallbool
+@save config["output_directory"]*config["run_name"]*"_cluster_bool_filter.jld2" clusbool
+@save config["output_directory"]*config["run_name"]*"_filament_bool_filter.jld2" filbool
+@save config["output_directory"]*config["run_name"]*"_wall_bool_filter.jld2" wallbool
 
 ####################################
 #        Make Plots

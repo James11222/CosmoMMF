@@ -1,17 +1,10 @@
 
-function get_clusbools(thresh, max_cats::AbstractArray{T,4}, den) where T
+function get_clusbools(mass_of_average_cell,thresh, max_cats::AbstractArray{T,4}, den) where T
     """
     This function takes in a physical threshold float value and the 
     output of the maximum_signature function (4D-Array of signatures)
     to determine the cluster boolean filter.
     """
-    #NEED TO FIX THIS AND MAKE IT PART OF THE YAML SETUP
-    # TNG300-3-Dark specifications
-    DM_particle_mass = 0.302538487429177 # in units of 1e10 Msun/h
-    N_DM = 244140625 
-    N_cells = size(den,1) * size(den,2) * size(den,3)
-    # an average grid cell has 
-    mass_of_average_cell = DM_particle_mass * N_DM / N_cells
     
     # step 1. create a bool filter that is only true when 
     # cluster signatures are larger than threshold
@@ -81,22 +74,18 @@ function get_sig_plot(sig_vec, f)
     return (10 .^ midx), dydx
 end
 
-function calc_structure_bools(cluster_threshold, combined_NEXUS::AbstractArray{T,4}, combined_NEXUSPLUS::AbstractArray{T,4}, den) where T
+function calc_structure_bools(mass_of_average_cell, cluster_threshold, combined_NEXUS::AbstractArray{T,4}, combined_NEXUSPLUS::AbstractArray{T,4}, den) where T
     """
     A function that returns the boolean filters for each structure based on physical criterion
     """
-    # TNG300-3-Dark specifications
-    DM_particle_mass = 0.302538487429177 # in units of 1e10 Msun/h
-    N_DM = 244140625 
+    
     N_cells = size(den,1) * size(den,2) * size(den,3)
-    # an average grid cell has 
-    mass_of_average_cell = DM_particle_mass * N_DM / N_cells
     
     ####################################
     #     CLUSTER FILTER PROCESS
     ####################################
 
-    clusbool = get_clusbools(cluster_threshold, combined_NEXUS, den);
+    clusbool = get_clusbools(mass_of_average_cell, cluster_threshold, combined_NEXUS, den);
 
     ####################################
     #    REMAINING FILTER PROCESS

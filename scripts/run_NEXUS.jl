@@ -17,6 +17,8 @@ config = YAML.load_file("../config.yaml")
 @load config["input_directory"]*config["run_name"]*".jld2" den
 print("\n Loading in Density Cube \n")
 
+den = den[1:512, 1:512, 1:512] #temporary
+
 ########################################
 #  Run n' Save NEXUS/NEXUS+ Algorithm(s)
 ########################################

@@ -35,12 +35,6 @@ def compute_snap(snapnum, run_type):
         f_star = HDFCatalog(input_files_string, root='PartType4')
         f_bh = HDFCatalog(input_files_string, root='PartType5')
         
-        # f = HDFCatalog(input_files_string)
-        # f_gas = f['PartType0']
-        # f_dm = f['PartType1']
-        # f_star = f['PartType4']
-        # f_bh = f['PartType5']
-        
         
         f_dm['Masses'] = 0.00398342749867548 #add mass field for dark matter particles 10^10 M_sun/h
         
