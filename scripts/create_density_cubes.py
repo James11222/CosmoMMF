@@ -4,7 +4,7 @@ from nbodykit.lab import *
 import h5py
 
 snap_num = 99
-config = {'nx' : 1024, 
+config = {'nx' : 2048, 
           'xmax' : 205000.0, 
           'xmin' : 0.0,
           'input_dir' : '/global/cscratch1/sd/james12/Illustris_TNG_Data/Full_Sims/snapdir_099/',
@@ -25,7 +25,7 @@ def compute_snap(snapnum, run_type):
         f['Position'] = f['PartType1/Coordinates']
         m = f.to_mesh(config['nx'], config["xmax"] - config['xmin'])
         field = m.compute()
-        np.save(output_file_string + "_dm.npy", field)
+        np.save(output_file_string + '_' + str(config['nx']) + "_dm.npy", field)
         
         
     elif run_type=='all':
@@ -45,7 +45,7 @@ def compute_snap(snapnum, run_type):
                                 weight='Masses', position='Coordinates')
         
         full_field = mesh.compute()
-        np.save(output_file_string + "_all_species.npy", full_field)
+        np.save(output_file_string + '_' +  str(config['nx']) +  "_all_species.npy", full_field)
         
 
     else:

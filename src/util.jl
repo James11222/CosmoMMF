@@ -55,7 +55,7 @@ wavevectors3D(dims, box_size=(2π, 2π, 2π)) = wavevectors3D(Float64, dims, box
 
 
 function test_print() 
-    print("This test function works!")
+    print("This test function works! (totally)")
 end
 
 function wall(n::Int64)
@@ -117,5 +117,189 @@ function save_max_sigs(output_directory, id_string, sig_array::AbstractArray{T,4
     A simple function to save the signatures to an output directory in the form of a jld2 file.
     """
     @save output_directory * id_string * ".jld2" sig_array
+end
+
+function save_hessian_component(output_directory, Rs, id_string, hessian_component::AbstractArray{T,3}) where T
+    """
+    A helper function to save a hessian component.
+    
+    Args:
+        output_directory [string]: where should the hessian component be saved to?
+        id_string [string]: component number in matrix 
+                            -> [[1 2 3],
+                                [  4 5],
+                                [    6]]
+        subvolume_divisions [Int]: number of subvolumes to divide original hessian into on each side. If = 2, then we make 2^3 subvolumes. (Default = 2)
+        hessian_component [AbstractArray{T,3}]: one of the components
+    """
+    dims = size(hessian_component)
+    
+    div_x, div_y, div_z = dims .÷ 2
+    
+    #chop hessian into 8ths
+    hessian_component_000 = hessian_component[1:div_x, 1:div_y, 1:div_z]
+    hessian_component_001 = hessian_component[1:div_x, 1:div_y, div_z+1:dims[3]]
+    hessian_component_010 = hessian_component[1:div_x, div_y+1:dims[2], 1:div_z]
+    hessian_component_100 = hessian_component[div_x+1:dims[1], 1:div_y, 1:div_z]
+    hessian_component_011 = hessian_component[1:div_x, div_y+1:dims[2], div_z+1:dims[3]]
+    hessian_component_110 = hessian_component[div_x+1:dims[1], div_y+1:dims[2], 1:div_z]
+    hessian_component_101 = hessian_component[div_x+1:dims[1], 1:div_y, div_z+1:dims[3]]
+    hessian_component_111 = hessian_component[div_x+1:dims[1], div_y+1:dims[2], div_z+1:dims[3]]
+    
+    @save output_directory * "hessian_component_000" * "_" * string(Rs) * id_string * ".jld2" hessian_component_000
+    @save output_directory * "hessian_component_001" * "_" * string(Rs) * id_string * ".jld2" hessian_component_001
+    @save output_directory * "hessian_component_010" * "_" * string(Rs) * id_string * ".jld2" hessian_component_010
+    @save output_directory * "hessian_component_100" * "_" * string(Rs) * id_string * ".jld2" hessian_component_100
+    @save output_directory * "hessian_component_011" * "_" * string(Rs) * id_string * ".jld2" hessian_component_011
+    @save output_directory * "hessian_component_110" * "_" * string(Rs) * id_string * ".jld2" hessian_component_110
+    @save output_directory * "hessian_component_101" * "_" * string(Rs) * id_string * ".jld2" hessian_component_101
+    @save output_directory * "hessian_component_111" * "_" * string(Rs) * id_string * ".jld2" hessian_component_111
+    
+end
+
+function compile_sub_hessians(f_Rn::AbstractArray{T,3}, Rs, subvolume, input_directory) where T
+    
+    id_strings = ["_1", "_2", "_3", "_4", "_5", "_6"]
+    dims = size(f_Rn) .÷ 2
+    hessian_sub = zeros(Complex{T}, (dims[1], dims[2], dims[3], 6))
+    
+    
+#     for (i, id_string) in enumerate(id_strings)
+#         @load input_directory * "hessian_component_000" * id_string * ".jld2" hessian_component_000    
+#         hessian_sub[:,:,:,i] .= hessian_component_000  
+#         #figure out how to delete files?
+#     end
+    
+#     @save input_directory * "hessian_component_000" * "_full" * ".jld2" real(hessian_sub)
+#     hessian_sub = zeros(Complex{T}, (dims[1], dims[2], dims[3], 6))
+    
+#     for (i, id_string) in enumerate(id_strings)
+#         @load input_directory * "hessian_component_001" * id_string * ".jld2" hessian_component_001
+#         hessian_sub[:,:,:,i] .= hessian_component_001
+#         #figure out how to delete files?
+#     end
+    
+#     @save input_directory * "hessian_component_001" * "_full" * ".jld2" real(hessian_sub)
+#     hessian_sub = zeros(Complex{T}, (dims[1], dims[2], dims[3], 6))
+    
+#     for (i, id_string) in enumerate(id_strings)
+#         @load input_directory * "hessian_component_010" * id_string * ".jld2" hessian_component_010
+#         hessian_sub[:,:,:,i] .= hessian_component_010  
+#         #figure out how to delete files?
+#     end
+    
+#     @save input_directory * "hessian_component_010" * "_full" * ".jld2" real(hessian_sub)
+#     hessian_sub = zeros(Complex{T}, (dims[1], dims[2], dims[3], 6))
+    
+#     for (i, id_string) in enumerate(id_strings)
+#         @load input_directory * "hessian_component_100" * id_string * ".jld2" hessian_component_100
+#         hessian_sub[:,:,:,i] .= hessian_component_100  
+#         #figure out how to delete files?
+#     end
+    
+#     @save input_directory * "hessian_component_100" * "_full" * ".jld2" real(hessian_sub)
+#     hessian_sub = zeros(Complex{T}, (dims[1], dims[2], dims[3], 6))
+    
+#     for (i, id_string) in enumerate(id_strings)
+#         @load input_directory * "hessian_component_011" * id_string * ".jld2" hessian_component_011
+#         hessian_sub[:,:,:,i] .= hessian_component_011  
+#         #figure out how to delete files?
+#     end
+    
+#     @save input_directory * "hessian_component_011" * "_full" * ".jld2" real(hessian_sub)
+#     hessian_sub = zeros(Complex{T}, (dims[1], dims[2], dims[3], 6))
+    
+#     for (i, id_string) in enumerate(id_strings)
+#         @load input_directory * "hessian_component_110" * id_string * ".jld2" hessian_component_110
+#         hessian_sub[:,:,:,i] .= hessian_component_110  
+#         #figure out how to delete files?
+#     end
+    
+#     @save input_directory * "hessian_component_110" * "_full" * ".jld2" real(hessian_sub)
+#     hessian_sub = zeros(Complex{T}, (dims[1], dims[2], dims[3], 6))
+    
+#     for (i, id_string) in enumerate(id_strings)
+#         @load input_directory * "hessian_component_101" * id_string * ".jld2" hessian_component_101
+#         hessian_sub[:,:,:,i] .= hessian_component_101  
+#         #figure out how to delete files?
+#     end
+    
+#     @save input_directory * "hessian_component_101" * "_full" * ".jld2" real(hessian_sub)
+#     hessian_sub = zeros(Complex{T}, (dims[1], dims[2], dims[3], 6))
+    
+    for (i, id_string) in enumerate(id_strings)
+        if subvolume == "000"
+            @load input_directory * "hessian_component_" * subvolume * "_" * string(Rs) * id_string * ".jld2" hessian_component_000
+        hessian_sub[:,:,:,i] .= hessian_component_000
+            
+        #delete old slice we don't need anymore
+        file = input_directory * "hessian_component_" * subvolume * "_" * string(Rs) * id_string * ".jld2" 
+        run(`rm $file`)
+            
+        elseif subvolume == "001"
+            @load input_directory * "hessian_component_" * subvolume * "_" * string(Rs) * id_string * ".jld2" hessian_component_001
+        hessian_sub[:,:,:,i] .= hessian_component_001
+            
+        #delete old slice we don't need anymore
+        file = input_directory * "hessian_component_" * subvolume * "_" * string(Rs) * id_string * ".jld2" 
+        run(`rm $file`)
+            
+        elseif subvolume == "010"
+            @load input_directory * "hessian_component_" * subvolume * "_" * string(Rs) * id_string * ".jld2" hessian_component_010
+        hessian_sub[:,:,:,i] .= hessian_component_010
+            
+        #delete old slice we don't need anymore
+        file = input_directory * "hessian_component_" * subvolume * "_" * string(Rs) * id_string * ".jld2" 
+        run(`rm $file`)
+            
+        elseif subvolume == "100"
+            @load input_directory * "hessian_component_" * subvolume * "_" * string(Rs) * id_string * ".jld2" hessian_component_100
+        hessian_sub[:,:,:,i] .= hessian_component_100
+            
+        #delete old slice we don't need anymore
+        file = input_directory * "hessian_component_" * subvolume * "_" * string(Rs) * id_string * ".jld2" 
+        run(`rm $file`)
+            
+        elseif subvolume == "011"
+            @load input_directory * "hessian_component_" * subvolume * "_" * string(Rs) * id_string * ".jld2" hessian_component_011
+        hessian_sub[:,:,:,i] .= hessian_component_011
+            
+        #delete old slice we don't need anymore
+        file = input_directory * "hessian_component_" * subvolume * "_" * string(Rs) * id_string * ".jld2" 
+        run(`rm $file`)
+            
+        elseif subvolume == "110"
+            @load input_directory * "hessian_component_" * subvolume * "_" * string(Rs) * id_string * ".jld2" hessian_component_110
+        hessian_sub[:,:,:,i] .= hessian_component_110
+            
+        #delete old slice we don't need anymore
+        file = input_directory * "hessian_component_" * subvolume * "_" * string(Rs) * id_string * ".jld2" 
+        run(`rm $file`)
+            
+        elseif subvolume == "101"
+            @load input_directory * "hessian_component_" * subvolume * "_" * string(Rs) * id_string * ".jld2" hessian_component_101
+        hessian_sub[:,:,:,i] .= hessian_component_101
+            
+        #delete old slice we don't need anymore
+        file = input_directory * "hessian_component_" * subvolume * "_" * string(Rs) * id_string * ".jld2" 
+        run(`rm $file`)
+            
+        elseif subvolume == "111"
+            @load input_directory * "hessian_component_" * subvolume * "_" * string(Rs) * id_string * ".jld2" hessian_component_111
+        hessian_sub[:,:,:,i] .= hessian_component_111
+            
+        #delete old slice we don't need anymore
+        file = input_directory * "hessian_component_" * subvolume * "_" * string(Rs) * id_string * ".jld2" 
+        run(`rm $file`)
+            
+        else
+            print("Give a correct subvolume string. Example: '000' ")
+        end
+         
+    end
+    
+    hessian_sub = real(hessian_sub)
+    @save input_directory * "hessian_component_" * subvolume * "_full" * ".jld2" hessian_sub   
+
 end
     
