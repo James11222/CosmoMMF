@@ -1,7 +1,8 @@
- ########################################
+########################################
 #              Preamble
 ########################################
 
+print("Importing Packages... \n")
 using YAML
 using Images
 using PyCall
@@ -17,19 +18,29 @@ config = YAML.load_file("../config.yaml")
 #                  Load Relevant Data
 ############################################################
 
+print("Importing Density Field... \n")
 #Density Field
 @load config["input_directory"]*config["run_name"]*".jld2" den
 
-saved_name = config["run_name"]
+print("Importing NEXUS Signatures... \n")
 #Signature Arrays
-@load config["output_directory"]*"Sigs_Nexus_"*saved_name*".jld2" sig_array
-combined_NEXUS = sig_array
-@load config["output_directory"]*"Sigs_NexusPlus_"*saved_name*".jld2" sig_array
-combined_NEXUSPLUS = sig_array
+save_name = config["run_name"] * "_NEXUS"
+@load config["output_directory"] * "max_sigs_" * save_name * "_full_signatures.jld2" sigmax
+sigmax_NEXUS = sigmax
+
+print("Importing NEXUS+ Signatures... \n")
+save_name = config["run_name"] * "_NEXUSPLUS"
+@load config["output_directory"] * "max_sigs_" * save_name * "_full_signatures.jld2" sigmax
+sigmax_NEXUSPLUS = sigmax
+
+#reduce RAM usage by removing sigmax from
+sigmax = nothing
 
 ############################################################
 # Simulation specifications (From Illustris website)
 ############################################################
+
+print("Importing Simulation Specifications... \n")
 
 # TNG-300 simulation specifications -> find average cell mass
 if config["simulation_type"] == "Dark"
@@ -53,12 +64,14 @@ end
 #        CREATE BOOL FILTERS
 ####################################
 
-clusbool, filbool, wallbool, S_fil, dM2_fil, S_wall, dM2_wall = CosmoMMF.calc_structure_bools(mass_of_average_cell, 240.0, combined_NEXUS, combined_NEXUSPLUS, den)
+print("Calculating Structure Boolean Filters... \n")
+clusbool, filbool, wallbool, S_fil, dM2_fil, S_wall, dM2_wall = CosmoMMF.calc_structure_bools(mass_of_average_cell, 240.0, sigmax_NEXUS, sigmax_NEXUSPLUS, den)
 
 ####################################
 #        SAVE BOOL FILTERS
 ####################################
 
+print("Saving Structure Boolean Filters... \n")
 @save config["output_directory"]*config["run_name"]*"_cluster_bool_filter.jld2" clusbool
 @save config["output_directory"]*config["run_name"]*"_filament_bool_filter.jld2" filbool
 @save config["output_directory"]*config["run_name"]*"_wall_bool_filter.jld2" wallbool

@@ -1,0 +1,18 @@
+
+ Loading in Density Cube 
+
+ loading different scales 
+
+Computing All Hessian Values: 
+
+Compiling Hessians & Calculating Max Signatures: 
+96456.532972 seconds (319.34 G allocations: 20.515 TiB, 1.00% gc time)
+
+Computing All Hessian Values: 
+slurmstepd: error: *** STEP 52282341.0 ON nid02249 CANCELLED AT 2021-12-27T00:26:18 ***
+srun: got SIGCONT
+srun: forcing job termination
+srun: Job step aborted: Waiting up to 32 seconds for job step to finish.
+
+signal (15): Terminated
+in expression starting at /global/u2/j/james12/.julia/dev/CosmoMMF/scripts/run_NEXUS_reduce_RAM.jl:27

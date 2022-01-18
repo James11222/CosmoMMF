@@ -63,6 +63,7 @@ function smooth_loggauss(f::AbstractArray{T,3}, R_S::T, kv) where {AA, T}
 
     # # simple version of what follows
     # f_Rn = 10 .^(real(ifft(GF .* fft(log10.(f)))))
+    # return f_Rn
 
     buffer = similar(f, Complex{T})   # make a complex version of the array
     @strided buffer .= log10.(f)      # threaded log10 the entire array
@@ -359,7 +360,7 @@ then iterate to the maximum scale of the problem, calculating the signatures
 for each smoothing scale. We then chose the maximum signature over all scales
 at each point to categorize whether that point is a wall, filament, or cluster.
 """
-function reduce_RAM_maximum_signature(Rs, output_directory, field::AbstractArray{T,3}; alg=:NEXUSPLUS) where T
+function reduce_RAM_maximum_signature(Rs, output_directory, save_name, field::AbstractArray{T,3}; alg=:NEXUSPLUS) where T
 
     if alg ∉ (:NEXUS, :NEXUSPLUS)
         throw(ArgumentError("alg must be either :NEXUS or :NEXUSPLUS"))
@@ -439,6 +440,21 @@ function reduce_RAM_maximum_signature(Rs, output_directory, field::AbstractArray
         file = output_directory * "hessian_component_"*subvolume*"_full.jld2"
         run(`rm $file`)
                 
-    end            
+    end
+    
+    sigmax_sub = nothing
+    
+    #----------------------------------------------------------------------------
+    
+    #combine and save final signatures!
+    sigmax = combine_max_sigs(output_directory, subvolumes, field)
+    @save output_directory * "max_sigs_" * save_name * "_full_signatures.jld2" sigmax
+    
+    #remove all remaining signature subvolumes 
+    for subvolume in subvolumes
+        file = output_directory * "max_sigs_"*subvolume*".jld2"
+        run(`rm $file`)
+    end
+     
 end
 

@@ -163,70 +163,6 @@ function compile_sub_hessians(f_Rn::AbstractArray{T,3}, Rs, subvolume, input_dir
     dims = size(f_Rn) .÷ 2
     hessian_sub = zeros(Complex{T}, (dims[1], dims[2], dims[3], 6))
     
-    
-#     for (i, id_string) in enumerate(id_strings)
-#         @load input_directory * "hessian_component_000" * id_string * ".jld2" hessian_component_000    
-#         hessian_sub[:,:,:,i] .= hessian_component_000  
-#         #figure out how to delete files?
-#     end
-    
-#     @save input_directory * "hessian_component_000" * "_full" * ".jld2" real(hessian_sub)
-#     hessian_sub = zeros(Complex{T}, (dims[1], dims[2], dims[3], 6))
-    
-#     for (i, id_string) in enumerate(id_strings)
-#         @load input_directory * "hessian_component_001" * id_string * ".jld2" hessian_component_001
-#         hessian_sub[:,:,:,i] .= hessian_component_001
-#         #figure out how to delete files?
-#     end
-    
-#     @save input_directory * "hessian_component_001" * "_full" * ".jld2" real(hessian_sub)
-#     hessian_sub = zeros(Complex{T}, (dims[1], dims[2], dims[3], 6))
-    
-#     for (i, id_string) in enumerate(id_strings)
-#         @load input_directory * "hessian_component_010" * id_string * ".jld2" hessian_component_010
-#         hessian_sub[:,:,:,i] .= hessian_component_010  
-#         #figure out how to delete files?
-#     end
-    
-#     @save input_directory * "hessian_component_010" * "_full" * ".jld2" real(hessian_sub)
-#     hessian_sub = zeros(Complex{T}, (dims[1], dims[2], dims[3], 6))
-    
-#     for (i, id_string) in enumerate(id_strings)
-#         @load input_directory * "hessian_component_100" * id_string * ".jld2" hessian_component_100
-#         hessian_sub[:,:,:,i] .= hessian_component_100  
-#         #figure out how to delete files?
-#     end
-    
-#     @save input_directory * "hessian_component_100" * "_full" * ".jld2" real(hessian_sub)
-#     hessian_sub = zeros(Complex{T}, (dims[1], dims[2], dims[3], 6))
-    
-#     for (i, id_string) in enumerate(id_strings)
-#         @load input_directory * "hessian_component_011" * id_string * ".jld2" hessian_component_011
-#         hessian_sub[:,:,:,i] .= hessian_component_011  
-#         #figure out how to delete files?
-#     end
-    
-#     @save input_directory * "hessian_component_011" * "_full" * ".jld2" real(hessian_sub)
-#     hessian_sub = zeros(Complex{T}, (dims[1], dims[2], dims[3], 6))
-    
-#     for (i, id_string) in enumerate(id_strings)
-#         @load input_directory * "hessian_component_110" * id_string * ".jld2" hessian_component_110
-#         hessian_sub[:,:,:,i] .= hessian_component_110  
-#         #figure out how to delete files?
-#     end
-    
-#     @save input_directory * "hessian_component_110" * "_full" * ".jld2" real(hessian_sub)
-#     hessian_sub = zeros(Complex{T}, (dims[1], dims[2], dims[3], 6))
-    
-#     for (i, id_string) in enumerate(id_strings)
-#         @load input_directory * "hessian_component_101" * id_string * ".jld2" hessian_component_101
-#         hessian_sub[:,:,:,i] .= hessian_component_101  
-#         #figure out how to delete files?
-#     end
-    
-#     @save input_directory * "hessian_component_101" * "_full" * ".jld2" real(hessian_sub)
-#     hessian_sub = zeros(Complex{T}, (dims[1], dims[2], dims[3], 6))
-    
     for (i, id_string) in enumerate(id_strings)
         if subvolume == "000"
             @load input_directory * "hessian_component_" * subvolume * "_" * string(Rs) * id_string * ".jld2" hessian_component_000
@@ -303,3 +239,46 @@ function compile_sub_hessians(f_Rn::AbstractArray{T,3}, Rs, subvolume, input_dir
 
 end
     
+
+function combine_max_sigs(output_directory, subvolumes, field::AbstractArray{T,3}) where T
+    dims = size(field)
+    div_x, div_y, div_z = size(field) .÷ 2
+    sigmax = zeros(T,dims[1],dims[2],dims[3],3)
+    
+    for subvolume in subvolumes
+        @load output_directory * "max_sigs_"*subvolume*".jld2" sigmax_sub
+        
+        if subvolume == "000"
+            sigmax[1:div_x, 1:div_y, 1:div_z, :] .= sigmax_sub
+            
+        elseif subvolume == "001"
+            sigmax[1:div_x, 1:div_y, div_z+1:dims[3], :] .= sigmax_sub
+            
+        elseif subvolume == "010"
+            sigmax[1:div_x, div_y+1:dims[2], 1:div_z, :] .= sigmax_sub
+            
+        elseif subvolume == "100"
+            sigmax[div_x+1:dims[1], 1:div_y, 1:div_z, :] .= sigmax_sub
+            
+        elseif subvolume == "011"
+            sigmax[1:div_x, div_y+1:dims[2], div_z+1:dims[3], :] .= sigmax_sub
+            
+        elseif subvolume == "110"
+            sigmax[div_x+1:dims[1], div_y+1:dims[2], 1:div_z, :] .= sigmax_sub
+            
+        elseif subvolume == "101"
+            sigmax[div_x+1:dims[1], 1:div_y, div_z+1:dims[3], :] .= sigmax_sub
+            
+        elseif subvolume == "111"
+            sigmax[div_x+1:dims[1], div_y+1:dims[2], div_z+1:dims[3], :] .= sigmax_sub
+            
+        else
+            print("Incorrect subvolume string.")
+            
+        end
+            
+    end
+    
+    return sigmax
+     
+end

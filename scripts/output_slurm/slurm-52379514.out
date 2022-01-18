@@ -1,0 +1,9 @@
+
+ Loading in Density Cube 
+
+ loading different scales 
+
+Computing All Hessian Values: 
+
+Compiling Hessians & Calculating Max Signatures: 
+104505.736727 seconds (319.34 G allocations: 15.101 TiB, 0.77% gc time)

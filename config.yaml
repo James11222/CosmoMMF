@@ -1,4 +1,4 @@
-run_name: density_cube_snap_099_full_dm
+run_name: density_cube_snap_099_full_1024_all_species
 input_directory: /global/cscratch1/sd/james12/Illustris_TNG_Data/TNG_Density_Cubes/
 snapfile_root: 99
 num_snaps: 1
@@ -13,5 +13,5 @@ DM_particle_mass_Dark: 0.0047271638660809
 N_DM: 15625000000
 N_GAS: 15625000000
 algorithm: NEXUS+
-simulation_type: Dark
+simulation_type: Full
 

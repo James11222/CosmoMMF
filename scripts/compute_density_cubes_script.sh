@@ -4,7 +4,7 @@
 #SBATCH -q regular
 #SBATCH --mail-user=jamessunseri@berkeley.edu
 #SBATCH --mail-type=ALL
-#SBATCH -t 35:00:00
+#SBATCH -t 15:00:00
 
 #OpenMP settings:
 export OMP_NUM_THREADS=1
@@ -16,4 +16,4 @@ export OMP_PROC_BIND=spread
 source /global/common/software/m3035/conda-activate.sh 3.7
 module load h5py-parallel
 cd /global/u2/j/james12/CosmoMMF/scripts/
-srun -n 1 -c 64 --cpu_bind=cores python create_density_cubes.py all
+srun -n 1 -c 64 --cpu_bind=cores python create_density_cubes_simple.py 99 all

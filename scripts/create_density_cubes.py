@@ -3,20 +3,34 @@ import numpy as np
 from nbodykit.lab import *
 import h5py
 
-snap_num = 99
-config = {'nx' : 2048, 
-          'xmax' : 205000.0, 
-          'xmin' : 0.0,
-          'input_dir' : '/global/cscratch1/sd/james12/Illustris_TNG_Data/Full_Sims/snapdir_099/',
-          'output_dir' : '/global/cscratch1/sd/james12/Illustris_TNG_Data/TNG_Density_Cubes/'}
+snap_num = int(sys.argv[1])
+snapdir_str = 'snapdir_' + str(snap_num).zfill(3) + '/'
+
+if sys.argv[2] == 'dark':
+    config = {'nx' : 1024, 
+              'xmax' : 205000.0, 
+              'xmin' : 0.0,
+              'input_dir' : '/global/cscratch1/sd/jialiu/NEXUS_TNG/L205n2500TNG_DM/' + snapdir_str,
+              'output_dir' : '/global/cscratch1/sd/james12/Illustris_TNG_Data/TNG_Density_Cubes/'}
+
+elif sys.argv[2] == 'all':  
+    config = {'nx' : 1024, 
+              'xmax' : 205000.0, 
+              'xmin' : 0.0,
+              'input_dir' : '/global/cscratch1/sd/jialiu/NEXUS_TNG/L205n2500TNG/' + snapdir_str,
+              'output_dir' : '/global/cscratch1/sd/james12/Illustris_TNG_Data/TNG_Density_Cubes/'}
+    
+else:
+    print("Invalid Input")
 
 #note: if we need bigfiles use BigFileCatalog instead of HDFCatalog and
 #the file extension is .big
 
 def compute_snap(snapnum, run_type):
     
-    input_files_string = config['input_dir'] + 'snap_099.*.hdf5'
-    output_file_string = config['output_dir'] + "density_cube_snap_099_full"
+    snapnum_str = str(snapnum).zfill(3)
+    input_files_string = config['input_dir'] + 'snap_' + snapnum_str + '.*.hdf5'
+    output_file_string = config['output_dir'] + 'density_cube_snap_' + snapnum_str + '_full'
     
     if run_type=='dark':
         
@@ -55,6 +69,6 @@ def compute_snap(snapnum, run_type):
 
 print("""\nComputing your density cubes for snap """ + str(snap_num) + '\n')
 
-compute_snap(snap_num, sys.argv[1])
+compute_snap(snap_num, sys.argv[2])
 
 

@@ -1,0 +1,48 @@
+
+ Loading in Density Cube 
+
+ loading different scales 
+
+Computing All Hessian Values: 
+ERROR: LoadError: DomainError with -3.1047481464385984:
+NaN result for non-NaN input.
+Stacktrace:
+  [1] nan_dom_err
+    @ ./math.jl:429 [inlined]
+  [2] log10
+    @ ./math.jl:575 [inlined]
+  [3] consume
+    @ ~/.julia/packages/Strided/hOf3y/src/broadcast.jl:98 [inlined]
+  [4] CaptureArgs
+    @ ~/.julia/packages/Strided/hOf3y/src/broadcast.jl:95 [inlined]
+  [5] macro expansion
+    @ ~/.julia/packages/Strided/hOf3y/src/mapreduce.jl:304 [inlined]
+  [6] macro expansion
+    @ ./simdloop.jl:77 [inlined]
+  [7] macro expansion
+    @ ~/.julia/packages/Strided/hOf3y/src/mapreduce.jl:303 [inlined]
+  [8] _mapreduce_kernel!(f::Strided.CaptureArgs{typeof(log10), Tuple{Strided.Arg}}, op::Nothing, initop::Nothing, dims::Tuple{Int64, Int64, Int64}, blocks::Tuple{Int64, Int64, Int64}, arrays::Tuple{Strided.StridedView{ComplexF64, 3, Vector{ComplexF64}, typeof(identity)}, Strided.StridedView{Float64, 3, Vector{Float64}, typeof(identity)}}, strides::Tuple{Tuple{Int64, Int64, Int64}, Tuple{Int64, Int64, Int64}}, offsets::Tuple{Int64, Int64})
+    @ Strided ~/.julia/packages/Strided/hOf3y/src/mapreduce.jl:205
+  [9] _mapreduce_block!(f::Any, op::Any, initop::Any, dims::Tuple{Int64, Int64, Int64}, strides::Tuple{Tuple{Int64, Int64, Int64}, Tuple{Int64, Int64, Int64}}, offsets::Tuple{Int64, Int64}, costs::Tuple{Int64, Int64, Int64}, arrays::Tuple{Strided.StridedView{ComplexF64, 3, Vector{ComplexF64}, typeof(identity)}, Strided.StridedView{Float64, 3, Vector{Float64}, typeof(identity)}})
+    @ Strided ~/.julia/packages/Strided/hOf3y/src/mapreduce.jl:135
+ [10] _mapreduce_order!(f::Any, op::Any, initop::Any, dims::Tuple{Int64, Int64, Int64}, strides::Tuple{Tuple{Int64, Int64, Int64}, Tuple{Int64, Int64, Int64}}, arrays::Tuple{Strided.StridedView{ComplexF64, 3, Vector{ComplexF64}, typeof(identity)}, Strided.StridedView{Float64, 3, Vector{Float64}, typeof(identity)}})
+    @ Strided ~/.julia/packages/Strided/hOf3y/src/mapreduce.jl:120
+ [11] _mapreduce_fuse!(f::Any, op::Any, initop::Any, dims::Tuple{Int64, Int64, Int64}, arrays::Tuple{Strided.StridedView{ComplexF64, 3, Vector{ComplexF64}, typeof(identity)}, Strided.StridedView{Float64, 3, Vector{Float64}, typeof(identity)}})
+    @ Strided ~/.julia/packages/Strided/hOf3y/src/mapreduce.jl:98
+ [12] copyto!
+    @ ~/.julia/packages/Strided/hOf3y/src/broadcast.jl:34 [inlined]
+ [13] materialize!
+    @ ./broadcast.jl:894 [inlined]
+ [14] materialize!
+    @ ./broadcast.jl:891 [inlined]
+ [15] smooth_loggauss(f::Array{Float64, 3}, R_S::Float64, kv::Tuple{Frequencies{Float64}, Frequencies{Float64}, Frequencies{Float64}})
+    @ CosmoMMF ~/.julia/dev/CosmoMMF/src/filter.jl:68
+ [16] reduce_RAM_maximum_signature(Rs::Vector{Float64}, output_directory::String, save_name::String, field::Array{Float32, 3}; alg::Symbol)
+    @ CosmoMMF ~/.julia/dev/CosmoMMF/src/filter.jl:388
+ [17] macro expansion
+    @ ./timing.jl:210 [inlined]
+ [18] top-level scope
+    @ /global/u2/j/james12/.julia/dev/CosmoMMF/scripts/run_NEXUS_reduce_RAM.jl:32
+in expression starting at /global/u2/j/james12/.julia/dev/CosmoMMF/scripts/run_NEXUS_reduce_RAM.jl:27
+srun: error: nid02026: task 0: Exited with exit code 1
+srun: launch/slurm: _step_signal: Terminating StepId=52614178.0
