@@ -104,4 +104,6 @@ if ARGS[1] == "-p"
     f.save_fig
 else
     print("plotting disabled, to turn on use -p flag")
+    
+end
 

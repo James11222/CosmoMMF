@@ -1,8 +1,8 @@
 run_name: density_cube_snap_099_full_1024_all_species
-input_directory: /global/cscratch1/sd/james12/Illustris_TNG_Data/TNG_Density_Cubes/
+input_directory: /global/cscratch1/sd/james12/Illustris_TNG_Data/TNG_Density_Cubes/simple_density_cubes/
 snapfile_root: 99
 num_snaps: 1
-output_directory: /global/cscratch1/sd/james12/NEXUS_analysis/
+output_directory: /global/cscratch1/sd/james12/NEXUS_analysis/Full_Species_1024_snap_099/ 
 xmin: 0.0
 xmax: 205000.0
 num_scales: 10
@@ -13,5 +13,5 @@ DM_particle_mass_Dark: 0.0047271638660809
 N_DM: 15625000000
 N_GAS: 15625000000
 algorithm: NEXUS+
-simulation_type: Full
+simulation_type: All
 

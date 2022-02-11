@@ -1,0 +1,88 @@
+
+ Loading in Density Cube 
+
+ loading different scales 
+
+Computing All Hessian Values: 
+
+Compiling Hessians & Calculating Max Signatures: 
+┌ Warning: Opening file with JLD2.MmapIO failed, falling back to IOStream
+└ @ JLD2 ~/.julia/packages/JLD2/DcnTD/src/JLD2.jl:230
+ERROR: LoadError: SystemError: opening file "/global/cscratch1/sd/james12/NEXUS_analysis/hessian_component_000_1.0_1.jld2": No such file or directory
+Stacktrace:
+  [1] systemerror(p::String, errno::Int32; extrainfo::Nothing)
+    @ Base ./error.jl:168
+  [2] #systemerror#62
+    @ ./error.jl:167 [inlined]
+  [3] systemerror
+    @ ./error.jl:167 [inlined]
+  [4] open(fname::String; lock::Bool, read::Bool, write::Bool, create::Bool, truncate::Bool, append::Bool)
+    @ Base ./iostream.jl:293
+  [5] openfile
+    @ ~/.julia/packages/JLD2/DcnTD/src/JLD2.jl:220 [inlined]
+  [6] openfile(T::Type, fname::String, wr::Bool, create::Bool, truncate::Bool, fallback::Type)
+    @ JLD2 ~/.julia/packages/JLD2/DcnTD/src/JLD2.jl:231
+  [7] jldopen(fname::String, wr::Bool, create::Bool, truncate::Bool, iotype::Type{JLD2.MmapIO}; fallback::Type{IOStream}, compress::Bool, mmaparrays::Bool)
+    @ JLD2 ~/.julia/packages/JLD2/DcnTD/src/JLD2.jl:286
+  [8] jldopen(fname::String, wr::Bool, create::Bool, truncate::Bool, iotype::Type{JLD2.MmapIO})
+    @ JLD2 ~/.julia/packages/JLD2/DcnTD/src/JLD2.jl:249
+  [9] jldopen(fname::String, mode::String; iotype::Type, kwargs::Base.Iterators.Pairs{Union{}, Union{}, Tuple{}, NamedTuple{(), Tuple{}}})
+    @ JLD2 ~/.julia/packages/JLD2/DcnTD/src/JLD2.jl:342
+ [10] jldopen (repeats 2 times)
+    @ ~/.julia/packages/JLD2/DcnTD/src/JLD2.jl:337 [inlined]
+ [11] jldopen(f::CosmoMMF.var"#1#9", args::String; kws::Base.Iterators.Pairs{Union{}, Union{}, Tuple{}, NamedTuple{(), Tuple{}}})
+    @ JLD2 ~/.julia/packages/JLD2/DcnTD/src/loadsave.jl:2
+ [12] jldopen
+    @ ~/.julia/packages/JLD2/DcnTD/src/loadsave.jl:2 [inlined]
+ [13] macro expansion
+    @ ~/.julia/packages/JLD2/DcnTD/src/loadsave.jl:144 [inlined]
+ [14] compile_sub_hessians(f_Rn::Array{Float64, 3}, Rs::Float64, subvolume::String, input_directory::String)
+    @ CosmoMMF ~/.julia/dev/CosmoMMF/src/util.jl:168
+ [15] reduce_RAM_maximum_signature(Rs::Vector{Float64}, output_directory::String, save_name::String, field::Array{Float32, 3}; alg::Symbol)
+    @ CosmoMMF ~/.julia/dev/CosmoMMF/src/filter.jl:421
+ [16] macro expansion
+    @ ./timing.jl:210 [inlined]
+ [17] top-level scope
+    @ /global/u2/j/james12/.julia/dev/CosmoMMF/scripts/run_NEXUS_reduce_RAM.jl:29
+in expression starting at /global/u2/j/james12/.julia/dev/CosmoMMF/scripts/run_NEXUS_reduce_RAM.jl:27
+
+caused by: SystemError: opening file "/global/cscratch1/sd/james12/NEXUS_analysis/hessian_component_000_1.0_1.jld2": No such file or directory
+Stacktrace:
+  [1] systemerror(p::String, errno::Int32; extrainfo::Nothing)
+    @ Base ./error.jl:168
+  [2] #systemerror#62
+    @ ./error.jl:167 [inlined]
+  [3] systemerror
+    @ ./error.jl:167 [inlined]
+  [4] open(fname::String; lock::Bool, read::Bool, write::Bool, create::Bool, truncate::Bool, append::Bool)
+    @ Base ./iostream.jl:293
+  [5] JLD2.MmapIO(fname::String, write::Bool, create::Bool, truncate::Bool)
+    @ JLD2 ~/.julia/packages/JLD2/DcnTD/src/mmapio.jl:105
+  [6] openfile
+    @ ~/.julia/packages/JLD2/DcnTD/src/JLD2.jl:223 [inlined]
+  [7] openfile(T::Type, fname::String, wr::Bool, create::Bool, truncate::Bool, fallback::Type)
+    @ JLD2 ~/.julia/packages/JLD2/DcnTD/src/JLD2.jl:228
+  [8] jldopen(fname::String, wr::Bool, create::Bool, truncate::Bool, iotype::Type{JLD2.MmapIO}; fallback::Type{IOStream}, compress::Bool, mmaparrays::Bool)
+    @ JLD2 ~/.julia/packages/JLD2/DcnTD/src/JLD2.jl:286
+  [9] jldopen(fname::String, wr::Bool, create::Bool, truncate::Bool, iotype::Type{JLD2.MmapIO})
+    @ JLD2 ~/.julia/packages/JLD2/DcnTD/src/JLD2.jl:249
+ [10] jldopen(fname::String, mode::String; iotype::Type, kwargs::Base.Iterators.Pairs{Union{}, Union{}, Tuple{}, NamedTuple{(), Tuple{}}})
+    @ JLD2 ~/.julia/packages/JLD2/DcnTD/src/JLD2.jl:342
+ [11] jldopen (repeats 2 times)
+    @ ~/.julia/packages/JLD2/DcnTD/src/JLD2.jl:337 [inlined]
+ [12] jldopen(f::CosmoMMF.var"#1#9", args::String; kws::Base.Iterators.Pairs{Union{}, Union{}, Tuple{}, NamedTuple{(), Tuple{}}})
+    @ JLD2 ~/.julia/packages/JLD2/DcnTD/src/loadsave.jl:2
+ [13] jldopen
+    @ ~/.julia/packages/JLD2/DcnTD/src/loadsave.jl:2 [inlined]
+ [14] macro expansion
+    @ ~/.julia/packages/JLD2/DcnTD/src/loadsave.jl:144 [inlined]
+ [15] compile_sub_hessians(f_Rn::Array{Float64, 3}, Rs::Float64, subvolume::String, input_directory::String)
+    @ CosmoMMF ~/.julia/dev/CosmoMMF/src/util.jl:168
+ [16] reduce_RAM_maximum_signature(Rs::Vector{Float64}, output_directory::String, save_name::String, field::Array{Float32, 3}; alg::Symbol)
+    @ CosmoMMF ~/.julia/dev/CosmoMMF/src/filter.jl:421
+ [17] macro expansion
+    @ ./timing.jl:210 [inlined]
+ [18] top-level scope
+    @ /global/u2/j/james12/.julia/dev/CosmoMMF/scripts/run_NEXUS_reduce_RAM.jl:29
+srun: error: nid02298: task 0: Exited with exit code 1
+srun: launch/slurm: _step_signal: Terminating StepId=53301085.0
