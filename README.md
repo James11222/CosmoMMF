@@ -1,3 +1,6 @@
+![Fancy Logo](Images/CosmoMMF_Dark.png#gh-dark-mode-only)
+![Fancy Logo](Images/CosmoMMF_light.png#gh-light-mode-only)
+
 # CosmoMMF
 
 [![Stable](https://img.shields.io/badge/docs-stable-blue.svg)](https://James11222.github.io/CosmoMMF.jl/stable)
