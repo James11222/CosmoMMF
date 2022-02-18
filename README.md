@@ -1,5 +1,9 @@
-![Fancy Logo](Images/CosmoMMF_Dark.png#gh-dark-mode-only)
-![Fancy Logo](Images/CosmoMMF_light.png#gh-light-mode-only)
+<p align="center">
+  <img src="Images/CosmoMMF_Dark.png#gh-dark-mode-only" width="60%">
+  <img src="Images/CosmoMMF_light.png#gh-light-mode-only" width="60%">
+</p>
+
+
 
 # CosmoMMF
 
