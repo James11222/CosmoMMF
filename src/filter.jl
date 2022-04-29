@@ -263,7 +263,7 @@ function reduce_RAM_hessian_from_smoothed(f_Rn::AbstractArray{T,3}, R_S, kv, out
     end
     
     ifft!(@view (hessian[:,:,:]))
-    hessian = real(R_S^2 .* hessian)
+    hessian = real(hessian)
     save_hessian_component(output_directory, R_S, id_strings[6], hessian)
     hessian=nothing
     
