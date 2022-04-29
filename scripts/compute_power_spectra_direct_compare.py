@@ -34,11 +34,11 @@ filtered_clus = filtered_clus * clusbool.astype(int) #compute Pk of clusters onl
 
 filtered_fil = density_cube
 filtered_fil = filtered_fil * filbool.astype(int)
-filtered_fil = filtered_clus + filtered_fil #compute Pk of clusters + filaments
+# filtered_fil = filtered_clus + filtered_fil #compute Pk of clusters + filaments
 
 filtered_wall = density_cube
 filtered_wall = filtered_wall * wallbool.astype(int)
-filtered_wall = filtered_clus + filtered_fil + filtered_wall #compute Pk of clusters + filaments + walls
+# filtered_wall = filtered_clus + filtered_fil + filtered_wall #compute Pk of clusters + filaments + walls
 
 
 
@@ -73,36 +73,6 @@ result_all.save(config["run_name"] + "_pk_all.json")
 result_NEXUS_clus.save(config["run_name"] + "_pk_clus.json")
 result_NEXUS_fil.save(config["run_name"] + "_pk_fil.json")
 result_NEXUS_wall.save(config["run_name"] + "_pk_wall.json")
-# print("Saving Power Spectra...")
-# (pd.DataFrame({"k": pk_all["k"], "power":pk_all['power'], "shotnoise":pk_all.attrs['shotnoise']}).to_csv(config["run_name"] + "_pk_all.csv")
-# print(pk_all.attrs['shotnoise'])
-# (pd.DataFrame({"k": pk_clus["k"], "power":pk_clus['power'], "shotnoise":pk_clus.attrs['shotnoise']}).to_csv(config["run_name"] + "_pk_clus.csv")
-# print(pk_clus.attrs['shotnoise'])
-# (pd.DataFrame({"k": pk_fil["k"], "power":pk_fil['power'], "shotnoise":pk_fil.attrs['shotnoise']}).to_csv(config["run_name"] + "_pk_fil.csv")
-# print(pk_fil.attrs['shotnoise'])
-# (pd.DataFrame({"k": pk_wall["k"], "power":pk_wall['power'], "shotnoise":pk_wall.attrs['shotnoise']}).to_csv(config["run_name"] + "_pk_wall.csv")
-# print(pk_wall.attrs['shotnoise'])
-
-#-----------------------------------------
-#          Plot Results
-#-----------------------------------------
-
-# print("Plotting...")
-# plt.figure(figsize=(12,8))
-# # print the shot noise subtracted P(k)
-# plt.loglog((pk_all['k']) * 1e3, (pk_all['power'].real - pk_all.attrs['shotnoise'])*1e-9, label='All Data', color="black") #Illustris units are kpc we need to convert to Mpc
-# plt.loglog((pk_clus['k']) * 1e3, (pk_clus['power'].real - pk_clus.attrs['shotnoise'])*1e-9, label='NEXUS+ Cluster', color="red", linestyle="--")
-# plt.loglog((pk_fil['k']) * 1e3, (pk_fil['power'].real - pk_fil.attrs['shotnoise'])*1e-9, label='NEXUS+ Filament', color="blue", linestyle="-.")
-# plt.loglog((pk_wall['k']) * 1e3, (pk_wall['power'].real - pk_wall.attrs['shotnoise'])*1e-9, label='NEXUS+ Wall', color="green", linestyle=":")
-
-
-# plt.title("Power Spectra: DM Only")
-# # format the axes
-# plt.xlabel(r"$k$ [$h \ \mathrm{Mpc}^{-1}$]")
-# plt.ylabel(r"$P(k)$ [$h^{-3}\mathrm{Mpc}^3$]")
-# plt.legend(fontsize=14)
-# plt.savefig("NEXUS+_pk_full_species.png", format="png", dpi=300, bbox_inches="tight")
-# plt.show()
 
 finish = time.time()
 
