@@ -8,7 +8,7 @@ using JLD2
 using YAML
 using CosmoMMF
 
-config = YAML.load_file("../config.yaml")
+config = YAML.load_file("../../config.yaml")
 
 ########################################
 #            Load in Data

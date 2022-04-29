@@ -122,7 +122,7 @@ function slow_hessian_from_smoothed(f_Rn::AbstractArray{T,3}, R_S, kv) where T
     hessian[:,:,:,4] .= ifft(hessian[:,:,:,4])
     hessian[:,:,:,5] .= ifft(hessian[:,:,:,5])
     hessian[:,:,:,6] .= ifft(hessian[:,:,:,6])
-    real(R_S^2 .* hessian)
+    real(hessian)
 end
 
 function fast_hessian_from_smoothed(f_Rn::AbstractArray{T,3}, R_S, kv) where T
@@ -162,7 +162,7 @@ function fast_hessian_from_smoothed(f_Rn::AbstractArray{T,3}, R_S, kv) where T
     for j in 1:6
         ifft!(@view (hessian[:,:,:,j]))
     end
-    real(R_S^2 .* hessian)
+    real(hessian)
 end
 
 function reduce_RAM_hessian_from_smoothed(f_Rn::AbstractArray{T,3}, R_S, kv, output_directory) where T
@@ -186,7 +186,7 @@ function reduce_RAM_hessian_from_smoothed(f_Rn::AbstractArray{T,3}, R_S, kv, out
     end
     
     ifft!(@view (hessian[:,:,:]))
-    hessian = real(R_S^2 .* hessian)
+    hessian = real(hessian)
     save_hessian_component(output_directory, R_S, id_strings[1], hessian)
     hessian = zeros(Complex{T}, (dims[1], dims[2], dims[3]))
     
@@ -201,7 +201,7 @@ function reduce_RAM_hessian_from_smoothed(f_Rn::AbstractArray{T,3}, R_S, kv, out
     end
     
     ifft!(@view (hessian[:,:,:]))
-    hessian = real(R_S^2 .* hessian)
+    hessian = real(hessian)
     save_hessian_component(output_directory, R_S, id_strings[2], hessian)
     hessian = zeros(Complex{T}, (dims[1], dims[2], dims[3]))
     
@@ -216,7 +216,7 @@ function reduce_RAM_hessian_from_smoothed(f_Rn::AbstractArray{T,3}, R_S, kv, out
     end
     
     ifft!(@view (hessian[:,:,:]))
-    hessian = real(R_S^2 .* hessian)
+    hessian = real(hessian)
     save_hessian_component(output_directory, R_S, id_strings[3], hessian)
     hessian = zeros(Complex{T}, (dims[1], dims[2], dims[3]))
     
@@ -231,7 +231,7 @@ function reduce_RAM_hessian_from_smoothed(f_Rn::AbstractArray{T,3}, R_S, kv, out
     end
     
     ifft!(@view (hessian[:,:,:]))
-    hessian = real(R_S^2 .* hessian)
+    hessian = real(hessian)
     save_hessian_component(output_directory, R_S, id_strings[4], hessian)
     hessian = zeros(Complex{T}, (dims[1], dims[2], dims[3]))
     
@@ -247,7 +247,7 @@ function reduce_RAM_hessian_from_smoothed(f_Rn::AbstractArray{T,3}, R_S, kv, out
     end
     
     ifft!(@view (hessian[:,:,:]))
-    hessian = real(R_S^2 .* hessian)
+    hessian = real(hessian)
     save_hessian_component(output_directory, R_S, id_strings[5], hessian)
     hessian = zeros(Complex{T}, (dims[1], dims[2], dims[3]))
     
