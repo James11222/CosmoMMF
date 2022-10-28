@@ -13,5 +13,5 @@ export OMP_PLACES=threads
 export OMP_PROC_BIND=spread
 
 #run the application:
-cd /global/homes/j/james12/CosmoMMF/scripts/
+cd /global/homes/j/james12/CosmoMMF/scripts/NEXUS_runs/
 srun -n 1 -c 64 --cpu_bind=cores julia run_NEXUS_final.jl NEXUS
