@@ -12,7 +12,5 @@ using Images
 include("util.jl")
 include("filter.jl")
 include("tagging.jl")
-# include("../test/runtests.jl")
-
 
 end
