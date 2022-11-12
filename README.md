@@ -61,7 +61,7 @@ save_name = "save_name_string"
 output_directory = "path/to/offload/temporary/calculations/"
 
 max_signatures = CosmoMMF.reduce_RAM_maximum_signature(
-                                            Rs, output_directory, save_name, density_field, alg=:NEXUSPLUS)
+                          Rs, output_directory, save_name, density_field, alg=:NEXUSPLUS)
 ```
 
 * We also note in the `calc_structure_bools()` function, one does not have to load in their own boolean filter for clusters `clusbool`, one can set the first argument to be `nothing` and the code will use the criterion that a cluster must be virialized to be considered a valid cluster. We found this method to not be as accurate as other dedicated cluster finding algorithms, but we include it's implementation for completeness. For more information on this method, see [Cautun et al. 2013](https://academic.oup.com/mnras/article/429/2/1286/1038906).
