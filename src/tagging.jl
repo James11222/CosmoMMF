@@ -52,7 +52,7 @@ function get_clusbools(mass_of_average_cell,thresh, max_cats::AbstractArray{T,4}
         end
     end
     
-    clusbool
+    return clusbool
 end
 
 function get_sig_plot(sig_vec, f)
@@ -74,7 +74,7 @@ function get_sig_plot(sig_vec, f)
     return (10 .^ midx), dydx
 end
 
-function calc_structure_bools(mass_of_average_cell, cluster_threshold, combined_NEXUS::AbstractArray{T,4}, combined_NEXUSPLUS::AbstractArray{T,4}, den) where T
+function calc_structure_bools(clusbool, combined_NEXUSPLUS::AbstractArray{T,4}, den, mass_of_average_cell=0.01, cluster_threshold=240.0) where T
     """
     A function that returns the boolean filters for each structure based on physical criterion
     """
@@ -85,14 +85,16 @@ function calc_structure_bools(mass_of_average_cell, cluster_threshold, combined_
     #     CLUSTER FILTER PROCESS
     ####################################
 
-    clusbool = get_clusbools(mass_of_average_cell, cluster_threshold, combined_NEXUS, den);
+    if clusbool == nothing
+        clusbool = get_clusbools(mass_of_average_cell, cluster_threshold, combined_NEXUSPLUS, den);
+    end
 
     ####################################
     #    REMAINING FILTER PROCESS
     ####################################
 
     # we create 3 N^3 arrays with the signature corresponding to each structure
-    cluster_signature = reshape(combined_NEXUS[:,:,:,1], N_cells)
+    cluster_signature = reshape(combined_NEXUSPLUS[:,:,:,1], N_cells)
     filament_signature = reshape(combined_NEXUSPLUS[:,:,:,2], N_cells)
     wall_signature = reshape(combined_NEXUSPLUS[:,:,:,3], N_cells);
 
