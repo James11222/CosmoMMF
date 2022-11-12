@@ -25,32 +25,41 @@ The general usage of the package would look like:
 ```julia
 using CosmoMMF
 
-@load "path/to/density_field.jld2" density_field #load density field
+@load "path/to/density_field.jld2" density_field; #load density field
 
-Rs = (√2) .^ 0:10 #smoothing scales
+Rs = (√2) .^ 0:10; #smoothing scales
 
-max_signatures = CosmoMMF.maximum_signature(Rs, density_field, alg=:NEXUSPLUS) #compute maximum signatures
+max_signatures = CosmoMMF.maximum_signature(Rs, sphere_field, alg=:NEXUSPLUS); #compute maximum signatures
 
-@load "path/to/cluster_boolean_filter.jld2" clusbool #load in externally computed boolean filter for clusters
+@load "path/to/cluster_boolean_filter.jld2" clusbool;
 
-clusbool, filbool, wallbool, S_fil, dM2_fil, S_wall, dM2_wall = CosmoMMF.calc_structure_bools(
-                                                        clusbool, max_signatures, density_field) #tag structures
+clusbool, filbool, wallbool, S_fil, dM2_fil, S_wall, dM2_wall = CosmoMMF.calc_structure_bools(clusbool, max_signatures, density_field);
 ```
 
+The output of `maximum_signature()` is a 4D Array where the 4th index denotes the signature type: 1 = clusters, 2 = filaments, 3 = walls. An example output of this can be seen below
+
+<p align="center">
+  <img src="Images/final_NEXUSPLUS_Signatures_hydro_dark.png#gh-dark-mode-only" width="70%">
+  <img src="Images/final_NEXUSPLUS_Signatures_hydro.png#gh-light-mode-only" width="70%">
+</p>
+
+The boolean filters for each structure type produced by `calc_structure_bools()` can be used to tag structures within a density field, the results of this can be seen below
+
+<p align="center">
+  <img src="Images/final_tagging_figure_dark.png#gh-dark-mode-only" width="70%">
+  <img src="Images/final_tagging_figure.png#gh-light-mode-only" width="70%">
+</p>
+
+
 ### Additional Code Information 
-
-* We provide both the NEXUS and the NEXUS+ algorithms for completeness, to toggle between them change the `alg` argument from `:NEXUSPLUS` to `:NEXUS`
-
-* the `calc_structure_bools()` function also outputs four extra variables: ` S_fil, dM2_fil, S_wall, dM2_wall`. These variables are used to determine the threshold for valid filaments and walls as discussed in Figure 3 of [Cautun et al. 2013](https://academic.oup.com/mnras/article/429/2/1286/1038906).
 
 * For exceptionally large arrays where containing the entire computation in memory is an issue, we include a `reduce_RAM_maximum_signature()` function which exploits the symmetries of the hessian matrix to reduce the memory footprint of the NEXUS+ algorithm. This function is used in the following
 
 ```julia
-save_name = "save_name_string"
-output_directory = "path/to/offload/temporary/calculations/"
+save_name = "save_name_string";
+output_directory = "path/to/offload/temporary/calculations/";
 
-max_signatures = CosmoMMF.reduce_RAM_maximum_signature(
-                                      Rs, output_directory, save_name, density_field, alg=:NEXUSPLUS)
+max_signatures = CosmoMMF.reduce_RAM_maximum_signature(Rs, output_directory, save_name, density_field, alg=:NEXUSPLUS);
 ```
 
 * We also note in the `calc_structure_bools()` function, one does not have to load in their own boolean filter for clusters `clusbool`, one can set the first argument to be `nothing` and the code will use the criterion that a cluster must be virialized to be considered a valid cluster. We found this method to not be as accurate as other dedicated cluster finding algorithms, but we include it's implementation for completeness. For more information on this method, see [Cautun et al. 2013](https://academic.oup.com/mnras/article/429/2/1286/1038906).
