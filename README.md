@@ -39,15 +39,15 @@ clusbool, filbool, wallbool, S_fil, dM2_fil, S_wall, dM2_wall = CosmoMMF.calc_st
 The output of `maximum_signature()` is a 4D Array where the 4th index denotes the signature type: 1 = clusters, 2 = filaments, 3 = walls. An example output of this can be seen below
 
 <p align="center">
-  <img src="Images/final_NEXUSPLUS_Signatures_hydro_dark.png#gh-dark-mode-only" width="70%">
-  <img src="Images/final_NEXUSPLUS_Signatures_hydro.png#gh-light-mode-only" width="70%">
+  <img src="Images/final_NEXUSPLUS_Signatures_hydro_dark.png#gh-dark-mode-only" width="100%">
+  <img src="Images/final_NEXUSPLUS_Signatures_hydro.png#gh-light-mode-only" width="100%">
 </p>
 
 The boolean filters for each structure type produced by `calc_structure_bools()` can be used to tag structures within a density field, the results of this can be seen below
 
 <p align="center">
-  <img src="Images/final_tagging_figure_dark.png#gh-dark-mode-only" width="70%">
-  <img src="Images/final_tagging_figure.png#gh-light-mode-only" width="70%">
+  <img src="Images/final_tagging_figure_dark.png#gh-dark-mode-only" width="100%">
+  <img src="Images/final_tagging_figure.png#gh-light-mode-only" width="100%">
 </p>
 
 
