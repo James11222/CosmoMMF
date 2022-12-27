@@ -10,6 +10,7 @@
 [![Stable](https://img.shields.io/badge/docs-stable-blue.svg)](https://James11222.github.io/CosmoMMF.jl/stable)
 [![Dev](https://img.shields.io/badge/docs-dev-blue.svg)](https://James11222.github.io/CosmoMMF.jl/dev)
 [![codecov](https://codecov.io/gh/James11222/CosmoMMF/branch/main/graph/badge.svg?token=cSdBAqnqya)](https://codecov.io/gh/James11222/CosmoMMF)
+[![DOI](https://zenodo.org/badge/347520773.svg)](https://zenodo.org/badge/latestdoi/347520773)
 
 
 Nexus Pipeline for analyzing the effects of baryonic matter on cosmological structures in IllustrisTNG simulations 
