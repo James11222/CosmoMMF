@@ -32,7 +32,7 @@ using CosmoMMF
 
 Rs = (√2) .^ 0:10 #smoothing scales
 
-max_signatures = CosmoMMF.maximum_signature(Rs, sphere_field, alg=:NEXUSPLUS) #compute maximum signatures
+max_signatures = CosmoMMF.maximum_signature(Rs, density_field, alg=:NEXUSPLUS) #compute maximum signatures
 
 @load "path/to/cluster_boolean_filter.jld2" clusbool #load in externally computed boolean filter for clusters
 
