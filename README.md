@@ -19,6 +19,8 @@ The `CosmoMMF.jl` package contains the algorithms necessary for a Multiscale Mor
 
 The NEXUS+ algorithm contains several steps as described in our paper ([Sunseri et al. 2022](https://ui.adsabs.harvard.edu/abs/2023PhRvD.107b3514S/abstract)). In general, we start with a density field, smooth it with a logarithmic Gaussian smoothing filter, then compute the hessian of the smoothed density field, use the eigenvalues of the hessian matrix to calculate the structure type signatures, find the maximum signatures over a range of smoothing scales, and apply physically based threshold criterion to categorize structures within the Cosmic Web. The entire package is implemented in `julia` and all of these steps are summarized inside of two functions. The first function `maximum_signature()` does the first several steps of the NEXUS+ algorithm to compute the maximum structure signatures, the second function is `calc_structure_bools()` which uses physical criteria to tag structures into 4 categories: clusters, filaments, walls, and voids. 
 
+We also make the data products from our paper ([Sunseri et al. 2022](https://ui.adsabs.harvard.edu/abs/2023PhRvD.107b3514S/abstract)) available for download at [This Link](http://idark.ipmu.jp/~jia.liu/data/Baryon_Analysis_Data/)
+
 ### General Code Usage
 
 The general usage of the package would look like:
