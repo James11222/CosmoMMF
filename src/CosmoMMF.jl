@@ -7,7 +7,10 @@ using YAML
 using JLD2
 using Strided
 using Images
+using PyCall
+using PyPlot
 
+np = pyimport("numpy")
 
 include("util.jl")
 include("filter.jl")

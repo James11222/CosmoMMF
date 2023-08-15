@@ -13,8 +13,8 @@ using JLD2
     max_sigs_nexusplus = CosmoMMF.maximum_signature(Rs, den, alg=:NEXUSPLUS)
 
     #tagging
-    clusbool, filbool, wallbool, S_fil, dM2_fil, S_wall, dM2_wall = CosmoMMF.calc_structure_bools(
-    clusbool, max_sigs_nexusplus, den)
+    clusbool, filbool, wallbool, voidbool, S_fil, dM2_fil, S_wall, dM2_wall = CosmoMMF.calc_structure_bools(
+    den, max_sigs_nexusplus, true, clusbool=clusbool)
 
     #test to make sure the filament curve is well behaved
     fil_max_index = findmax(dM2_fil ./ maximum(dM2_fil))[2]
@@ -27,8 +27,8 @@ using JLD2
     @test wall_test_passed
 
     #test the virialization technique
-    clusbool, filbool, wallbool, S_fil, dM2_fil, S_wall, dM2_wall = CosmoMMF.calc_structure_bools(
-    nothing, max_sigs_nexusplus, den, 10.0, 0.1)
+    clusbool, filbool, wallbool, voidbool, S_fil, dM2_fil, S_wall, dM2_wall = CosmoMMF.calc_structure_bools(
+    den, max_sigs_nexusplus, true)
 
     #test to make sure the filament curve is well behaved
     fil_max_index = findmax(dM2_fil ./ maximum(dM2_fil))[2]

@@ -1,11 +1,11 @@
 # computational utilities
-
 """
     θ(x)
 
-Heaviside step function. Returns one if the argument is positive, zero otherwise.
+    Heaviside step function. Returns one if the argument is positive, zero otherwise.
 """
 function θ(x::T) where T
+    
     if x > zero(T)
         return one(T)
     end
@@ -15,34 +15,67 @@ end
 """
     xθ(x)
 
-Heaviside step times x. Returns x if the argument is positive, zero otherwise.
+    Heaviside step times x. Returns x if the argument is positive, zero otherwise.
 """
 function xθ(x::T) where T
+    
     if x > zero(T)
         return x
     end
     return zero(T)
 end
 
+"""
+    A function to find the closest value in an
+    array to a threshold value.
+"""
+function find_close_value_index(values, threshold)
+    
+    
+    scores = zeros(size(values))
+    
+    for (i, value) in enumerate(values)
+        if value > 0 && value < 1
+            difference = abs(value - threshold)
+            scores[i] = difference
+        else
+            scores[i] = 1e10
+        end
+    end
+    
+    index = argmin(scores)
+    best_value = values[index]
+    
+    if abs(threshold - best_value) > 0.1
+        @warn """It looks like your grid is resolution limited. Make sure your grid mesh
+                 is sufficiently high resolution that clusters can be resolved (< 1 Mpc/h per 
+                 voxel preferably). This cluster finder is not physical at the current resolution.
+                 It is recommended that you run the cluster finder with the verbose flag turned on
+                 to examine the virialization fraction curve for proof."""
+    end
+    
+    return argmin(scores), best_value
+end
 
 """
     wavevectors3D([T=Float64], dims, box_size=(2π, 2π, 2π))
 
-# Arguments:
-- `T` : output element type
-- `dims`: array or tuple containing size
-- `box_size`: side lengths of box, normalizes the wavenumber
+    # Arguments:
+    - `T` : output element type
+    - `dims`: array or tuple containing size
+    - `box_size`: side lengths of box, normalizes the wavenumber
 
-# Returns:
-- `Tuple{Vector{T},Vector{T},Vector{T}}`: kx, ky, kz wavevectors
+    # Returns:
+    - `Tuple{Vector{T},Vector{T},Vector{T}}`: kx, ky, kz wavevectors
 
-# Examples
-```julia-repl
-julia> CosmoMMF.wavevectors3D((6,2,2))
-([0.0, 1.0, 2.0, -3.0, -2.0, -1.0], [0.0, -1.0], [0.0, -1.0])
-```
+    # Examples
+    ```julia-repl
+    julia> CosmoMMF.wavevectors3D((6,2,2))
+    ([0.0, 1.0, 2.0, -3.0, -2.0, -1.0], [0.0, -1.0], [0.0, -1.0])
+    ```
 """
 function wavevectors3D(T::Type{<:Real}, dims, box_size=(2π, 2π, 2π))
+    
     sample_rate = T.(2π .* dims ./ box_size)
     kx = fftfreq(dims[1], sample_rate[1]) .* (2π / dims[1])
     ky = fftfreq(dims[2], sample_rate[2]) .* (2π / dims[2])
@@ -51,7 +84,7 @@ function wavevectors3D(T::Type{<:Real}, dims, box_size=(2π, 2π, 2π))
 end
 
 # default T is Float64
-wavevectors3D(dims, box_size=(2π, 2π, 2π)) = wavevectors3D(Float64, dims, box_size)
+# wavevectors3D(dims, box_size=(2π, 2π, 2π)) = wavevectors3D(Float64, dims, box_size)
 
 
 function test_print() 
