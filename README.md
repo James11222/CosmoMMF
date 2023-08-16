@@ -107,4 +107,6 @@ max_signatures = CosmoMMF.reduce_RAM_maximum_signature(
                           Rs, output_directory, save_name, density_field, alg=:NEXUSPLUS)
 ```
 
+* Note: The NEXUS+ implementation of tagging clusters is highly dependent on the the grid resolution being used. The cluster boolean filter will only be physically motivated if the resolution of each voxel is roughly < 1 Mpc/h so clusters can be resolved. 
+
 
