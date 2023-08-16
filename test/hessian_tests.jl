@@ -6,7 +6,7 @@ using JLD2
     
     resolution = 64
     Rs = (√2) .^ 4
-    wave_vecs = CosmoMMF.wavevectors3D((resolution,resolution,resolution))
+    wave_vecs = CosmoMMF.wavevectors3D(Float64, (resolution,resolution,resolution))
     
     #generate some test fields
     sphere_field = CosmoMMF.sphere(resolution, 5.0)
