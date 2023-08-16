@@ -17,13 +17,17 @@ Nexus Pipeline for analyzing the effects of baryonic matter on cosmological stru
 
 The `CosmoMMF.jl` package contains the algorithms necessary for a Multiscale Morphological Analysis (MMF) of cosmological simulations. The purpose of this package is to streamline our modified version of the NEXUS+ algorithm. We used this package in our work ([Sunseri et al. 2022](https://ui.adsabs.harvard.edu/abs/2023PhRvD.107b3514S/abstract)) to analyze the effects of baryonic matter on the Cosmic Web.
 
-The NEXUS+ algorithm contains several steps as described in our paper ([Sunseri et al. 2022](https://ui.adsabs.harvard.edu/abs/2023PhRvD.107b3514S/abstract)). In general, we start with a density field, smooth it with a logarithmic Gaussian smoothing filter, then compute the hessian of the smoothed density field, use the eigenvalues of the hessian matrix to calculate the structure type signatures, find the maximum signatures over a range of smoothing scales, and apply physically based threshold criterion to categorize structures within the Cosmic Web. The entire package is implemented in `julia` and all of these steps are summarized inside of two functions. The first function `maximum_signature()` does the first several steps of the NEXUS+ algorithm to compute the maximum structure signatures, the second function is `calc_structure_bools()` which uses physical criteria to tag structures into 4 categories: clusters, filaments, walls, and voids. 
+The NEXUS+ algorithm contains several steps as described in our paper ([Sunseri et al. 2022](https://ui.adsabs.harvard.edu/abs/2023PhRvD.107b3514S/abstract)). In general, we start with a density field (note: we more specifically mean a 1 + δ field), smooth it with a logarithmic Gaussian smoothing filter, then compute the hessian of the smoothed density field, use the eigenvalues of the hessian matrix to calculate the structure type signatures, find the maximum signatures over a range of smoothing scales, and apply physically based threshold criterion to categorize structures within the Cosmic Web. The entire package is implemented in `julia` and all of these steps are summarized inside of two functions. The first function `maximum_signature()` does the first several steps of the NEXUS+ algorithm to compute the maximum structure signatures, the second function is `calc_structure_bools()` which uses physical criteria to tag structures into 4 categories: clusters, filaments, walls, and voids. 
 
 We also make the data products from our paper ([Sunseri et al. 2022](https://ui.adsabs.harvard.edu/abs/2023PhRvD.107b3514S/abstract)) available for download at [This Link](http://idark.ipmu.jp/~jia.liu/data/Baryon_Analysis_Data/)
 
-### General Code Usage
+## General Code Usage
 
 The general usage of the package would look like:
+
+### Step I
+
+We first calculate the maximum structure signatures across multiple smoothing scales with the NEXUS+/NEXUS algorithm
 
 ```julia
 using CosmoMMF
@@ -33,19 +37,55 @@ using CosmoMMF
 Rs = (√2) .^ 0:10 #smoothing scales
 
 max_signatures = CosmoMMF.maximum_signature(Rs, density_field, alg=:NEXUSPLUS) #compute maximum signatures
-
-@load "path/to/cluster_boolean_filter.jld2" clusbool #load in externally computed boolean filter for clusters
-
-clusbool, filbool, wallbool, S_fil, dM2_fil, S_wall, dM2_wall = CosmoMMF.calc_structure_bools(
-                                                      clusbool, max_signatures, density_field) #tag structures
 ```
 
-The output of `maximum_signature()` is a 4D Array where the 4th index denotes the signature type: 1 = clusters, 2 = filaments, 3 = walls. An example output of this can be seen below
+The output of `maximum_signature()` is a 4D Float Array where the 4th index denotes the signature type: 1 = clusters, 2 = filaments, 3 = walls. An example output of this can be seen below
 
 <p align="center">
   <img src="Images/final_NEXUSPLUS_Signatures_hydro_dark.png#gh-dark-mode-only" width="100%">
   <img src="Images/final_NEXUSPLUS_Signatures_hydro.png#gh-light-mode-only" width="100%">
 </p>
+
+### Step II
+
+We then have the option of running the tagging scheme a few different ways. The first important argument in `calc_structure_bools()` besides the `density_field` and the `max_signatures` arrays is the `verbose_flag`. When
+set to `true` the code gives a lot more information and provides a few plots. This is best turned on when
+debugging the code. When `verbose_flag` is turned on there are 4 additional outputs to the `calc_structure_bools()`
+function: `S_fil, dM2_fil, S_wall, dM2_wall` which can be used to make the mass change curves for filaments and
+walls. 
+
+***Verbose Flag On:***
+
+```julia
+verbose_flag = true #or false
+
+clusbool, filbool, wallbool, voidbool, S_fil, dM2_fil, S_wall, dM2_wall = CosmoMMF.calc_structure_bools(
+                                                       density_field, max_signatures, verbose_flag) #tag structures
+```
+
+***Verbose Flag Off:***
+
+```julia
+verbose_flag = false 
+
+clusbool, filbool, wallbool, voidbool = CosmoMMF.calc_structure_bools(
+                                        density_field, max_signatures, verbose_flag) #tag structures
+```
+
+We also note in the `calc_structure_bools()` function, one can use their own cluster boolean filter instead of the one generated by the NEXUS+ formalism (using virialization of clusters as a tool for determining spurious detections). This is helpful if you want to use a more trusted cluster/halo finder algorithm (FoF, Rockstar, etc...). For more information on the NEXUS+ method, see [Cautun et al. 2013](https://academic.oup.com/mnras/article/429/2/1286/1038906). 
+
+***External Cluster Boolean Filter:***
+
+```julia
+@load "path/to/cluster_boolean_filter.jld2" clusbool_ext #load in externally computed boolean filter for clusters
+
+verbose_flag = false 
+
+clusbool, filbool, wallbool, voidbool = CosmoMMF.calc_structure_bools(
+                                        density_field, max_signatures, verbose_flag, clusbool_ext) #tag structures
+```
+
+Another important optional argument in the `calc_structure_bools()` function is `Δ`. The default value is `Δ = 370` as used in [Cautun et al. 2013](https://academic.oup.com/mnras/article/429/2/1286/1038906) but other values can be 200 or 500 corresponding to `R_200` or `R_500`. `Δ` is the overdensity parameter, when clusters achieve a density greater than this value, they are thought to be virialized/collapsed.
 
 The boolean filters for each structure type produced by `calc_structure_bools()` can be used to tag structures within a density field, the results of this can be seen below
 
@@ -67,5 +107,4 @@ max_signatures = CosmoMMF.reduce_RAM_maximum_signature(
                           Rs, output_directory, save_name, density_field, alg=:NEXUSPLUS)
 ```
 
-* We also note in the `calc_structure_bools()` function, one does not have to load in their own boolean filter for clusters `clusbool`, one can set the first argument to be `nothing` and the code will use the criterion that a cluster must be virialized to be considered a valid cluster. We found this method to not be as accurate as other dedicated cluster finding algorithms, but we include it's implementation for completeness. For more information on this method, see [Cautun et al. 2013](https://academic.oup.com/mnras/article/429/2/1286/1038906).
 
