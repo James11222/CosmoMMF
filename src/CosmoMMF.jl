@@ -10,8 +10,6 @@ using Images
 using StatsBase
 using PyPlot
 
-np = pyimport("numpy")
-
 include("util.jl")
 include("filter.jl")
 include("tagging.jl")
