@@ -7,7 +7,7 @@ using YAML
 using JLD2
 using Strided
 using Images
-using PyCall
+using StatsBase
 using PyPlot
 
 np = pyimport("numpy")

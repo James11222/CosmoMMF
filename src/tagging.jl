@@ -38,9 +38,14 @@ function make_the_clusbool(data, max_sigs, verbose, Δ)
     
     nx,ny,nz = size(data)
     total_volume = nx*ny*nz
+    
+    bins = 10 .^ Array(range(-5, 2, length=nx))
+    
+    h = fit(Histogram, reshape(max_sigs[:,:,:,1], total_volume), bins)
+    Smin = bin_edges[1:nx-1][argmax(h.weights)]
 
-    hist, bin_edges = np.histogram(max_sigs[:,:,:,1], bins=np.logspace(-5,2,nx))
-    Smin = bin_edges[1:nx-1][argmax(hist)] #we make a cutoff at the peak of the distribution of signatures
+    # hist, bin_edges = np.histogram(max_sigs[:,:,:,1], bins=np.logspace(-5,2,nx))
+    # Smin = bin_edges[1:nx-1][argmax(hist)] #we make a cutoff at the peak of the distribution of signatures
 
     initial_clusbool = (max_sigs[:,:,:,1] .> Smin) 
 
