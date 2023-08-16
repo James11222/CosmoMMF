@@ -14,7 +14,7 @@ using JLD2
 
     #tagging
     clusbool, filbool, wallbool, voidbool, S_fil, dM2_fil, S_wall, dM2_wall = CosmoMMF.calc_structure_bools(
-    den, max_sigs_nexusplus, true, clusbool=clusbool)
+    den, max_sigs_nexusplus, true, clusbool)
 
     #test to make sure the filament curve is well behaved
     fil_max_index = findmax(dM2_fil ./ maximum(dM2_fil))[2]
